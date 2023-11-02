@@ -11,7 +11,6 @@
   
 
 <div class="formbold-main-wrapper">
-    <img src="img/bgRegister" alt="gambar background">
     <div class="formbold-form-wrapper">
         <b><h1 class="title">Register</h1></b>
         <form action="https://formbold.com/s/FORM_ID" method="POST">
