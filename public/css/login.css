@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
+
 html,::placeholder,* {
   font-family: 'Poppins', sans-serif;
 }
@@ -42,6 +42,7 @@ html,::placeholder,* {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .formbold-form-wrapper {
@@ -49,11 +50,12 @@ html,::placeholder,* {
   max-width: 570px;
   width: 100%;
   background: white;
-  padding: 40px;
+  padding: 80px;
   margin-left: auto;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-
+  height: 100vh;
+  
 }
 
 .formbold-img {
@@ -178,7 +180,7 @@ select.formbold-form-input,
   background-color: #FF65B0;
   color: white;
   cursor: pointer;
-  margin-top: 25px;
+  margin-top: 50px;
   width: 100%;
 }
 .formbold-btn:hover {
@@ -189,61 +191,14 @@ select.formbold-form-input,
   width: 45%;
 }
 
-/* Style for the dropzone container */
-.dropzone {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
+.formbold-buatAkun{
+    font-size: 15px;
+    color: #536387;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
-/* Style for the label with file input */
-.dropzone-label {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-height: 16rem;
-border: 2px dashed #e5e7eb;
-border-radius: 0.5rem;
-cursor: pointer;
-background-color: #f3f4f6;
-text-align: center; /* Menambahkan tata letak teks tengah */
-}
 
-.dropzone-label:hover {
-background-color: #f3f4f6;
-border-color: #9ca3af;
-}
 
-/* Style for the SVG icon */
-.dropzone-icon {
-width: 2rem;
-height: 2rem;
-margin-bottom: 1rem;
-color: #718096;
-margin: 0 auto; /* Mengatur ikon agar berada di tengah secara horizontal */
-}
 
-/* Style for the text inside the label */
-.dropzone-text {
-margin-bottom: 0.5rem;
-color: #718096;
-vertical-align: middle; /* Mengatur teks ke tengah vertikal */
-}
-
-.dropzone-hint {
-color: #718096;
-}
-
-/* Sembunyikan tombol "Choose File" dan teks "No file chosen" */
-input[type="file"] {
-    display: none;
-}
-
-/* Gaya khusus untuk label dengan elemen input tipe "file" yang tersembunyi */
-.dropzone-label input[type="file"] + * {
-    display: none;
-}
 

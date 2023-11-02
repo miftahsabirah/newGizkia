@@ -20,3 +20,25 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/layoutsAdmin', function () {
+    return view('layoutsAdmin');
+});
+
+Route::get('/manajemenAkses', function () {
+    return view('manajemenAkses');
+});
+
+Route::get('/manajemenPetugasKesehatan', function () {
+    return view('manajemenPetugasKesehatan');
+});
+
+Route::get('/databumil', function () {
+    return view('dataBumil');
+});
+
+

@@ -10,7 +10,7 @@
 <body>
   
 
-<div class="formbold-main-wrapper">
+<div class="formbold-main-wrapper" style="background-image: url('img/bgRegisterLogin.png'); background-size: cover; background-repeat: no-repeat;">
     <div class="formbold-form-wrapper">
         <b><h1 class="title">Register</h1></b>
         <form action="https://formbold.com/s/FORM_ID" method="POST">
