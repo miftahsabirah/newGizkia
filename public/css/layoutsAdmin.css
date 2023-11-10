@@ -33,6 +33,10 @@ a {
 	text-decoration: none;
 }
 
+.a-link{
+	text-decoration: none;
+}
+
 li {
 	list-style: none;
 }
@@ -75,6 +79,8 @@ li {
 	background: var(--light);
 	transition: all .3s ease;
 	padding: 0 6px;
+	text-decoration: none;
+	
 }
 #sidebar .icon {
 	min-width: 48px;
@@ -83,6 +89,7 @@ li {
 	justify-content: center;
 	align-items: center;
 	margin-right: 6px;
+	text-decoration: none;
 	
 }
 #sidebar .icon-right {
@@ -203,7 +210,9 @@ li {
 	width: calc(100% - 260px);
 	left: 260px;
 	transition: all .3s ease;
+	background-color: #F5F5F5; /* Ganti dengan kode warna abu-abu yang Anda inginkan */
 }
+
 #sidebar.hide + #content {
 	width: calc(100% - 60px);
 	left: 60px;
@@ -228,6 +237,7 @@ nav {
 .NavTitle{
 	color: #0000A3;
 	font-size: 24px;
+	margin: 0px;
 }
 
 .with-background1 {
