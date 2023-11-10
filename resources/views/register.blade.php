@@ -132,12 +132,12 @@
                   </div>
                   <input id="dropzone-file" type="file" class="hidden" />
               </label>
-          </div>
+          </div>--}}
   
         <button class="formbold-btn">Submit</button>
       </form>
     </div>
-  </div> --}}
+  </div> 
 
 
 </body>
