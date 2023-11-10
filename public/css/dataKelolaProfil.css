@@ -1,194 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,100&display=swap%27');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,100&display=swap%27');
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-  font-family: 'Poppins', sans-serif;
-    background-color: #f5f6fa;
-  }
+    body {
+    font-family: 'Poppins', sans-serif;
+      background-color: #f5f6fa;
+    }
 
-  .formbold-main-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 48px;
-    height: 150%;
-  }
+    .formbold-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      height: 150%;
+    }
 
-  .formbold-form-wrapper {
-width: 100%;
-max-width: 80%;
-background: white;
-padding: 20px; /* Reduce the padding */
-border-radius: 10px;
-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-overflow-y: auto;
+    .formbold-form-wrapper {
+  width: 100%;
+  max-width: 80%;
+  background: white;
+  padding: 20px; /* Reduce the padding */
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .formbold-heading {
-font-size: 24px;
-font-weight: 700;
-color: #333;
-margin-bottom: 20px;
-margin-top: 0; /* Add this to prevent top margin */
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 0; /* Add this to prevent top margin */
 }
 
 
-  .formbold-input-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+    .formbold-input-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-  .formbold-w-45 {
-    flex: 0 0 calc(50% - 20px);
-  }
+    .formbold-w-45 {
+      flex: 0 0 calc(50% - 20px);
+    }
 
-  .formbold-form-input {
-    width: 100%;
-    padding: 13px 22px;
-    border-radius: 5px;
-    border: 1px solid #dde3ec;
-    background: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
-    color: #536387;
-    outline: none;
-    resize: none;
-    margin-bottom: 10px;
-    transition: box-shadow 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-  }
+    .formbold-form-input {
+      width: 100%;
+      padding: 13px 22px;
+      border-radius: 5px;
+      border: 1px solid #dde3ec;
+      background: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+      resize: none;
+      margin-bottom: 10px;
+      transition: box-shadow 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  .formbold-form-input::placeholder {
-    color: rgba(83, 99, 135, 0.5);
-  }
+    .formbold-form-input::placeholder {
+      color: rgba(83, 99, 135, 0.5);
+    }
 
-  .formbold-form-input:focus {
-    border-color: #6a64f1;
-    box-shadow: 0px 0px 10px rgba(106, 100, 241, 0.2);
-  }
+    .formbold-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 0px 10px rgba(106, 100, 241, 0.2);
+    }
 
-  .formbold-form-label {
-    color: #536387;
-    font-size: 14px;
-    line-height: 30px;
-    display: block;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
+    .formbold-form-label {
+      color: #536387;
+      font-size: 14px;
+      line-height: 30px;
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
 
-  .formbold-checkbox-label {
-    display: flex;
-    cursor: pointer;
-    user-select: none;
-    font-size: 16px;
-    line-height: 24px;
-    color: #536387;
-  }
+    .formbold-checkbox-label {
+      display: flex;
+      cursor: pointer;
+      user-select: none;
+      font-size: 16px;
+      line-height: 24px;
+      color: #536387;
+    }
 
-  .formbold-checkbox-label a {
-    margin-left: 5px;
-    color: #6a64f1;
-  }
+    .formbold-checkbox-label a {
+      margin-left: 5px;
+      color: #6a64f1;
+    }
 
-  .formbold-input-checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
+    .formbold-input-checkbox {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
 
-  .formbold-checkbox-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin-right: 16px;
-    margin-top: 2px;
-    border: 0.7px solid #dde3ec;
-    border-radius: 3px;
-  }
+    .formbold-checkbox-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+      margin-top: 2px;
+      border: 0.7px solid #dde3ec;
+      border-radius: 3px;
+    }
 
-  .formbold-form-file {
-    padding: 12px;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(83, 99, 135, 0.5);
-  }
+    .formbold-form-file {
+      padding: 12px;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(83, 99, 135, 0.5);
+    }
 
-  .formbold-form-file::-webkit-file-upload-button {
-    display: none;
-  }
+    .formbold-form-file::-webkit-file-upload-button {
+      display: none;
+    }
 
-  .formbold-form-file:before {
-    content: 'Upload';
-    display: inline-block;
-    background: #EEEEEE;
-    border: 0.5px solid #E7E7E7;
-    border-radius: 3px;
-    padding: 3px 12px;
-    outline: none;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
-    color: #637381;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    margin-right: 10px;
-  }
+    .formbold-form-file:before {
+      content: 'Upload';
+      display: inline-block;
+      background: #EEEEEE;
+      border: 0.5px solid #E7E7E7;
+      border-radius: 3px;
+      padding: 3px 12px;
+      outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      color: #637381;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      margin-right: 10px;
+    }
 
-  .formbold-btn,
+    .formbold-btn,
 .formbold-btn.save,
 .formbold-btn.cancel {
-font-size: 16px;
-border-radius: 5px;
-padding: 14px 25px;
-border: none;
-font-weight: 500;
-cursor: pointer;
-margin-top: 25px;
-transition: background-color 0.3s ease;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 14px 25px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
 }
 
 .formbold-btn,
 .formbold-btn.save {
-color: white;
+  color: white;
 }
 
 .formbold-btn.save {
-background-color: #FF65B0;
+  background-color: #FF65B0;
 }
 
 .formbold-btn.cancel {
-background-color: #d1d8e0;
-color: #536387;
+  background-color: #d1d8e0;
+  color: #536387;
 }
 
 .formbold-btn:hover {
-background-color: #554fed;
+  background-color: #554fed;
 }
 
 
 .formbold-btn-wrapper {
-display: flex;
-justify-content: flex-end;
-gap: 10px;
-margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
 }
 
 
-  /* Style for the dropzone container */
+    /* Style for the dropzone container */
 .dropzone {
 display: flex;
 align-items: center;
@@ -238,16 +238,16 @@ color: #718096;
 
 /* Sembunyikan tombol "Choose File" dan teks "No file chosen" */
 input[type="file"] {
-  display: none;
+    display: none;
 }
 
 /* Gaya khusus untuk label dengan elemen input tipe "file" yang tersembunyi */
 .dropzone-label input[type="file"] + * {
-  display: none;
+    display: none;
 }
 
-  @media screen and (max-width: 600px) {
-    .formbold-w-45 {
-      flex: 0 0 100%;
+    @media screen and (max-width: 600px) {
+      .formbold-w-45 {
+        flex: 0 0 100%;
+      }
     }
-  }
