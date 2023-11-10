@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('datadesa', function (Blueprint $table) {
             $table->string('kode_desa', 11)->primary();
+            $table->unsignedBigInteger('users_id');
             $table->string('kode_kecamatan', 2);
             $table->string('desa', 25);
             $table->integer('wilayah');
@@ -22,8 +23,7 @@ return new class extends Migration
             $table->string('kode_pkm', 2);
 
             $table->foreign('kode_kecamatan')->references('kode_kecamatan')->on('datakecamatan');
-
-            
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 
