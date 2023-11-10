@@ -30,15 +30,32 @@ Route::get('/layoutsAdmin', function () {
 });
 
 Route::get('/manajemenAkses', function () {
-    return view('manajemenAkses');
+    return view('admin.kelolaProfil.manajemenAkses');
 });
 
 Route::get('/manajemenPetugasKesehatan', function () {
-    return view('manajemenPetugasKesehatan');
+    return view('admin.kelolaProfil.manajemenPetugasKesehatan');
 });
 
-Route::get('/databumil', function () {
-    return view('dataBumil');
+Route::get('/dataBumil', function () {
+    return view('admin.kelolaData.dataBumil');
+});
+
+Route::get('/dataIbuMelahirkan', function () {
+    return view('admin.kelolaData.dataIbuMelahirkan');
+});
+
+Route::get('/dataBumilRisti', function () {
+    return view('admin.kelolaData.dataBumilRisti');
+});
+
+Route::get('/coba', function () {
+    return view('coba');
+});
+
+
+Route::get('/tambahdata', function () {
+    return view('admin.kelolaProfil.dataKelolaProfil');
 });
 
 
