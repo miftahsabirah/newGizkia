@@ -17,6 +17,16 @@ class LoginRegisterController extends Controller
      * Instantiate a new LoginRegisterController instance.
      */
 
+
+    // public function __construct()
+    // {
+    //     // middleware merupakan perantara yang mengendalikan akses ke rute atau metode tertentu berdasarkan aturan tertentu
+    //     // quest merupakan bagian persyaratan akses 
+    //     $this->middleware('guest')->except([
+    //         'login', 'admin.kelolaProfil.manajemenPetugasKesehatan'
+    //     ]);
+    // }
+
     /**
      * Display a registration form.
      *
@@ -132,7 +142,8 @@ class LoginRegisterController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login' )
+        return redirect()->route('login')
+
             ->withSuccess('You have logged out successfully!');;
     }
 }
