@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('jenisristi', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->tinyInteger('resiko1')->default(1);
-            $table->tinyInteger('resiko2')->default(1);
-            $table->tinyInteger('resiko3')->default(1);
-            $table->tinyInteger('resiko4')->default(1);
-            $table->tinyInteger('resiko5')->default(1);
-            $table->tinyInteger('resiko6')->default(1);
-            $table->tinyInteger('resiko7')->default(1);
-            $table->tinyInteger('resiko8')->default(1);
-            $table->tinyInteger('resiko9')->default(1);
-            $table->tinyInteger('resiko10')->default(1);
-            $table->tinyInteger('resiko11')->default(1);
+            $table->tinyInteger('resiko1')->default(1)->nullable();
+            $table->tinyInteger('resiko2')->default(1)->nullable();
+            $table->tinyInteger('resiko3')->default(1)->nullable();
+            $table->tinyInteger('resiko4')->default(1)->nullable();
+            $table->tinyInteger('resiko5')->default(1)->nullable();
+            $table->tinyInteger('resiko6')->default(1)->nullable();
+            $table->tinyInteger('resiko7')->default(1)->nullable();
+            $table->tinyInteger('resiko8')->default(1)->nullable();
+            $table->tinyInteger('resiko9')->default(1)->nullable();
+            $table->tinyInteger('resiko10')->default(1)->nullable();
+            $table->tinyInteger('resiko11')->default(1)->nullable();
         });
     }
 
