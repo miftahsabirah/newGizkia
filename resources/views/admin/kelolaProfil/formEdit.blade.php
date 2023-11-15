@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/dataKelolaProfil.css">
+    <link rel="stylesheet" href="css/formData.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
         <div class="formbold-main-wrapper">
           <div class="formbold-form-wrapper">
-            <h2 class="formbold-heading">Tambah Petugas Kesehatan</h2>
+            <h2 class="formbold-heading">Edit Petugas Kesehatan</h2>
             <div class="formbold-input-flex">
             <div class="formbold-w-45">
               <label for="firstname" class="formbold-form-label"> NIP </label>
@@ -105,12 +106,40 @@
         
       
           <div class="formbold-btn-wrapper">
-              <button class="formbold-btn save">Simpan</button>
+              <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                  Simpan
+              </button>
               <button class="formbold-btn cancel">Batal</button>
+
+          </div>
+          
+          <!-- Modal 2 -->
+              <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="modal-header d-flex justify-content-center">
+                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
+                          </div>
+                          <div class="modal-body">
+                              <div class="formbold-mb-3 d-flex justify-content-center">
+                                  Apakah Anda ingin menyimpan data ini?
+                              </div>
+                          </div>
+                          <div class="modal-footer d-flex justify-content-center">
+                              <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
+                              <button type="button" class="btn btn-primary w-25">Ya</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
             </div>
 
             
         </div>
       </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

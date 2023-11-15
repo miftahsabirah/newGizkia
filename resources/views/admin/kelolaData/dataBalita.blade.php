@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-Data Ibu Melahirkan
+Data Balita
 @endsection
 
 
@@ -14,19 +14,9 @@ Data Ibu Melahirkan
 @section('isi')
 
   <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <div>
-        <button class="btn btn-color dropdown-toggle button1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #D9D9D9">
-            -- Ibu Melahirkan --
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="{{ route('dataBumil') }}">Ibu Hamil</a>
-          <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
-          <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
-        </div>
-    </div>
-
+    <h4>Data Balita</h4>
     <button type="button" class="add-data">
-        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Ibu Melahirkan
+        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data
     </button>
   </div>
 

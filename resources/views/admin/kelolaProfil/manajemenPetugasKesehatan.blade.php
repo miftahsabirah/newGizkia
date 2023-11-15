@@ -52,104 +52,12 @@ Manajemen Petugas Kesehatan
                           <button class="icon-button">
                             <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
                           </button>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-trash" style="color: #A30D11;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                      
-                    </tr>
-
-                    <tr>
-                        <td>012345672</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-trash" style="color: #A30D11;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345673</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Nauval Tri
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-trash" style="color: #A30D11;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345674</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Muhammad Fadhillah
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-trash" style="color: #A30D11;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                            <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
                           <span style="margin-right: 10px;"></span>
                           <button class="icon-button">
                             <i class="fi fi-rr-trash" style="color: #A30D11;"></i> <!-- Ikon kedua menjadi hijau -->
                           </button>
                         </td>
+                      
                     </tr>
 
                 </tbody>
