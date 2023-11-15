@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('jenisfaktor', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->tinyInteger('faktor1')->default(1);
-            $table->tinyInteger('faktor2')->default(1);
-            $table->tinyInteger('faktor3')->default(1);
-            $table->tinyInteger('faktor4')->default(1);
-            $table->tinyInteger('faktor5')->default(1);
-            $table->tinyInteger('faktor6')->default(1);
+            $table->tinyInteger('faktor1')->default(1)->nullable();
+            $table->tinyInteger('faktor2')->default(1)->nullable();
+            $table->tinyInteger('faktor3')->default(1)->nullable();
+            $table->tinyInteger('faktor4')->default(1)->nullable();
+            $table->tinyInteger('faktor5')->default(1)->nullable();
+            $table->tinyInteger('faktor6')->default(1)->nullable();
         });
     }
 

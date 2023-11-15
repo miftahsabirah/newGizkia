@@ -17,6 +17,16 @@ class LoginRegisterController extends Controller
      * Instantiate a new LoginRegisterController instance.
      */
 
+
+    // public function __construct()
+    // {
+    //     // middleware merupakan perantara yang mengendalikan akses ke rute atau metode tertentu berdasarkan aturan tertentu
+    //     // quest merupakan bagian persyaratan akses 
+    //     $this->middleware('guest')->except([
+    //         'login', 'admin.kelolaProfil.manajemenPetugasKesehatan'
+    //     ]);
+    // }
+
     /**
      * Display a registration form.
      *
@@ -63,7 +73,9 @@ class LoginRegisterController extends Controller
 
 
         $credentials = $request->only('username', 'password');
-        // Auth::attempt($credentials);
+
+        Auth::attempt($credentials);
+      
         $request->session()->regenerate();
         return redirect()->route('login')
             ->withSuccess('You have successfully registered & logged in!');
@@ -88,7 +100,9 @@ class LoginRegisterController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'email' => 'required|email',
+
+            'username' => 'required',
+
             'password' => 'required'
         ]);
 
@@ -98,9 +112,10 @@ class LoginRegisterController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Your provided credentials do not match in our records.',
-        ])->onlyInput('email');
+            'username' => 'Your provided credentials do not match in our records.',
+        ])->onlyInput('username');
     }
+
 
     /**
      * Display a dashboard to authenticated users.
@@ -110,13 +125,17 @@ class LoginRegisterController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
-            return view('dashboard');
+
+            return view('admin.kelolaProfil.manajemenPetugasKesehatan');
+
         }
 
         return redirect()->route('login')
             ->withErrors([
-                'email' => 'Please login to access the dashboard.',
-            ])->onlyInput('email');
+
+                'username' => 'Please login to access the dashboard.',
+            ])->onlyInput('username');
+
     }
 
     /**
@@ -130,7 +149,7 @@ class LoginRegisterController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login')
+
             ->withSuccess('You have logged out successfully!');;
     }
 }

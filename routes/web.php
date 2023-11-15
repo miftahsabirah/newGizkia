@@ -20,8 +20,8 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
-Route::get('/register', function () {
-    return view('register');
+Route::get('/', function () {
+    return view('login');
 });
 
 Route::get('/login', function () {
@@ -35,6 +35,7 @@ Route::get('/layoutsAdmin', function () {
 Route::get('/manajemenAkses', function () {
     return view('admin.kelolaProfil.manajemenAkses');
 });
+
 
 Route::get('/manajemenPetugasKesehatan', function () {
     return view('admin.kelolaProfil.manajemenPetugasKesehatan');
@@ -77,7 +78,7 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/store', 'store')->name('storeRegister');
     Route::get('/login', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
-    Route::get('/dashboard', 'dashboard')->name('dashboard')->middleware('auth');
+    Route::get('/dashboard', 'dashboard')->name('dashboard')->middleware(['auth', 'admin']);
     Route::post('/logout', 'logout')->name('logout');
 });
 

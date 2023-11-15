@@ -13,18 +13,18 @@ return new class extends Migration
     {
         Schema::create('jenispenyakit', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->tinyInteger('jantung')->default(1);
-            $table->tinyInteger('diabetes')->default(1);
-            $table->tinyInteger('paru_paru')->default(1);
-            $table->tinyInteger('ginjal')->default(1);
-            $table->tinyInteger('hati')->default(1);
-            $table->tinyInteger('kurang_darah')->default(1);
-            $table->tinyInteger('malaria')->default(1);
-            $table->tinyInteger('asma')->default(1);
-            $table->tinyInteger('tbc')->default(1);
-            $table->tinyInteger('epilepsi')->default(1);
-            $table->tinyInteger('jiwa')->default(1);
-            $table->tinyInteger('pms')->default(1);
+            $table->tinyInteger('jantung')->default(1)->nullable();
+            $table->tinyInteger('diabetes')->default(1)->nullable();
+            $table->tinyInteger('paru_paru')->default(1)->nullable();
+            $table->tinyInteger('ginjal')->default(1)->nullable();
+            $table->tinyInteger('hati')->default(1)->nullable();
+            $table->tinyInteger('kurang_darah')->default(1)->nullable();
+            $table->tinyInteger('malaria')->default(1)->nullable();
+            $table->tinyInteger('asma')->default(1)->nullable();
+            $table->tinyInteger('tbc')->default(1)->nullable();
+            $table->tinyInteger('epilepsi')->default(1)->nullable();
+            $table->tinyInteger('jiwa')->default(1)->nullable();
+            $table->tinyInteger('pms')->default(1)->nullable();
         });
     }
 
