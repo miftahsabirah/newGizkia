@@ -73,7 +73,9 @@ class LoginRegisterController extends Controller
 
 
         $credentials = $request->only('username', 'password');
+
         Auth::attempt($credentials);
+      
         $request->session()->regenerate();
         return redirect()->route('login')
             ->withSuccess('You have successfully registered & logged in!');
@@ -98,7 +100,9 @@ class LoginRegisterController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
+
             'username' => 'required',
+
             'password' => 'required'
         ]);
 
@@ -113,7 +117,6 @@ class LoginRegisterController extends Controller
     }
 
 
-
     /**
      * Display a dashboard to authenticated users.
      *
@@ -122,13 +125,17 @@ class LoginRegisterController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
+
             return view('admin.kelolaProfil.manajemenPetugasKesehatan');
+
         }
 
         return redirect()->route('login')
             ->withErrors([
+
                 'username' => 'Please login to access the dashboard.',
             ])->onlyInput('username');
+
     }
 
     /**
@@ -142,7 +149,6 @@ class LoginRegisterController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login')
 
             ->withSuccess('You have logged out successfully!');;
     }

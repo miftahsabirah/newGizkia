@@ -176,6 +176,27 @@ vertical-align: middle;
     margin-top: 8px;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.small-input {
+    height: 40px; /* Sesuaikan lebar sesuai kebutuhan */
+  }
+  
+.date-input-container {
+display: flex;
+align-items: center;
+margin-right: 5px; /* Atur margin jika diperlukan */
+}
+
+.formbold-form-text {
+margin-right: 10px; /* Atur margin antara label dan input */
+white-space: nowrap; /* Menghindari pemisah baris */
+
+}
+  
+
 
   
 
