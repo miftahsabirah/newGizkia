@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-Data Bumil Risti
+Data Imunisasi
 @endsection
 
 
@@ -14,19 +14,10 @@ Data Bumil Risti
 @section('isi')
 
   <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <div>
-        <button class="btn btn-color dropdown-toggle button1" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #D9D9D9">
-            -- Bumil Risti --
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="{{ route('dataBumil') }}">Ibu Hamil</a>
-            <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
-            <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
-        </div>
-    </div>
+    <h4>Data Imunisasi</h4>
 
     <button type="button" class="add-data">
-        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil Risti
+        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Imunisasi
     </button>
   </div>
 
@@ -116,49 +107,62 @@ Data Bumil Risti
                             </div>
                         </div>
                     </div>
+                  </div>
+
+                    {{-- button modal 3 --}}
+                    <button type="button" class="button-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3">
+                      Variabel
+                  </button>
+                  
+                  <!-- Modal 3 -->
+                  <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                          <div class="formbold-mb-3">
+                              <label class="formbold-form-label">Jenis Imunisasi</label>
+                      
+                              <select class="formbold-form-input" name="Imunisasi" id="Imunisasi">
+                              <option value="Pilih Imunisasi">--Pilih Jenis Imunisasi--</option>
+                              <option value="Imunisasi1">BCG</option>
+                              <option value="Imunisasi2">Booster Pentavalen</option>
+                              <option value="Imunisasi3">Booster Campak</option>
+                              <option value="Imunisasi4">Campak</option>
+                              <option value="Imunisasi5">DPT 1</option>
+                              <option value="Imunisasi6">DPT 2</option>
+                              <option value="Imunisasi7">DPT 3</option>
+                              <option value="Imunisasi8">Hepatitis 0</option>
+                              <option value="Imunisasi9">IPV</option>
+                              <option value="Imunisasi10">Polio 1</option>
+                              <option value="Imunisasi11">Polio 2</option>
+                              <option value="Imunisasi12">Polio 3</option>
+                              <option value="Imunisasi13">Polio 4</option>
+                              </select>
+                          </div>
+                          </div>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                          <button type="button" class="btn btn-primary">Terapkan</button>
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
 
             <div class="d-flex">
-                <div class="form-check-dbr mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Periode HPL
-                    </label>
-                </div>
-    
-                <div class="dropdown me-2">
-                    <button class="button-dd dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        --Bulan--
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <a class="dropdown-item" href="#">Januari</a>
-                        <a class="dropdown-item" href="#">Februari</a>
-                        <a class="dropdown-item" href="#">Maret</a>
-                        <a class="dropdown-item" href="#">April</a>
-                        <a class="dropdown-item" href="#">Mei</a>
-                        <a class="dropdown-item" href="#">Juni</a>
-                        <a class="dropdown-item" href="#">Juli</a>
-                        <a class="dropdown-item" href="#">Agustus</a>
-                        <a class="dropdown-item" href="#">September</a>
-                        <a class="dropdown-item" href="#">Oktober</a>
-                        <a class="dropdown-item" href="#">November</a>
-                        <a class="dropdown-item" href="#">Desember</a>
-                    </div>
-                </div>
-    
-                <div class="dropdown me-2">
-                    <button class="button-dd dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        --Tahun--
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                        <a class="dropdown-item" href="#">2020</a>
-                        <a class="dropdown-item" href="#">2021</a>
-                        <a class="dropdown-item" href="#">2022</a>
-                        <a class="dropdown-item" href="#">2023</a>
-                    </div>
-                </div>
-            </div>
+              <div class="date-input-container">
+                <label class="formbold-form-text">Tanggal Awal</label>
+                <input class="formbold-form-input small-input" type="date" name="TanggalAwal" id="TanggalAwal">
+              </div>
+            
+              <div class="date-input-container">
+                <label class="formbold-form-text">Tanggal Akhir</label>
+                <input class="formbold-form-input small-input" type="date" name="TanggalAkhir" id="TanggalAkhir">
+              </div>
+            </div>            
         </div>
 
         
@@ -167,89 +171,27 @@ Data Bumil Risti
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                      <th style="text-align: center;">No. Register</th>
-                      <th style="text-align: center;">Nama</th>
-                      <th style="text-align: center;">Umur</th>
-                      <th style="text-align: center;">Suami</th>
-                      <th style="text-align: center;">Jenis</th>
-                      <th style="text-align: center;">Gakin</th>
+                      <th style="text-align: center;">Tanggal</th>
+                      <th style="text-align: center;">No. Index</th>
+                      <th style="text-align: center;">Nama Bayi</th>
+                      <th style="text-align: center;">Tgl Lahir</th>
+                      <th style="text-align: center;">Jenis Kelamin</th>
                       <th style="text-align: center;">Posyandu</th>
-                      <th style="text-align: center;">RT</th>
-                      <th style="text-align: center;">RW</th>
                       <th style="text-align: center;">Dusun</th>
                       <th style="text-align: center;">Desa</th>
-                      <th style="text-align: center;">HTP</th>
-                      <th style="text-align: center;">F1</th>
-                      <th style="text-align: center;">F2</th>
-                      <th style="text-align: center;">F3</th>
-                      <th style="text-align: center;">F4</th>
-                      <th style="text-align: center;">F5</th>
-                      <th style="text-align: center;">F6</th>
-                      <th style="text-align: center;">R1</th>
-                      <th style="text-align: center;">R2</th>
-                      <th style="text-align: center;">R3</th>
-                      <th style="text-align: center;">R4</th>
-                      <th style="text-align: center;">R5</th>
-                      <th style="text-align: center;">R6</th>
-                      <th style="text-align: center;">R7</th>
-                      <th style="text-align: center;">R8</th>
-                      <th style="text-align: center;">R9</th>
-                      <th style="text-align: center;">R10</th>
-                      <th style="text-align: center;">R11</th>
-                      <th style="text-align: center;">R12</th>
-                      <th style="text-align: center;">Jenis Risti</th>
-                      <th style="text-align: center;">Rincian Risti</th>
-                      <th style="text-align: center;">G</th>
-                      <th style="text-align: center;">P</th>
-                      <th style="text-align: center;">A</th>
-                      <th style="text-align: center;">Lila</th>
-                      <th style="text-align: center;">S. Akhir</th>
-                      <th style="text-align: center;">D. Akhir</th>
-                      <th style="text-align: center;">HB. Akhir</th>
                       <th style="text-align: center;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>012345671</td>
-                        <td>Resanti Dwi Cahyani</td>
-                        <td>23 Tahun</td>
-                        <td>Doni Kurnia</td>                        
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
+                        <td>2023-11-09</td>                        
+                        <td>1234567789</td>                        
+                        <td>Muhammad Nur Huda</td>                        
+                        <td>2008-09-08</td>                        
+                        <td>Laki-Laki</td>                        
+                        <td>-</td>                        
+                        <td>-</td>                        
+                        <td>-</td>                        
                         <td>
                           <button class="icon-button">
                             <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
@@ -274,7 +216,7 @@ Data Bumil Risti
   $(document).ready(function () {
       $('#example').DataTable({
           columnDefs: [
-              { targets: [14], orderable: false }  // Kolom 10, 11, dan 16 tidak dapat di-sorting
+              { targets: [8], orderable: false }  // Kolom 10, 11, dan 16 tidak dapat di-sorting
           ]
       });
   });

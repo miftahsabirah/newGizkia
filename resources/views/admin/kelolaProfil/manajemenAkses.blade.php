@@ -43,246 +43,61 @@ Manajemen Akses
                         <td>$320,800</td>
                         <td><span class="badge rounded-pill bg-success">Terima</span></td>
                         <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
+                          <button type="button" class="icon-button" data-bs-toggle="modal" data-bs-target="#exampleModal-Decline">
+                              <i class="fi fi-rr-square-x" style="color: red;"></i>
                           </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
+                          <span style="margin-right: 10px;"></span>
+                          <button type="button" class="icon-button" data-bs-toggle="modal" data-bs-target="#exampleModal-Accept">
+                            <i class="fi fi-rr-checkbox" style="color: green;"></i>
                           </button>
                         </td>
                       
-                    </tr>
-
-                    <tr>
-                        <td>012345672</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345673</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Nauval Tri
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345674</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Muhammad Fadhillah
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>012345675</td>
-                        <td>
-                          <div class="profile">
-                              <img src="img/bgRegisterLogin.png" alt="Profile Image">
-                              Ananda Kusuma 
-                          </div>
-                        </td>                         
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td><span class="badge rounded-pill bg-danger">Tolak</span></td>
-                        <td>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-square-x" style="color: red;"></i> <!-- Ikon pertama menjadi merah -->
-                          </button>
-                          <span style="margin-right: 10px;"></span>
-                          <button class="icon-button">
-                              <i class="fi fi-rr-checkbox" style="color: green;"></i> <!-- Ikon kedua menjadi hijau -->
-                          </button>
-                        </td>
                     </tr>
 
                 </tbody>
             </table>
         </div>
     </div>
+
+{{-- untuk modal decline --}}
+<div class="modal fade" id="exampleModal-Decline" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+              <h5 class="modal-title" id="exampleModalLabel">Tolak</h5>
+            </div>
+            <div class="modal-body">
+                <div class="formbold-mb-3 d-flex justify-content-center">
+                    Apakah Anda yakin ingin menolak permintaan bidan ini?
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
+                <button type="button" class="btn btn-primary w-25">Ya</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- untuk modal accept --}}
+<div class="modal fade" id="exampleModal-Accept" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+              <h5 class="modal-title" id="exampleModalLabel">Terima</h5>
+            </div>
+            <div class="modal-body">
+                <div class="formbold-mb-3 d-flex justify-content-center">
+                    Apakah Anda yakin ingin menerima permintaan bidan ini?
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
+                <button type="button" class="btn btn-primary w-25">Ya</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection
 

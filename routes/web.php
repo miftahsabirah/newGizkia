@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginRegisterController;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,25 +24,53 @@ Route::get('/register', function () {
     return view('register');
 });
 
-// Route::get('/login', function () {
-//     return view('login');
-// });
+Route::get('/login', function () {
+    return view('login');
+});
 
-// Route::get('/layoutsAdmin', function () {
-//     return view('layoutsAdmin');
-// });
+Route::get('/layoutsAdmin', function () {
+    return view('layoutsAdmin');
+});
 
-// Route::get('/manajemenAkses', function () {
-//     return view('manajemenAkses');
-// });
+Route::get('/manajemenAkses', function () {
+    return view('admin.kelolaProfil.manajemenAkses');
+});
 
-// Route::get('/manajemenPetugasKesehatan', function () {
-//     return view('manajemenPetugasKesehatan');
-// });
+Route::get('/manajemenPetugasKesehatan', function () {
+    return view('admin.kelolaProfil.manajemenPetugasKesehatan');
+});
 
-// Route::get('/databumil', function () {
-//     return view('dataBumil');
-// });
+Route::get('/dataBumil', function () {
+    return view('admin.kelolaData.dataBumil');
+});
+
+Route::get('/dataIbuMelahirkan', function () {
+    return view('admin.kelolaData.dataIbuMelahirkan');
+});
+
+Route::get('/dataBumilRisti', function () {
+    return view('admin.kelolaData.dataBumilRisti');
+});
+
+Route::get('/formEdit', function () {
+    return view('admin.kelolaProfil.formEdit');
+});
+
+Route::get('/formDataBumil', function () {
+    return view('admin.kelolaData.formDataBumil');
+});
+
+Route::get('/formDataBumilRisti', function () {
+    return view('admin.kelolaData.formDataBumilRisti');
+});
+
+Route::get('/formDataIbuMelahirkan', function () {
+    return view('admin.kelolaData.formDataIbuMelahirkan');
+});
+
+Route::get('/dataImunisasi', function () {
+    return view('admin.kelolaData.dataImunisasi');
+});
 
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
@@ -49,4 +79,15 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard')->middleware('auth');
     Route::post('/logout', 'logout')->name('logout');
+});
+
+Route::controller(AdminController::class)->group(function () {
+    Route::get('/manajemenAkses', 'manajemenAkses')->name('manajemenAkses');
+    Route::get('/manajemenPetugasKesehatan', 'manajemenPetugas')->name('manajemenPetugas');
+    Route::get('/dataBumil', 'dataBumil')->name('dataBumil');
+    Route::get('/dataBumilRisti', 'dataBumilRisti')->name('dataBumilRisti');
+    Route::get('/dataIbuMelahirkan', 'dataIbuMelahirkan')->name('dataIbuMelahirkan');
+    Route::get('/dataBalita', 'dataBalita')->name('dataBalita');    
+    Route::get('/dataImunisasi', 'dataImunisasi')->name('dataImunisasi');    
+
 });
