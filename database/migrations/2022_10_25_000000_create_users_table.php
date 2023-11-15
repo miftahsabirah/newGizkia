@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('username');
             $table->string('password');
             $table->string('kode_pkm');
-            $table->enum('jenis_petugas',['bidan', 'dokter'])->nullable();
+            $table->enum('jenis_petugas',['bidan', 'dokter']);
             $table->string('email');
             $table->string('pwd');
-            $table->enum('role_id', ['admin', 'petugas'])->nullable();
+            $table->enum('role_id', ['admin', 'petugas']);
             $table->dateTime('last_login')->nullable();
             $table->integer('login_count')->nullable();
         });
