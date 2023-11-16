@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
-
 <body>
-    <div class="formbold-main-wrapper">
-        <div class="formbold-form-wrapper">
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h2 class="formbold-heading">Tambah Petugas Kesehatan</h2>
@@ -109,55 +105,6 @@
                             <span class="text-danger">{{ $errors->first('kode_pkm') }}</span>
                         @endif
                     </div>
-                    {{-- <div class="formbold-input-flex">
-                                    <div class="formbold-w-45">
-                                    <label for="nip" class="formbold-form-label"> NIP </label>
-                                    <input type="text" name="nip" id="nip" placeholder="NIP"
-                                        class="formbold-form-input" />
-                                    @if ($errors->has('nip'))
-                                        <span class="text-danger">{{ $errors->first('nip') }}</span>
-                                    @endif
-                                </div>
-
-                                <div class="formbold-w-45">
-                                    <label for="nama" class="formbold-form-label"> Nama Bidan </label>
-                                    <input type="text" name="nama" id="nama" placeholder="Nama bidan"
-                                        class="formbold-form-input" />
-                                    @if ($errors->has('nama'))
-                                        <span class="text-danger">{{ $errors->first('nama') }}</span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="formbold-input-flex">
-                                <div class="formbold-w-45">
-                                    <label for="age" class="formbold-form-label"> Puskesmas </label>
-                                    <input type="text" name="Puskesmas" id="puskesmas" placeholder="Ngudi Rahayu"
-                                        class="formbold-form-input" />
-                                </div>
-
-                                <div class="formbold-w-45">
-                                    <label for="dob" class="formbold-form-label"> Tanggal Lahir </label>
-                                    <input type="date" name="dob" id="dob"
-                                        class="formbold-form-input" />
-                                </div>
-                            </div>
-
-                            <div class="formbold-input-flex">
-                                <div class="formbold-w-45">
-                                    <label class="formbold-form-label">Jabatan</label>
-                                    <select class="formbold-form-input" name="occupation" id="occupation">
-                                        <option value="male">Bidan</option>
-                                        <option value="female">Petugas</option>
-                                        <option value="others">Lainnya</option>
-                                    </select>
-                                </div>
-
-                                <div class="formbold-w-45">
-                                    <label for="email" class="formbold-form-label"> Username </label>
-                                    <input type="text" name="username" id="username" placeholder="example"
-                                        class="formbold-form-input" />
-                                </div> --}}
                 </div>
 
                 {{-- <div class="formbold-mb-3">
@@ -165,7 +112,7 @@
                     <input name="foto" id="foto" placeholder="Pilih foto untuk di unggah"
                         class="formbold-form-input" disabled />
                 </div> --}}
-{{-- 
+                {{-- 
                 <div class="dropzone">
                     <label for="dropzone-file" class="dropzone-label">
                         <div class="dropzone-content">
@@ -184,7 +131,7 @@
                         </div>
                         <input id="dropzone-file" type="file" class="hidden" />
                     </label>
-                </div> --}} --}}
+                </div> --}}
 
 
                 <div class="formbold-btn-wrapper">
@@ -194,8 +141,9 @@
                         Simpan
                     </button> --}}
                     <button type="button" class="formbold-btn cancel">
-                <a href="{{ route('manajemenPetugas') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
-              </button>
+                        <a href="{{ route('manajemenPetugas') }}"
+                            style="color: #ffffff; text-decoration: none;">Batal</a>
+                    </button>
 
                 </div>
 
@@ -223,16 +171,9 @@
             </form>
         </div>
     </div>
-    </div> --}}
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
-
 </html>
-
