@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('penyakit', function (Blueprint $table) {
             $table->bigIncrements('id'); // Kolom 'id' adalah primary key
-            $table->integer('asfiksia');
-            $table->integer('hipotermi');
-            $table->integer('infeksi');
-            $table->integer('tetanus');
-            $table->integer('bblr');
-            $table->integer('komplikasi_lain');
+            $table->integer('asfiksia')->nullable();
+            $table->integer('hipotermi')->nullable();
+            $table->integer('infeksi')->nullable();
+            $table->integer('tetanus')->nullable();
+            $table->integer('bblr')->nullable();
+            $table->integer('komplikasi_lain')->nullable();
         });
     }
 

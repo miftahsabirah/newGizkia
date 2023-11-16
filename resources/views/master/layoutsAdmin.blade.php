@@ -84,7 +84,13 @@
 
 		<ul class="side-menu">
 			<li><a href="#" class="a-link"><i class="fi fi-rr-interrogation icon"></i> Bantuan</a></li>
-			<li><a href="#" class="a-link"><i class="fi fi-rr-exit icon" id="red-color"></i> <span id="red-color">Keluar</span></a></li>
+			<li><a class="a-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+				document.getElementById('logout-form').submit();"><i class="fi fi-rr-exit icon" id="red-color"></i> <span id="red-color">Keluar</span></a>
+					<form id="logout-form" action="{{ route('logout') }}" method="POST">
+						@csrf
+					</form>
+				</li>
+			{{-- <li><a href="{{ route('logout') }}" class="a-link"><i class="fi fi-rr-exit icon" id="red-color"></i> <span id="red-color">Keluar</span></a></li> --}}
 		</ul>
 
 	</section>
@@ -100,7 +106,7 @@
 					<h1 class= "NavTitle">BANK DATA GIZKIA</h1>
 				</div>
 			</form>
-			
+
 		</nav>
 		<!-- NAVBAR -->
 
