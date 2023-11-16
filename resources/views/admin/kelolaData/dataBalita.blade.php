@@ -16,13 +16,14 @@ Data Balita
   <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
     <h4>Data Balita</h4>
     <button type="button" class="add-data">
-        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data
+        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
     </button>
   </div>
 
 
     <div class="main-container">      
-        <div class="title-container rounded-top border-bottom">
+        <div class="title-container rounded-top border-bottom d-flex justify-content-between align-items-center">
+          <div>
           {{-- button modal 1 --}}
           <button type="button" class="button-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-1">
             Wilayah
@@ -167,7 +168,20 @@ Data Balita
               </div>
             </div>
           </div>
-          
+        </div>
+
+         
+          <div class="d-flex">
+            <div class="date-input-container">
+              <label class="formbold-form-text">Status</label>
+              <select class="formbold-form-input" name="status" id="status">
+                <option value="status">--Status--</option>
+                <option value="status1">Masih Menetap</option>
+                <option value="status2">Pindah</option>
+                <option value="status3">Meninggal</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         
@@ -176,39 +190,60 @@ Data Balita
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                      <th style="text-align: center;">No. Index Bumil</th>
+                      <th style="text-align: center;">No.</th>
+                      <th style="text-align: center;">Akte</th>
+                      <th style="text-align: center;">No. KK</th>
                       <th style="text-align: center;">Nama</th>
-                      <th style="text-align: center;">Suami</th>
+                      <th style="text-align: center;">Tgl Lahir</th>
+                      <th style="text-align: center;">Umur</th>
+                      <th style="text-align: center;">Jenis Kelamin</th>
+                      <th style="text-align: center;">Nama Ibu</th>
+                      <th style="text-align: center;">Nama Ayah</th>
+                      <th style="text-align: center;">Gakin</th>
                       <th style="text-align: center;">Posyandu</th>
                       <th style="text-align: center;">RT</th>
                       <th style="text-align: center;">RW</th>
                       <th style="text-align: center;">Dusun</th>
                       <th style="text-align: center;">Desa</th>
-                      <th style="text-align: center;">Tgl</th>
-                      <th style="text-align: center;">Penolong</th>
-                      <th style="text-align: center;">Cara Lahir</th>
-                      <th style="text-align: center;">Kondisi Bayi</th>
-                      <th style="text-align: center;">Kondisi Ibu</th>
-                      <th style="text-align: center;">Konseling Pasca Salin</th>
+                      <th style="text-align: center;">TB Terakhir</th>
+                      <th style="text-align: center;">BB Terakhir</th>
+                      <th style="text-align: center;">Tgl Timbang</th>
+                      <th style="text-align: center;">Stunting</th>
+                      <th style="text-align: center;">IDL</th>
+                      <th style="text-align: center;">BADUTA</th>
+                      <th style="text-align: center;">BBU</th>
+                      <th style="text-align: center;">TBU</th>
+                      <th style="text-align: center;">BBTB</th>
                       <th style="text-align: center;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>012345671</td>
-                        <td>Resanti Dwi Cahyani</td>
-                        <td>Doni Kurnia</td>                        
-                        <td>Posyanduu</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>Klakah</td>
-                        <td>Klakah</td>
-                        <td>2011-04-25</td>
-                        <td>Dipsi Lala</td>
-                        <td>Normal</td>
-                        <td>Sehat</td>
-                        <td>Sehat</td>
+                        <td>1</td>
+                        <td>36787765679</td>
                         <td>-</td>
+                        <td>Resanti Dwi Cahyani</td>
+                        <td>2011-07-04</td>
+                        <td>2011-07-04</td>
+                        <td>2</td>
+                        <td>Perempuan</td>
+                        <td>Nana Kusnadi</td>
+                        <td>Muhammad Nur Huda</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        
                         <td>
                           <button class="icon-button">
                             <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
@@ -233,7 +268,7 @@ Data Balita
   $(document).ready(function () {
       $('#example').DataTable({
           columnDefs: [
-              { targets: [14], orderable: false }  // Kolom 10, 11, dan 16 tidak dapat di-sorting
+              { targets: [24], orderable: false }  // Kolom 10, 11, dan 16 tidak dapat di-sorting
           ]
       });
   });
