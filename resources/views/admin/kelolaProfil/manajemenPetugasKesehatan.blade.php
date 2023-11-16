@@ -17,7 +17,7 @@ Manajemen Petugas Kesehatan
         <div class="table-container">
           <div>
             <button type="button" class="add-data">
-              <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data
+              <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Petugas
             </button>
           </div>
         

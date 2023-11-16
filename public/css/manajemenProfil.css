@@ -207,6 +207,10 @@ padding: 8px; /* Sesuaikan dengan padding yang diinginkan */
 box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar elemen */
 }
 
+.w-text{
+    color: #FFF;
+}
+
 
 
 

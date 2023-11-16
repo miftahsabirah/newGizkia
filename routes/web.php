@@ -57,6 +57,10 @@ Route::get('/formEdit', function () {
     return view('admin.kelolaProfil.formEdit');
 });
 
+Route::get('/formTambah', function () {
+    return view('admin.kelolaProfil.formTambah');
+});
+
 Route::get('/formDataBumil', function () {
     return view('admin.kelolaData.formDataBumil');
 });
