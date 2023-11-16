@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginRegisterController;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\ManajemenPetugasKesehatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,6 +80,13 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::post('/authenticate', 'authenticate')->name('authenticate');
     Route::get('/dashboard', 'dashboard')->name('dashboard')->middleware(['auth', 'admin']);
     Route::post('/logout', 'logout')->name('logout');
+});
+
+Route::controller(ManajemenPetugasKesehatanController::class)->group(function () {
+    Route::get('/Formtambah', 'Formtambah')->name('Formtambah');
+    Route::post('/storepetugas', 'storepetugas')->name('storepetugas');
+    Route::get('/manpetugas', 'manpetugas')->name('manpetugas');
+
 });
 
 Route::controller(AdminController::class)->group(function () {
