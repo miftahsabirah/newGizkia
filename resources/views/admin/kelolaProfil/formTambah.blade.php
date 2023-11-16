@@ -105,55 +105,6 @@
                             <span class="text-danger">{{ $errors->first('kode_pkm') }}</span>
                         @endif
                     </div>
-                    {{-- <div class="formbold-input-flex">
-                                    <div class="formbold-w-45">
-                                    <label for="nip" class="formbold-form-label"> NIP </label>
-                                    <input type="text" name="nip" id="nip" placeholder="NIP"
-                                        class="formbold-form-input" />
-                                    @if ($errors->has('nip'))
-                                        <span class="text-danger">{{ $errors->first('nip') }}</span>
-                                    @endif
-                                </div>
-
-                                <div class="formbold-w-45">
-                                    <label for="nama" class="formbold-form-label"> Nama Bidan </label>
-                                    <input type="text" name="nama" id="nama" placeholder="Nama bidan"
-                                        class="formbold-form-input" />
-                                    @if ($errors->has('nama'))
-                                        <span class="text-danger">{{ $errors->first('nama') }}</span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="formbold-input-flex">
-                                <div class="formbold-w-45">
-                                    <label for="age" class="formbold-form-label"> Puskesmas </label>
-                                    <input type="text" name="Puskesmas" id="puskesmas" placeholder="Ngudi Rahayu"
-                                        class="formbold-form-input" />
-                                </div>
-
-                                <div class="formbold-w-45">
-                                    <label for="dob" class="formbold-form-label"> Tanggal Lahir </label>
-                                    <input type="date" name="dob" id="dob"
-                                        class="formbold-form-input" />
-                                </div>
-                            </div>
-
-                            <div class="formbold-input-flex">
-                                <div class="formbold-w-45">
-                                    <label class="formbold-form-label">Jabatan</label>
-                                    <select class="formbold-form-input" name="occupation" id="occupation">
-                                        <option value="male">Bidan</option>
-                                        <option value="female">Petugas</option>
-                                        <option value="others">Lainnya</option>
-                                    </select>
-                                </div>
-
-                                <div class="formbold-w-45">
-                                    <label for="email" class="formbold-form-label"> Username </label>
-                                    <input type="text" name="username" id="username" placeholder="example"
-                                        class="formbold-form-input" />
-                                </div> --}}
                 </div>
 
                 {{-- <div class="formbold-mb-3">
@@ -161,7 +112,7 @@
                     <input name="foto" id="foto" placeholder="Pilih foto untuk di unggah"
                         class="formbold-form-input" disabled />
                 </div> --}}
-{{-- 
+                {{-- 
                 <div class="dropzone">
                     <label for="dropzone-file" class="dropzone-label">
                         <div class="dropzone-content">
@@ -181,44 +132,48 @@
                         <input id="dropzone-file" type="file" class="hidden" />
                     </label>
                 </div> --}}
-        
-      
-          <div class="formbold-btn-wrapper">
-              <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
-                  Simpan
-              </button>
-              <button type="button" class="formbold-btn cancel">
-                <a href="{{ route('manajemenPetugas') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
-              </button>
-
-          </div>
-          
-          {{--  <!-- Modal 2 -->
-              <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                          <div class="modal-header d-flex justify-content-center">
-                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
-                          </div>
-                          <div class="modal-body">
-                              <div class="formbold-mb-3 d-flex justify-content-center">
-                                  Apakah Anda ingin menyimpan data ini?
-                              </div>
-                          </div>
-                          <div class="modal-footer d-flex justify-content-center">
-                              <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
-                              <button type="button" class="btn btn-primary w-25">Ya</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-  
-            </div> --}}
 
 
+                <div class="formbold-btn-wrapper">
+                    <button class="formbold-btn">Submit</button>
+                    {{-- <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal-2">
+                        Simpan
+                    </button> --}}
+                    <button type="button" class="formbold-btn cancel">
+                        <a href="{{ route('manajemenPetugas') }}"
+                            style="color: #ffffff; text-decoration: none;">Batal</a>
+                    </button>
 
+                </div>
+
+                {{--  <!-- Modal 2 -->
+                {{-- <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header d-flex justify-content-center">
+                                    <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="formbold-mb-3 d-flex justify-content-center">
+                                        Apakah Anda ingin menyimpan data ini?
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                    <button type="button" class="btn btn-secondary w-25"
+                                        data-bs-dismiss="modal">Tidak</button>
+                                    <button type="button" class="btn btn-primary w-25">Ya</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
+            </form>
+        </div>
+    </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
