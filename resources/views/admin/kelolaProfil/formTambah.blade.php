@@ -161,8 +161,8 @@
                     <input name="foto" id="foto" placeholder="Pilih foto untuk di unggah"
                         class="formbold-form-input" disabled />
                 </div> --}}
-
-                {{-- <div class="dropzone">
+{{-- 
+                <div class="dropzone">
                     <label for="dropzone-file" class="dropzone-label">
                         <div class="dropzone-content">
                             <svg class="dropzone-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -181,43 +181,39 @@
                         <input id="dropzone-file" type="file" class="hidden" />
                     </label>
                 </div> --}}
+        
+      
+          <div class="formbold-btn-wrapper">
+              <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                  Simpan
+              </button>
+              <button type="button" class="formbold-btn cancel">
+                <a href="{{ route('manajemenPetugas') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+              </button>
 
-
-                <div class="formbold-btn-wrapper">
-                    <button class="formbold-btn">Submit</button>
-                    {{-- <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal-2">
-                        Simpan
-                    </button> --}}
-                    <button class="formbold-btn cancel">Batal</button>
-
-                </div>
-
-                <!-- Modal 2 -->
-                {{-- <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header d-flex justify-content-center">
-                                    <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="formbold-mb-3 d-flex justify-content-center">
-                                        Apakah Anda ingin menyimpan data ini?
-                                    </div>
-                                </div>
-                                <div class="modal-footer d-flex justify-content-center">
-                                    <button type="button" class="btn btn-secondary w-25"
-                                        data-bs-dismiss="modal">Tidak</button>
-                                    <button type="button" class="btn btn-primary w-25">Ya</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-            </form>
-        </div>
-    </div>
-    </div>
+          </div>
+          
+          {{--  <!-- Modal 2 -->
+              <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                          <div class="modal-header d-flex justify-content-center">
+                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
+                          </div>
+                          <div class="modal-body">
+                              <div class="formbold-mb-3 d-flex justify-content-center">
+                                  Apakah Anda ingin menyimpan data ini?
+                              </div>
+                          </div>
+                          <div class="modal-footer d-flex justify-content-center">
+                              <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
+                              <button type="button" class="btn btn-primary w-25">Ya</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+  
+            </div> --}}
 
 
 

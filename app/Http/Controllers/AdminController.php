@@ -41,4 +41,19 @@ class AdminController extends Controller
         return view('admin.kelolaData.dataImunisasi');
     }
 
+    public function formDataBumil()
+    {
+        return view('admin.kelolaData.formDataBumil');
+    }
+
+    public function formDataBumilRisti()
+    {
+        return view('admin.kelolaData.formDataBumilRisti');
+    }
+
+    public function formDataIbuMelahirkan()
+    {
+        return view('admin.kelolaData.formDataIbuMelahirkan');
+    }
+
 }

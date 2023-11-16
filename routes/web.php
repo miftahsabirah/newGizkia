@@ -57,6 +57,10 @@ Route::get('/formEdit', function () {
     return view('admin.kelolaProfil.formEdit');
 });
 
+Route::get('/formTambah', function () {
+    return view('admin.kelolaProfil.formTambah');
+});
+
 Route::get('/formDataBumil', function () {
     return view('admin.kelolaData.formDataBumil');
 });
@@ -96,6 +100,10 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/dataBumilRisti', 'dataBumilRisti')->name('dataBumilRisti');
     Route::get('/dataIbuMelahirkan', 'dataIbuMelahirkan')->name('dataIbuMelahirkan');
     Route::get('/dataBalita', 'dataBalita')->name('dataBalita');    
-    Route::get('/dataImunisasi', 'dataImunisasi')->name('dataImunisasi');    
+    Route::get('/dataImunisasi', 'dataImunisasi')->name('dataImunisasi');
+    Route::get('/formDataBumil', 'formDataBumil')->name('formDataBumil');
+    Route::get('/formDataBumilRisti', 'formDataBumilRisti')->name('formDataBumilRisti');
+    Route::get('/formDataIbuMelahirkan', 'formDataIbuMelahirkan')->name('formDataIbuMelahirkan');
+    
 
 });

@@ -155,12 +155,12 @@ Data Imunisasi
             <div class="d-flex">
               <div class="date-input-container">
                 <label class="formbold-form-text">Tanggal Awal</label>
-                <input class="formbold-form-input small-input" type="date" name="TanggalAwal" id="TanggalAwal">
+                <input class="formbold-form-input small-input1" type="date" name="TanggalAwal" id="TanggalAwal">
               </div>
             
               <div class="date-input-container">
                 <label class="formbold-form-text">Tanggal Akhir</label>
-                <input class="formbold-form-input small-input" type="date" name="TanggalAkhir" id="TanggalAkhir">
+                <input class="formbold-form-input small-input1" type="date" name="TanggalAkhir" id="TanggalAkhir">
               </div>
             </div>            
         </div>

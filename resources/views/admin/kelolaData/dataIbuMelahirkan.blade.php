@@ -25,9 +25,9 @@ Data Ibu Melahirkan
         </div>
     </div>
 
-    <button type="button" class="add-data">
-        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Ibu Melahirkan
-    </button>
+    <a href="{{ route('formDataIbuMelahirkan') }}" type="button" class="add-data">
+      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Ibu Melahirkan
+    </a>
   </div>
 
 
