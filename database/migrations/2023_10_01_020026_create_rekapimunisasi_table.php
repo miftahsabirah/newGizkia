@@ -13,24 +13,24 @@ return new class extends Migration
     {
         Schema::create('rekapimunisasi', function (Blueprint $table) {
             $table->id();
-            $table->date('bcg');
-            $table->date('dpt_1');
-            $table->date('dpt_2');
-            $table->date('dpt_3');
-            $table->date('polio_1');
-            $table->date('polio_2');
-            $table->date('polio_3');
-            $table->date('ipv');
-            $table->date('campak'); 
-            $table->date('boosterpentavalen');
-            $table->date('boostercampak');
-            $table->date('hepatitis_0');
-            $table->date('hepatitis_1');
-            $table->date('hepatitis_2');
-            $table->date('hepatitis_3');
-            $table->date('noe_natal_1');
-            $table->date('noe_natal_2');
-            $table->date('noe_natal_3');
+            $table->date('bcg')->nullable();
+            $table->date('dpt_1')->nullable();
+            $table->date('dpt_2')->nullable();
+            $table->date('dpt_3')->nullable();
+            $table->date('polio_1')->nullable();
+            $table->date('polio_2')->nullable();
+            $table->date('polio_3')->nullable();
+            $table->date('ipv')->nullable();
+            $table->date('campak')->nullable();
+            $table->date('boosterpentavalen')->nullable();
+            $table->date('boostercampak')->nullable();
+            $table->date('hepatitis_0')->nullable();
+            $table->date('hepatitis_1')->nullable();
+            $table->date('hepatitis_2')->nullable();
+            $table->date('hepatitis_3')->nullable();
+            $table->date('noe_natal_1')->nullable();
+            $table->date('noe_natal_2')->nullable();
+            $table->date('noe_natal_3')->nullable();
             
         });
     }
