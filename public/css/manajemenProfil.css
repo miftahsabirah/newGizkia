@@ -180,29 +180,36 @@ vertical-align: middle;
     display: flex;
 }
 
-.small-input {
+.small-input1 {
     height: 40px; /* Sesuaikan lebar sesuai kebutuhan */
   }
-  
+
+.small-input2 {
+height: 35px; /* Sesuaikan lebar sesuai kebutuhan */
+}
+.d-flex {
+    display: flex;
+}
+
 .date-input-container {
-display: flex;
+display: grid;
+grid-template-columns: max-content auto;
+gap: 10px; /* Sesuaikan dengan jarak antar elemen yang diinginkan */
 align-items: center;
-margin-right: 5px; /* Atur margin jika diperlukan */
+margin-bottom: 10px; /* Sesuaikan dengan margin yang diinginkan */
+margin-right: 10px;
 }
 
-.formbold-form-text {
-margin-right: 10px; /* Atur margin antara label dan input */
-white-space: nowrap; /* Menghindari pemisah baris */
 
+.formbold-form-input {
+width: 100%; /* Mengisi lebar container */
+padding: 8px; /* Sesuaikan dengan padding yang diinginkan */
+box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar elemen */
 }
-  
 
-
-  
-
-
-
-
+.w-text{
+    color: #FFF;
+}
 
 
 

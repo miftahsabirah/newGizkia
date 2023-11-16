@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
+
 <body>
+    <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h2 class="formbold-heading">Tambah Petugas Kesehatan</h2>
@@ -161,8 +165,8 @@
                     <input name="foto" id="foto" placeholder="Pilih foto untuk di unggah"
                         class="formbold-form-input" disabled />
                 </div> --}}
-
-                {{-- <div class="dropzone">
+{{-- 
+                <div class="dropzone">
                     <label for="dropzone-file" class="dropzone-label">
                         <div class="dropzone-content">
                             <svg class="dropzone-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +184,7 @@
                         </div>
                         <input id="dropzone-file" type="file" class="hidden" />
                     </label>
-                </div> --}}
+                </div> --}} --}}
 
 
                 <div class="formbold-btn-wrapper">
@@ -189,11 +193,13 @@
                         data-bs-target="#exampleModal-2">
                         Simpan
                     </button> --}}
-                    <button class="formbold-btn cancel">Batal</button>
+                    <button type="button" class="formbold-btn cancel">
+                <a href="{{ route('manajemenPetugas') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+              </button>
 
                 </div>
 
-                <!-- Modal 2 -->
+                {{--  <!-- Modal 2 -->
                 {{-- <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
@@ -217,12 +223,16 @@
             </form>
         </div>
     </div>
-    </div>
+    </div> --}}
+
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
+
 </html>
+

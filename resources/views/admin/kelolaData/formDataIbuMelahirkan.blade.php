@@ -157,8 +157,9 @@
               <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
                   Simpan
               </button>
-              <button class="formbold-btn cancel">Batal</button>
-
+              <button type="button" class="formbold-btn cancel">
+                <a href="{{ route('dataIbuMelahirkan') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+              </button>
           </div>
           
           <!-- Modal 2 -->
@@ -175,7 +176,9 @@
                           </div>
                           <div class="modal-footer d-flex justify-content-center">
                               <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
-                              <button type="button" class="btn btn-primary w-25">Ya</button>
+                              <button type="button" class="btn btn-primary w-25">
+                                <a href="{{ route('dataIbuMelahirkan') }}" style="color: #ffffff; text-decoration: none;">Ya</a>
+                              </button>                          
                           </div>
                       </div>
                   </div>
