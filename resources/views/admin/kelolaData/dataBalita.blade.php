@@ -15,9 +15,9 @@ Data Balita
 
   <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
     <h4>Data Balita</h4>
-    <button type="button" class="add-data">
-        <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
-    </button>
+    <a href="{{ route('Formtambah') }}" type="button" class="add-data">
+      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
+    </a>
   </div>
 
 

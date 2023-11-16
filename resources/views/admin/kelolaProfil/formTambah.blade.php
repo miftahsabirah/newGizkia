@@ -161,8 +161,8 @@
                     <input name="foto" id="foto" placeholder="Pilih foto untuk di unggah"
                         class="formbold-form-input" disabled />
                 </div> --}}
-
-                {{-- <div class="dropzone">
+{{-- 
+                <div class="dropzone">
                     <label for="dropzone-file" class="dropzone-label">
                         <div class="dropzone-content">
                             <svg class="dropzone-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@
                         </div>
                         <input id="dropzone-file" type="file" class="hidden" />
                     </label>
-                </div>
+                </div> --}}
         
       
           <div class="formbold-btn-wrapper">
@@ -193,7 +193,7 @@
 
           </div>
           
-          <!-- Modal 2 -->
+          {{--  <!-- Modal 2 -->
               <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
@@ -213,7 +213,7 @@
                   </div>
               </div>
   
-            </div>
+            </div> --}}
 
 
 

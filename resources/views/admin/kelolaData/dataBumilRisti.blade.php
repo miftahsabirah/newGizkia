@@ -25,9 +25,9 @@ Data Bumil Risti
         </div>
     </div>
 
-    <button type="button" class="add-data">
+    <a href="{{ route('formDataBumilRisti') }}" type="button" class="add-data">
         <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil Risti
-    </button>
+    </a>
   </div>
 
 
