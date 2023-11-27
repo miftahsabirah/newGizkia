@@ -113,5 +113,3 @@ Manajemen Akses
 </script>
 @endsection
 
-</body>
-</html>

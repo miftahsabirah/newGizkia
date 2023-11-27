@@ -1,6 +1,7 @@
-@extends('layoutsAdmin')
+@extends('master.layoutsAdmin')
 
 <!-- MAIN -->
+<link rel="stylesheet" href="css/manajemenProfil.css">
 
 @section('isi')
 
@@ -14,6 +15,8 @@
     <link rel="stylesheet" href="css/coba.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    
+
 </head>
 <body>
 
@@ -25,16 +28,24 @@
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th>NIP</th>
+                        <th rowspan="2">NIP</th>                        
+                        <th>2</th>
+                        <th>3</th>
+                        <th rowspan="2">NIP</th>                        
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th rowspan="2">NIP</th>                        
+                    </tr>
+                    <tr>
                         <th>Nama</th>
                         <th>Puskesmas</th>
-                        <th>Tanggal Lahir</th>
                         <th>Jabatan</th>
                         <th>Username</th>
                         <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <td>012345678</td>
@@ -67,10 +78,9 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+
 <script>
     new DataTable('#example');
-
-
 </script>
 
 </body>

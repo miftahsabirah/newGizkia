@@ -55,5 +55,13 @@ class AdminController extends Controller
     {
         return view('admin.kelolaData.formDataIbuMelahirkan');
     }
+    public function formDataBalita()
+    {
+        return view('admin.kelolaData.formDataBalita');
+    }
+    public function formDataImunisasi()
+    {
+        return view('admin.kelolaData.formDataImunisasi');
+    }
 
 }
