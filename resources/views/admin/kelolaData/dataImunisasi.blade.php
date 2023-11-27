@@ -16,9 +16,9 @@ Data Imunisasi
   <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
     <h4>Data Imunisasi</h4>
 
-    <button type="button" class="add-data">
+    <a href="{{ route('formDataImunisasi') }}" type="button" class="add-data2">
         <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Imunisasi
-    </button>
+    </a>
   </div>
 
 
@@ -235,6 +235,5 @@ Data Imunisasi
 
 @endsection
 
-</body>
-</html>
+
 

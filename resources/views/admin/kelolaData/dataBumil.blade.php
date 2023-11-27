@@ -1,11 +1,11 @@
 @extends('master.layoutsAdmin')
 
 @section('link')
-    <link rel="stylesheet" href="css/manajemenProfil.css">
+        <link rel="stylesheet" href="css/manajemenProfil.css">
 @endsection
 
 @section('title')
-    Data Bumil
+        Data Bumil
 @endsection
 
 
@@ -24,11 +24,25 @@
                 <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
             </div>
         </div>
+    <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <button class="btn btn-color dropdown-toggle button1" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #D9D9D9">
+                -- Ibu Hamil --
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{{ route('dataBumil') }}">Ibu Hamil</a>
+                <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
+                <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
+            </div>
+        </div>
 
-        <a href="{{ route('formDataBumil') }}" type="button" class="add-data">
-            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
-        </a>
-    </div>
+
+    <a href="{{ route('formDataBumil') }}" type="button" class="add-data2">
+      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
+    </a>
+  </div>
+
 
 
     <div class="main-container">
@@ -262,6 +276,4 @@
     </script>
 @endsection
 
-</body>
 
-</html>
