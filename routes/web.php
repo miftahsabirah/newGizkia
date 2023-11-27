@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginRegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DatabayiController;
+use App\Http\Controllers\DatabumilController;
 use App\Http\Controllers\ManajemenPetugasKesehatanController;
 use App\Http\Controllers\MapsController;
 
@@ -144,6 +146,17 @@ Route::controller(ManajemenPetugasKesehatanController::class)->group(function ()
     Route::get('/manpetugas', 'manpetugas')->name('manpetugas');
 
 });
+
+route::controller(DatabayiController::class)->group(function() {
+    Route::get('/indexbayi', 'indexbayi')->name('indexbayi');
+
+});
+
+route::controller(DatabumilController::class)->group(function() {
+    Route::get('/indexbumil', 'indexbumil')->name('indexbumil');
+
+});
+
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/manajemenAkses', 'manajemenAkses')->name('manajemenAkses');

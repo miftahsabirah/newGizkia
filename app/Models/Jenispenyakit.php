@@ -8,5 +8,24 @@ use Illuminate\Database\Eloquent\Model;
 class Jenispenyakit extends Model
 {
     use HasFactory;
+
     protected $table = 'jenispenyakit';
+    protected $fillable = [
+        'jantung',
+        'diabetes',
+        'paru_paru',
+        'ginjal',
+        'hati',
+        'kurang_darah',
+        'malaria',
+        'asma',
+        'tbc',
+        'epilepsi',
+        'jiwa',
+        'pms',
+    ];
+
+    // Jika Anda memiliki timestamp (created_at, updated_at), tambahkan properti berikut
+    public $timestamps = false;
+
 }

@@ -18,7 +18,7 @@ class RekapbalitaFactory extends Factory
     {
         return [
             'umur_bayi_meniggal' => $this->faker->numberBetween(1, 24),
-            'tempat_bayi_meniggal' => $this->faker->randomElement(['RS', 'Rumah']),
+            'tempat_bayi_meniggal' => substr($this->faker->word, 0, 2),
             'penyebab_bayi_meniggal' => $this->faker->randomElement(['A', 'B', 'C']),
             'meniggal' => $this->faker->randomElement(['Y', 'N']),
             'tanggal_meniggal' => $this->faker->date,
