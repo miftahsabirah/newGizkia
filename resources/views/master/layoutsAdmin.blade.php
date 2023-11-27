@@ -52,8 +52,8 @@
 			<li>
 				<a href="#" class="a-link"><i class="fi fi-rr-stats icon"></i> Kelola Data <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="{{ route('dataBumil') }}" class="a-link">Data Bumil</a></li>
-					<li><a href="{{ route('dataBalita') }}" class="a-link">Data Anak</a></li>
+					<li><a href="{{ route('indexbumil') }}" class="a-link">Data Bumil</a></li>
+					<li><a href="{{ route('indexbayi') }}" class="a-link">Data Anak</a></li>
 					<li><a href="{{ route('dataImunisasi') }}" class="a-link">Data Imunisasi</a></li>
 				</ul>
 			</li>

@@ -8,5 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Jenisfaktor extends Model
 {
     use HasFactory;
+
     protected $table = 'jenisfaktor';
+    protected $fillable = [
+        'faktor1',
+        'faktor2',
+        'faktor3',
+        'faktor4',
+        'faktor5',
+        'faktor6',
+    ];
+
+    // Jika Anda memiliki timestamp (created_at, updated_at), tambahkan properti berikut
+    public $timestamps = false;
 }
