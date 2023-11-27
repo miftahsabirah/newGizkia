@@ -8,5 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Rekapbalita extends Model
 {
     use HasFactory;
-    protected $table = 'rekapbalita';
+
+    protected $table = 'rekapbalita'; // Sesuaikan dengan nama tabel yang sebenarnya
+
+    protected $fillable = [
+        'umur_bayi_meniggal',
+        'tempat_bayi_meniggal',
+        'penyebab_bayi_meniggal',
+        'meniggal',
+        'tanggal_meniggal',
+        'gizi_buruk',
+        'berat_bayi',
+        'linkar_kepala',
+        'pindah',
+        'tanggal_pindah',
+        'status_tumbuh_kembang',
+    ];
+
+    protected $dates = ['tanggal_meniggal', 'tanggal_pindah'];
+    public $timestamps = false;
 }

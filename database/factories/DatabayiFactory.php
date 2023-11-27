@@ -8,11 +8,15 @@ use App\Models\Rekapbalita;
 use App\Models\Rekapimunisasi;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+use App\Models\Databayi;
+
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Databayi>
  */
 class DatabayiFactory extends Factory
 {
+    protected $model = Databayi::class;
+    
     /**
      * Define the model's default state.
      *
@@ -20,11 +24,10 @@ class DatabayiFactory extends Factory
      */
     public function definition(): array
     {
+        $posyandu = Posyandu::inRandomOrder()->first();
         return [
             'no_index_balita' => $this->faker->unique()->numberBetween(100000000000000000, 999999999999999999),
-            'kode_posyandu' => function () {
-                return Posyandu::inRandomOrder()->first()->kode_posyandu;
-            },
+            'kode_posyandu' => $posyandu ? $posyandu->kode_posyandu : null,
             'id_rekapimunisasi' => function () {
                 return Rekapimunisasi::inRandomOrder()->first()->id;
             },
@@ -57,7 +60,7 @@ class DatabayiFactory extends Factory
             'status_bbtb' => $this->faker->randomElement(['A', 'B', 'C']),
             'tanggal_register' => $this->faker->date,
             'kode_tempat' => $this->faker->randomElement(['A', 'B', 'C']),
-            'alamat' => $this->faker->address,
+            'alamat' => implode(' ', $this->faker->words(10)),
             'kode_wilayah' => $this->faker->randomElement(['A', 'B', 'C']),
             'dirujuk' => $this->faker->randomElement(['A', 'B', 'C']),
             'no_telepon_ortu' => $this->faker->phoneNumber,

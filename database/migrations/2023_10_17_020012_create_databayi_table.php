@@ -39,7 +39,7 @@ return new class extends Migration
             $table->string('status_bbtb', 1);
             $table->date('tanggal_register');
             $table->string('kode_tempat', 2);
-            $table->string('alamat', 50);
+            $table->string('alamat', 255); 
             $table->string('kode_wilayah', 10);
             $table->string('dirujuk', 2);
             $table->string('no_telepon_ortu', 15);
