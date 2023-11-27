@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,100&display=swap%27');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* buat navbar bawah */
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #AEE2FF;
+}
+/* buat navbar atas (bank gizkia) */
+.navbar1{
+    padding: 15px;
+    top: 0;
+    background-color: #46BEFF;
+    color: #0000A3;
+    font-size: x-large;
+}
+
+.nav-link {
+    color: #000000; /* Mengganti warna teks untuk semua elemen .nav-link menjadi biru */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.nav-item:hover .nav-link {
+    color: #2563EB; /* Ganti dengan warna yang Anda inginkan saat hover */
+  }
+
+
+

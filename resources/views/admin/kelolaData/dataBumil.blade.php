@@ -25,10 +25,12 @@
             </div>
         </div>
 
-        <a href="{{ route('formDataBumil') }}" type="button" class="add-data">
-            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
-        </a>
-    </div>
+
+    <a href="{{ route('formDataBumil') }}" type="button" class="add-data2">
+      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
+    </a>
+  </div>
+
 
 
     <div class="main-container">
@@ -262,6 +264,4 @@
     </script>
 @endsection
 
-</body>
 
-</html>

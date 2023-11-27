@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DatabayiController;
 use App\Http\Controllers\DatabumilController;
 use App\Http\Controllers\ManajemenPetugasKesehatanController;
+use App\Http\Controllers\MapsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +33,7 @@ Route::get('/login', function () {
 });
 
 Route::get('/layoutsAdmin', function () {
-    return view('layoutsAdmin');
+    return view('master.layoutsAdmin');
 });
 
 Route::get('/manajemenAkses', function () {
@@ -75,9 +77,59 @@ Route::get('/formDataIbuMelahirkan', function () {
     return view('admin.kelolaData.formDataIbuMelahirkan');
 });
 
+Route::get('/formDataBalita', function () {
+    return view('admin.kelolaData.formDataBalita');
+});
+
+Route::get('/formDataImunisasi', function () {
+    return view('admin.kelolaData.formDataImunisasi');
+});
+
 Route::get('/dataImunisasi', function () {
     return view('admin.kelolaData.dataImunisasi');
 });
+
+Route::get('/petaAnak', function () {
+    return view('admin.lihatLokasi.petaAnak');
+});
+
+Route::get('/petaBumil', function () {
+    return view('admin.lihatLokasi.petaBumil');
+});
+
+Route::get('/petaBelumTerdaftar', function () {
+    return view('admin.lihatLokasi.petaBelumTerdaftar');
+});
+
+Route::get('/coba', function () {
+    return view('coba');
+});
+
+Route::get('/rekapGizi', function () {
+    return view('admin.rekapitulasi.gizi');
+});
+Route::get('/rekapBumil', function () {
+    return view('admin.rekapitulasi.bumil');
+});
+Route::get('/rekapAnak', function () {
+    return view('admin.rekapitulasi.anak');
+});
+Route::get('/rekapImunisasi', function () {
+    return view('admin.rekapitulasi.imunisasi');
+});
+
+Route::get('/pengaturan', function () {
+    return view('admin.pengaturan');
+});
+
+Route::get('/dash', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/header', function () {
+    return view('master.header');
+});
+
 
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
@@ -117,6 +169,12 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/formDataBumil', 'formDataBumil')->name('formDataBumil');
     Route::get('/formDataBumilRisti', 'formDataBumilRisti')->name('formDataBumilRisti');
     Route::get('/formDataIbuMelahirkan', 'formDataIbuMelahirkan')->name('formDataIbuMelahirkan');
+    Route::get('/formDataBalita', 'formDataBalita')->name('formDataBalita');
+    Route::get('/formDataImunisasi', 'formDataImunisasi')->name('formDataImunisasi');
+
     
 
 });
+
+Route::get('/maps', 'MapsController@showMap');
+

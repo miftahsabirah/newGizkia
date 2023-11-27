@@ -22,6 +22,11 @@
     width: auto;
 }
 
+.th2 {
+    border: 1px solid #dee2e6 !important;
+    text-align: center !important
+}
+
 .table th {
     white-space: nowrap; /* Jangan lakukan wrap teks */
     overflow: hidden; /* Sembunyikan teks yang melebihi lebar sel */
@@ -74,6 +79,17 @@
     color: #FFF;
     border-radius: 8px;
     border: 0px;
+    margin-right: 20px;
+}
+
+.add-data2{
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: #26A4EA;
+    color: #FFF;
+    border-radius: 8px;
+    border: 0px;
+    margin-right: 5px;
 }
 
 .add-icon{
@@ -210,6 +226,51 @@ box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar eleme
 .w-text{
     color: #FFF;
 }
+
+.halaman-peta{
+    margin: 30px;
+
+}
+
+.bg-filter-peta{
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.title-peta{
+    background-color: #26A4EA;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+}
+
+.filter-peta{
+    margin-top: 20px;
+    margin-bottom: 75px;
+}
+
+#map { height: 575px; }
+
+.table-pengaturan{
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title-pengaturan{
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.separator {
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+
 
 
 

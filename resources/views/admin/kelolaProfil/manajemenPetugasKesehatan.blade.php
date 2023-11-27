@@ -79,6 +79,4 @@
     </script>
 @endsection
 
-</body>
 
-</html>

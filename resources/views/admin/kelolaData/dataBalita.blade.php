@@ -12,12 +12,14 @@
 <!-- MAIN -->
 
 @section('isi')
-    <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-        <h4>Data Balita</h4>
-        <a href="{{ route('Formtambah') }}" type="button" class="add-data">
-            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
-        </a>
-    </div>
+
+  <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
+    <h4>Data Balita</h4>
+    <a href="{{ route('formDataBalita') }}" type="button" class="add-data2">
+      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
+    </a>
+  </div>
+
 
 
     <div class="main-container">
@@ -318,6 +320,3 @@
     </script>
 @endsection
 
-</body>
-
-</html>

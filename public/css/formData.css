@@ -48,6 +48,7 @@ body {
 
     .formbold-w-45 {
       flex: 0 0 calc(50% - 20px);
+      margin-left: 5px;
     }
 
     .formbold-form-input {
