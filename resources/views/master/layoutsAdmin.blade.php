@@ -31,7 +31,7 @@
 
 		<ul class="side-menu">
 			<li class="divider" data-text="Utama">Utama</li>
-			<li><a href="#" class="a-link"><i class='fi fi-rr-home icon'></i> Dashboard</a></li>
+			<li><a href="{{ route('dashboard')}}" class="a-link"><i class='fi fi-rr-home icon'></i> Dashboard</a></li>
 			<li>
 				<a href="#" class="a-link"><i class="fi fi-rr-user icon"></i></i> Kelola Profil <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
@@ -43,9 +43,9 @@
 			<li>
 				<a href="#" class="a-link"><i class="fi fi-rr-map-marker icon"></i> Lihat Lokasi <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="#" class="a-link">Peta Bumil</a></li>
-					<li><a href="#" class="a-link">Peta Anak</a></li>
-					<li><a href="#" class="a-link">Peta Bumil Belum Terdaftar</a></li>
+					<li><a href="{{ route('petaBumil')}}" class="a-link">Peta Bumil</a></li>
+					<li><a href="{{ route('petaAnak')}}" class="a-link">Peta Anak</a></li>
+					<li><a href="{{ route('petaBelumTerdaftar')}}" class="a-link">Peta Bumil Belum Terdaftar</a></li>
 				</ul>
 			</li>
 
@@ -61,10 +61,10 @@
 			<li>
 				<a href="#" class="a-link"><i class="fi fi-rr-memo-circle-check icon"></i> Kelola Rekapitulasi <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="#" class="a-link">Rekapitulasi Bumil</a></li>
-					<li><a href="#" class="a-link">Rekapitulasi Anak</a></li>
-					<li><a href="#" class="a-link">Rekapitulasi Imunisasi</a></li>
-					<li><a href="#" class="a-link">Rekapitulasi Gizi</a></li>
+					<li><a href="{{ route('rekapBumil')}}" class="a-link">Rekapitulasi Bumil</a></li>
+					<li><a href="{{ route('rekapAnak')}}" class="a-link">Rekapitulasi Anak</a></li>
+					<li><a href="{{ route('rekapImunisasi')}}" class="a-link">Rekapitulasi Imunisasi</a></li>
+					<li><a href="{{ route('rekapGizi')}}" class="a-link">Rekapitulasi Gizi</a></li>
 				</ul>
 			</li>
 			
@@ -72,18 +72,11 @@
 
 			<li class="divider" data-text="Pengaturan">Pengaturan</li>
 			<li>
-				<a href="#" class="a-link"><i class="fi fi-rr-settings icon"></i></i> Pengaturan <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="#" class="a-link">Basic</a></li>
-					<li><a href="#" class="a-link">Select</a></li>
-					<li><a href="#" class="a-link">Checkbox</a></li>
-					<li><a href="#" class="a-link">Radio</a></li>
-				</ul>
+				<a href="{{ route('pengaturan')}}" class="a-link"><i class="fi fi-rr-settings icon"></i></i> Pengaturan </a>
 			</li>
 		</ul>
 
 		<ul class="side-menu">
-			<li><a href="#" class="a-link"><i class="fi fi-rr-interrogation icon"></i> Bantuan</a></li>
 			<li><a class="a-link" href="{{ route('logout') }}" onclick="event.preventDefault();
 				document.getElementById('logout-form').submit();"><i class="fi fi-rr-exit icon" id="red-color"></i> <span id="red-color">Keluar</span></a>
 					<form id="logout-form" action="{{ route('logout') }}" method="POST">

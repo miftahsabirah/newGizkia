@@ -49,7 +49,7 @@ crossorigin=""></script>
             </div>
 
             <div class="d-grid gap-2 filter-peta">
-                <button class="btn btn-primary" type="button">Button</button>
+                <button class="btn btn-primary" type="button">Cari Lokasi</button>
             </div>
               
         </div>
