@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('posyandu', function (Blueprint $table) {
-            $table->string('kode_posyandu', 10)->primary();
-            $table->string('kode_desa', 11);
-            $table->string('kode_dusun', 14);
-            $table->string('posyandu', 20);
-            $table->string('kode_bidan', 21);
+            $table->string('kode_posyandu')->primary();
+            $table->string('kode_desa');
+            $table->string('kode_dusun');
+            $table->string('posyandu');
+            $table->string('kode_bidan');
             $table->integer('jumlah_kader');
-            $table->string('jenis', 2);
+            $table->string('jenis');
 
             $table->foreign('kode_desa')->references('kode_desa')->on('datadesa');
             $table->foreign('kode_dusun')->references('kode_dusun')->on('datadusun');

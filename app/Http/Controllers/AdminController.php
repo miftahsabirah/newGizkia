@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -69,6 +71,7 @@ class AdminController extends Controller
         return view('admin.kelolaData.formDataImunisasi');
     }
 
+
     public function petaAnak()
     {
         return view('admin.lihatLokasi.petaAnak');
@@ -122,5 +125,38 @@ class AdminController extends Controller
     {
         return view('admin.kelolaProfil.formEdit');
     }
+
+
+    public function storeadmin(Request $request){
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'nama' => 'required',
+            'telepon' => 'required',
+            'jenis_petugas' => 'required',
+            'nip' => 'required',
+            'pwd' => 'required',
+            'kode_pkm' => 'required',
+            'email' => 'required',
+        ]);
+        User::create([
+            'username' => $request->username,
+            'password' => Hash::make($request->password),
+            'nama' => $request->nama,
+            'telepon' => $request->telepon,
+            'jenis_petugas' => $request->jenis_petugas,
+            'nip' => $request->nip,
+            'pwd' => $request->pwd,
+            'kode_pkm' => $request->kode_pkm,
+            'role_id' => 'petugas',
+            'email' => $request->email,
+        ]);
+
+        return redirect()->route('login')
+        ->withSuccess('You have successfully registered & logged in!');
+    }
+
+
+
 
 }

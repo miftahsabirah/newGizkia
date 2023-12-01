@@ -25,11 +25,11 @@
             </div>
         </div>
 
-    <a href="{{ route('formDataBumil') }}" type="button" class="add-data2">
-      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
-    </a>
-  </div>
 
+        <a href="{{ route('createbumil') }}" type="button" class="add-data2">
+            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
+        </a>
+    </div>
 
 
     <div class="main-container">
@@ -225,10 +225,10 @@
                 <tbody>
                     @foreach ($databumilList as $data)
                         <tr>
-                            <td>{{ $data->tgl_register}}</td>
+                            <td>{{ $data->tgl_register }}</td>
                             <td>
-                              {{ $data->periksabumil->tanggal_periksa }}
-                          </td>
+                                {{ $data->periksabumil->tanggal_periksa }}
+                            </td>
                             <td>
                                 <button class="icon-button">
                                     <i class="fi fi-rr-edit" style="color: #624DE3;"></i>
@@ -262,5 +262,3 @@
         });
     </script>
 @endsection
-
-

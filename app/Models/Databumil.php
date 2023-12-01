@@ -65,4 +65,7 @@ class Databumil extends Model
     {
         return $this->belongsTo(Periksabumil::class, 'id_periksabumil');
     }
+    public function infoawalbumil() {
+        return $this->belongsTo(infoawalbumil::class, 'id_periksabumil', 'no_index_infobumil');
+    }
 }
