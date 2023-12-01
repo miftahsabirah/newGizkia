@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('rekapbalita', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('umur_bayi_meniggal', 2)->nullable();
-            $table->string('tempat_bayi_meniggal', 2)->nullable();
-            $table->string('penyebab_bayi_meniggal', 2)->nullable();
-            $table->string('meniggal', 1)->nullable();
+            $table->string('umur_bayi_meniggal')->nullable();
+            $table->string('tempat_bayi_meniggal')->nullable();
+            $table->string('penyebab_bayi_meniggal')->nullable();
+            $table->string('meniggal')->nullable();
             $table->date('tanggal_meniggal')->nullable();
-            $table->string('gizi_buruk', 1)->nullable();
-            $table->float('berat_bayi', 6, 2)->nullable();
-            $table->float('linkar_kepala', 6, 2)->nullable();
-            $table->string('pindah', 1)->nullable();
+            $table->string('gizi_buruk')->nullable();
+            $table->float('berat_bayi')->nullable();
+            $table->float('linkar_kepala')->nullable();
+            $table->string('pindah')->nullable();
             $table->date('tanggal_pindah')->nullable();
-            $table->string('status_tumbuh_kembang', 2)->nullable();
+            $table->string('status_tumbuh_kembang')->nullable();
         });
     }
 

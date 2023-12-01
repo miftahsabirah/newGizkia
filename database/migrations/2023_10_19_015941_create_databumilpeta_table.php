@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('databumilpeta', function (Blueprint $table) {
-            $table->string('id_data_bumil', 18)->primary();
-            $table->string('no_index_bumil', 18);
-            $table->string('statusristi', 20);
-            $table->string('hpl', 10);
-            $table->string('nip', 21);
+            $table->string('id_data_bumil')->primary();
+            $table->string('no_index_bumil');
+            $table->string('statusristi');
+            $table->string('hpl');
+            $table->string('nip');
             $table->foreign('no_index_bumil')->references('no_index_bumil')->on('databumil');
 
         });

@@ -38,6 +38,10 @@ class Posyandu extends Model
     {
         return $this->hasMany(DataDusun::class, 'kode_posyandu', 'kode_posyandu');
     }
+    public function infoawalbumil()
+    {
+        return $this->hasMany(infoawalbumil::class);
+    }
 
     public $timestamps = false;
 }

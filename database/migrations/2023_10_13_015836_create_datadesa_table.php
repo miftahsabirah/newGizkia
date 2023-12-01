@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('datadesa', function (Blueprint $table) {
-            $table->string('kode_desa', 11)->primary();
+            $table->string('kode_desa')->primary();
             $table->unsignedBigInteger('users_id');
-            $table->string('kode_kecamatan', 2);
-            $table->string('desa', 25);
+            $table->string('kode_kecamatan');
+            $table->string('desa');
             $table->integer('wilayah');
             $table->integer('jumlah_dusun');
             $table->integer('luas');
             $table->double('penduduk');
-            $table->string('kode_pkm', 2);
+            $table->string('kode_pkm');
 
             $table->foreign('kode_kecamatan')->references('kode_kecamatan')->on('datakecamatan');
             $table->foreign('users_id')->references('id')->on('users');

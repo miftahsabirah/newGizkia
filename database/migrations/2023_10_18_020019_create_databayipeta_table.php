@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('databayipeta', function (Blueprint $table) {
-            $table->string('id_data_bayipeta', 18)->primary();
-            $table->string('no_index_balita', 18);
-            $table->string('lat', 20);
-            $table->string('lng', 20);
-            $table->string('ket_stunting', 20);
-            $table->string('nip', 21);
-            $table->string('ket_gibur', 20);
+            $table->string('id_data_bayipeta')->primary();
+            $table->string('no_index_balita');
+            $table->string('lat');
+            $table->string('lng');
+            $table->string('ket_stunting');
+            $table->string('nip');
+            $table->string('ket_gibur');
 
             $table->foreign('no_index_balita')->references('no_index_balita')->on('databayi');
    

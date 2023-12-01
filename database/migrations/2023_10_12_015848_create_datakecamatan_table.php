@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('datakecamatan', function (Blueprint $table) {
-            $table->string('kode_kecamatan', 2)->primary();
-            $table->string('kecamatan', 20);
+            $table->string('kode_kecamatan')->primary();
+            $table->string('kecamatan');
         });
     }
 
