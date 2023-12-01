@@ -129,7 +129,25 @@ Route::get('/dash', function () {
 Route::get('/header', function () {
     return view('master.header');
 });
+Route::get('/dataDasar', function () {
+    return view('user.dataDasar');
+});
 
+Route::get('/dataAnak', function () {
+    return view('user.data.ibuMelahirkan');
+});
+
+Route::get('/petaUser', function () {
+    return view('user.peta.belumTerdaftar');
+});
+
+Route::get('/visualisasi', function () {
+    return view('user.grafik.visualisasiData');
+});
+
+Route::get('/tambahAnak', function () {
+    return view('admin.rekapitulasi.tambahAnak');
+});
 
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
@@ -173,6 +191,20 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/formDataIbuMelahirkan', 'formDataIbuMelahirkan')->name('formDataIbuMelahirkan');
     Route::get('/formDataBalita', 'formDataBalita')->name('formDataBalita');
     Route::get('/formDataImunisasi', 'formDataImunisasi')->name('formDataImunisasi');
+    Route::get('/petaAnak', 'petaAnak')->name('petaAnak');
+    Route::get('/petaBumil', 'petaBumil')->name('petaBumil');
+    Route::get('/petaBelumTerdaftar', 'petaBelumTerdaftar')->name('petaBelumTerdaftar');
+    Route::get('/rekapAnak', 'rekapAnak')->name('rekapAnak');
+    Route::get('/rekapBumil', 'rekapBumil')->name('rekapBumil');
+    Route::get('/rekapImunisasi', 'rekapImunisasi')->name('rekapImunisasi');
+    Route::get('/rekapGizi', 'rekapGizi')->name('rekapGizi');
+    Route::get('/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/pengaturan', 'pengaturan')->name('pengaturan');
+    Route::get('/tambahAnak', 'tambahAnak')->name('tambahAnak');
+    Route::get('/tambahImunisasi', 'tambahImunisasi')->name('tambahImunisasi');
+    Route::get('/tambahBumil', 'tambahBumil')->name('tambahBumil');
+    Route::get('/tambahGizi', 'tambahGizi')->name('tambahGizi');
+    Route::get('/editAkses', 'editAkses')->name('editAkses');
 
     Route::post('/storeadmin', 'storeadmin')->name('storeadmin');
 });

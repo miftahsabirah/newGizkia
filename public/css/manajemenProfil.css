@@ -79,7 +79,7 @@
     color: #FFF;
     border-radius: 8px;
     border: 0px;
-    margin-right: 20px;
+    margin-right: 35px;
 }
 
 .add-data2{
@@ -228,7 +228,8 @@ box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar eleme
 }
 
 .halaman-peta{
-    margin: 30px;
+    margin: 40px;
+    margin-bottom: 70px;
 
 }
 
@@ -255,7 +256,9 @@ box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar eleme
     border-radius: 30px;
     background-color: #FFFFFF;
     padding: 20px;
-    margin: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -269,6 +272,50 @@ box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar eleme
     border-top: 1px solid #ccc;
     margin-bottom: 20px;
 }
+
+#barChart {
+    max-width: 650px;
+    margin: 35px auto;
+}
+
+.img-dash{
+    width: 340px;
+    height: 300px;
+}
+
+.dash-container{
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title-dash{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.dash-table{
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    margin-top: 40px;
+    margin-right: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.btn-table-dash{
+    background-color: #F6F6F6;
+    color: #000;
+    border-radius: 10px;
+    width: 109px;
+    height: 40px;
+    padding-left: 25px;
+}
+
+
 
 
 

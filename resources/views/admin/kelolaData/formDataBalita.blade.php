@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master.layoutsAdmin')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+@section('link')
     <link rel="stylesheet" href="css/formData.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
+@endsection
 
-<body>
+@section('title')
+    Form Data Balita
+@endsection
+
+
+<!-- MAIN -->
+
+@section('isi')
+
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h2 class="formbold-heading">Tambah Data Anak</h2>
@@ -201,19 +203,29 @@
                         </div>
                     </div>
 
-                    <div class="formbold-input-flex">
-                        <div class="formbold-w-45">
-                            <label for="akte" class="formbold-form-label"> Alamat </label>
-                            <input type="text" name="akte" id="akte" class="formbold-form-input" />
-                        </div>
-
-                        <div class="formbold-w-45">
-                            <label for="kk" class="formbold-form-label"> Kode Suku </label>
-                            <input type="text" name="kk" id="kk" class="formbold-form-input" />
-                        </div>
-                    </div>
-
+              <div class="formbold-input-flex">
+                <div class="formbold-w-45">
+                  <label for="akte" class="formbold-form-label"> Alamat </label>
+                  <input
+                    type="text"
+                    name="akte"
+                    id="akte"
+                    class="formbold-form-input"
+                  />
                 </div>
+          
+                <div class="formbold-w-45">
+                  <label for="kk" class="formbold-form-label"> Kode Suku </label>
+                  <input
+                    type="text"
+                    name="kk"
+                    id="kk"
+                    class="formbold-form-input"
+                  />
+                </div>
+              </div>
+  
+          </div>
 
                 <div class="formbold-btn-wrapper">
                     <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal"
@@ -253,8 +265,5 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+@endsection
 
-</body>
-
-</html>

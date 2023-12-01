@@ -5,97 +5,83 @@
 @endsection
 
 @section('title')
-    Form Data Imunisasi
+    Tambah Rekap Gizi
 @endsection
 
 
 <!-- MAIN -->
 
 @section('isi')
-<body>
 <div class="formbold-main-wrapper">
     <div class="formbold-form-wrapper">
-        <h2 class="formbold-heading">Tambah Data Imunisasi</h2>
+        <h2 class="formbold-heading">Tambah Rekap Gizi</h2>
         <div class="color-container">
-          <h5 class="sub-header">Data Diri Anak</h5>
+          <h5 class="sub-header">Info Singkat</h5>
+          <div class="formbold-input-flex">
+                <div class="formbold-w-45">
+                    <label for="nama" class="formbold-form-label"> Kode </label>
+                    <input
+                    type="text"
+                    name="nama"
+                    id="nama"
+                    class="formbold-form-input"
+                    />
+                </div>
+            
+                <div class="formbold-w-45">
+                    <label for="JK" class="formbold-form-label"> Puskesmas </label>
+                    <input
+                    type="text"
+                    name="JK"
+                    id="JK"
+                    class="formbold-form-input"
+                    />
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="color-container">
+          <h5 class="sub-header">Rekap Gizi</h5>
           <div class="formbold-input-flex">
               <div class="formbold-w-45">
-                <label for="noIndex" class="formbold-form-label"> No. Index </label>
+                <label for="akte" class="formbold-form-label"> Terdaftar </label>
                 <input
                   type="text"
-                  name="noIndex"
-                  id="noIndex"
+                  name="akte"
+                  id="akte"
                   class="formbold-form-input"
                 />
               </div>
         
               <div class="formbold-w-45">
-                <label for="JK" class="formbold-form-label"> Jenis Kelamin </label>
+                <label for="kk" class="formbold-form-label"> Ditimbang </label>
                 <input
                   type="text"
-                  name="JK"
-                  id="JK"
+                  name="kk"
+                  id="kk"
                   class="formbold-form-input"
                 />
               </div>
             </div>
 
             <div class="formbold-input-flex">
-              <div class="formbold-w-45">
-                <label for="nama" class="formbold-form-label"> Nama Anak </label>
-                <input
-                  type="text"
-                  name="nama"
-                  id="nama"
-                  class="formbold-form-input"
-                />
+                <div class="formbold-w-45">
+                  <label for="akte" class="formbold-form-label"> N </label>
+                  <input
+                    type="text"
+                    name="akte"
+                    id="akte"
+                    class="formbold-form-input"
+                  />
+                </div>
               </div>
-        
-              <div class="formbold-w-45">
-                <label for="dob" class="formbold-form-label"> Tanggal Lahir </label>
-                <input type="date" name="dob" id="dob" class="formbold-form-input" />
-              </div>
-            </div>
+
 
         </div>
 
-        <div class="color-container">
-          <h5 class="sub-header">Data Posyandu</h5>
-          <div class="formbold-input-flex">
-              <div class="formbold-w-45">
-                <label for="posyandu" class="formbold-form-label"> Posyandu </label>
-                <input
-                  type="text"
-                  name="posyandu"
-                  id="posyandu"
-                  class="formbold-form-input"
-                />
-              </div>
-        
-              <div class="formbold-w-45">
-                <label for="desa" class="formbold-form-label"> Desa </label>
-                <input
-                  type="text"
-                  name="desa"
-                  id="desa"
-                  class="formbold-form-input"
-                />
-              </div>
-            </div>
 
-            <div class="formbold-input-flex">
-              <div class="formbold-w-45">
-                <label for="dusun" class="formbold-form-label"> Dusun </label>
-                <input
-                  type="text"
-                  name="dusun"
-                  id="dusun"
-                  class="formbold-form-input"
-                />
-              </div>
-            </div>
-
-        </div>
 
           <div class="formbold-btn-wrapper">
               <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
@@ -133,3 +119,4 @@
 </div>
 
 @endsection
+

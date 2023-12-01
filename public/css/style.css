@@ -1,0 +1,7 @@
+/* 'vh' stands for view height */
+/* Setting the html and body styles as follows allows us to use flexbox to center the page content vertically and horizontally */
+html,
+body {
+	min-width: 100vh;
+	min-height: 100vh;
+}

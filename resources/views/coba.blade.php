@@ -1,89 +1,68 @@
-@extends('master.layoutsAdmin')
-
-<!-- MAIN -->
-<link rel="stylesheet" href="css/manajemenProfil.css">
-
-@section('isi')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/coba.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
-    
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ 
+  <title>AdminKit</title>
+ 
+  <!-- AdminKit CSS file -->
+  <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
 </head>
 <body>
+  <h1>Hello, world!</h1>
+  <div id="chartjs-bar"></div>
+ 
+  <!-- AdminKit JS file -->
 
-    <div class="container">
-        <div class="title-container">
-            <h2>Manajemen Akses</h2>
-        </div>
-        <div class="table-container">
-            <table id="example" class="table table-striped" style="width:100%">
-                <thead>
-                    <tr>
-                        <th rowspan="2">NIP</th>                        
-                        <th>2</th>
-                        <th>3</th>
-                        <th rowspan="2">NIP</th>                        
-                        <th>5</th>
-                        <th>6</th>
-                        <th>7</th>
-                        <th rowspan="2">NIP</th>                        
-                    </tr>
-                    <tr>
-                        <th>Nama</th>
-                        <th>Puskesmas</th>
-                        <th>Jabatan</th>
-                        <th>Username</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+  <script>
+    new Chart(document.getElementById("chartjs-bar"), {
+  type: "bar",
+  data: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [{
+      label: "Last year",
+      backgroundColor: window.theme.primary,
+      borderColor: window.theme.primary,
+      hoverBackgroundColor: window.theme.primary,
+      hoverBorderColor: window.theme.primary,
+      data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+      barPercentage: .75,
+      categoryPercentage: .5
+    }, {
+      label: "This year",
+      backgroundColor: "#dee2e6",
+      borderColor: "#dee2e6",
+      hoverBackgroundColor: "#dee2e6",
+      hoverBorderColor: "#dee2e6",
+      data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
+      barPercentage: .75,
+      categoryPercentage: .5
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        gridLines: {
+          display: false
+        },
+        stacked: false
+      }],
+      xAxes: [{
+        stacked: false,
+        gridLines: {
+          color: "transparent"
+        }
+      }]
+    }
+  }
+});
+  </script>
 
-                <tbody>
-                    <tr>
-                        <td>012345678</td>
-                        <td>Miftah Sabirah</td>
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                    </tr>
-
-                    <tr>
-                        <td>012345678</td>
-                        <td>Ananda Kusuma</td>
-                        <td>Edinburgh</td>
-                        <td>2011-04-25</td>
-                        <td>2011-04-25</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                        <td>$320,800</td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-
-<script>
-    new DataTable('#example');
-</script>
+<script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
 
 </body>
 </html>
-
-@endsection

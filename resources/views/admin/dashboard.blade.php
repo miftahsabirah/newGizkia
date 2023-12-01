@@ -3,34 +3,11 @@
 @section('link')
 <link rel="stylesheet" href="css/manajemenProfil.css">
 
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- ApexCharts library -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-<link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-<!-- Icons. Uncomment required icon fonts -->
-<link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
-<!-- <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" /> -->
-
-<!-- Core CSS -->
-<link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
-<link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
-<link rel="stylesheet" href="../../assets/css/demo.css" />
-
-<!-- Vendors CSS -->
-<link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
-<!-- Helpers -->
-<script src="../../assets/vendor/js/helpers.js"></script>
-
-<!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-<!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-<script src="../../assets/vendor/js/template-customizer.js"></script>
-<!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-<script src="../../assets/js/config.js"></script>
 
 @endsection
 
@@ -39,119 +16,275 @@ Dashboard
 @endsection
 
 
-<!-- MAIN -->
 
 @section('isi')
 
+<div class="row g-2 dash-container">
+  <div class="col-sm-8">
+      
+    <h3 class="title-dash">
+      Selamat Datang di Gizkia
+      <br>
+      Dinas Kesehatan Kabupaten Boyolali, Jawa Tengah
+    </h3>  
+    
+  </div>
 
-  <div id="barChart"></div>
+  <div class="col-sm text-center">
+    <img src="img/dashboard.png" alt="gambarAdmin" class="img-dash mx-auto">
+  </div>
 
-  <!-- Core JS -->
-  <!-- build:js assets/vendor/js/core.js -->
-  <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="../../assets/vendor/libs/popper/popper.js"></script>
-  <script src="../../assets/vendor/js/bootstrap.js"></script>
-  <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-  <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-  <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-  <script src="../../assets/vendor/js/menu.js"></script>
-  <!-- endbuild -->
+</div>
+    
+{{-- buat barChart --}}
 
-  <!-- Main JS -->
-  <script src="../../assets/js/main.js"></script>
-  <script>
-    const barChartEl = document.querySelector('#barChart'),
-  barChartConfig = {
-    chart: {
-      height: 400,
-      type: 'bar',
-      stacked: true,
-      parentHeightOffset: 0,
-      toolbar: {
-        show: false
-      }
+<div class="table-pengaturan">
+  <div class="d-flex justify-content-between mb-4">
+    <h3>Statistik Bayi di Boyolali</h3>
+
+    <select id="yearFilter" class="btn-table-dash">
+      <option value="2011">2011</option>
+      <option value="2012">2012</option>
+      <!-- Add more options for other years as needed -->
+    </select>
+  </div>
+
+  <div id="chart"></div>
+</div>
+
+<div class="row g-2 mt-1">
+  <div class="col-sm-6 table-pengaturan">
+    <div id="lineChart"></div>
+  </div>
+
+  <div class="col-sm dash-table">
+    <h6>Data Terbaru</h6>
+    <table id="example" class="table table-striped" style="width:100%">
+      <thead>
+          <tr>
+              <th style="text-align: center;">Aktivitas Terbaru</th>
+              <th style="text-align: center;">Halaman</th>
+              <th style="text-align: center;">Terakhir</th>
+          </tr>
+      </thead>
+      <tbody>
+              <tr>
+                  <td>---</td>
+                  <td>---</td>
+                  <td>---</td>
+                  
+              </tr>
+              <tr>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                
+              </tr>
+              <tr>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+              
+              </tr>
+      </tbody>
+  </table>    
+  </div>
+
+</div>
+
+
+
+
+ {{-- BAR CHART --}}
+<script>
+var options = {
+  series: [
+    {
+      name: 'Laki-laki',
+      data: [44, 55, 41, 67, 22, 43, 44, 55, 41, 67, 22, 43]
     },
-    plotOptions: {
-      bar: {
-        columnWidth: '15%',
-        colors: {
-          backgroundBarColors: [
-            chartColors.column.bg,
-            chartColors.column.bg,
-            chartColors.column.bg,
-            chartColors.column.bg,
-            chartColors.column.bg
-          ],
-          backgroundBarRadius: 10
-        }
-      }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    legend: {
-      show: true,
-      position: 'top',
-      horizontalAlign: 'start',
-      labels: {
-        colors: legendColor,
-        useSeriesColors: false
-      }
-    },
-    colors: [chartColors.column.series1, chartColors.column.series2],
-    stroke: {
-      show: true,
-      colors: ['transparent']
-    },
-    grid: {
-      borderColor: borderColor,
-      xaxis: {
-        lines: {
-          show: true
-        }
-      }
-    },
-    series: [
-      {
-        name: 'Apple',
-        data: [90, 120, 55, 100, 80, 125, 175, 70, 88, 180]
-      },
-      {
-        name: 'Samsung',
-        data: [85, 100, 30, 40, 95, 90, 30, 110, 62, 20]
-      }
-    ],
-    xaxis: {
-      categories: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12'],
-      axisBorder: {
-        show: false
-      },
-      axisTicks: {
-        show: false
-      },
-      labels: {
-        style: {
-          colors: labelColor,
-          fontSize: '13px'
-        }
-      }
-    },
-    yaxis: {
-      labels: {
-        style: {
-          colors: labelColor,
-          fontSize: '13px'
-        }
-      }
-    },
-    fill: {
-      opacity: 1
+    {
+      name: 'Perempuan',
+      data: [13, 23, 20, 8, 13, 27, 44, 55, 41, 67, 22, 43]
     }
-  };
-if (typeof barChartEl !== undefined && barChartEl !== null) {
-  const barChart = new ApexCharts(barChartEl, barChartConfig);
-  barChart.render();
-}
-  </script>
+  ],
+  chart: {
+    type: 'bar',
+    height: 350,
+    stacked: true,
+    toolbar: {
+      show: true
+    },
+    zoom: {
+      enabled: true
+    }
+  },
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        legend: {
+          position: 'bottom',
+          offsetX: -10,
+          offsetY: 0
+        }
+      }
+    }
+  ],
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      borderRadius: 15,
+      dataLabels: {
+        total: {
+          enabled: true,
+          style: {
+            fontSize: '13px',
+            fontWeight: 900
+          }
+        }
+      },
+      columnWidth: '50%', // Mengatur lebar batang
+    }
+  },
+  colors: ['#AEE2FF', '#FCAABE'], // Ganti warna batang sesuai kebutuhan
+  xaxis: {
+    categories: [
+      'Januari',
+      'Februari',
+      'Maret',
+      'April',
+      'Mei',
+      'Juni',
+      'Juli',
+      'Agustus',
+      'September',
+      'Oktober',
+      'November',
+      'Desember'
+    ],
+    labels: {
+      style: {
+        fontSize: '12px',  // Ukuran font
+        fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+        color: '#E0E0E0'
+      }
+    }
+  },
+  yaxis: {
+    labels: {
+      style: {
+        fontSize: '12px',  // Ukuran font
+        fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+        color: '#E0E0E0'      }
+    }
+  },
+  legend: {
+    position: 'top', // Mengatur posisi legenda ke atas chart
+    offsetY: 10,
+    fontSize: '14px', // Ukuran font legenda
+    fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+    color: '#E0E0E0'  
+  },
+  fill: {
+    opacity: 1
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+ 
+</script>
+
+{{-- LINE CHART --}}
+<script>
+var lineChartOptions = {
+  series: [
+    {
+      name: "Bumil Gakin",
+      data: [10, 81, 35, 51, 49, 20, 69, 91, 148]
+    },
+    {
+      name: "Ibu Melahirkan",
+      data: [5, 20, 68, 30, 25, 40, 80, 50, 45]
+    }
+  ],
+  chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  title: {
+    text: 'Kategori Ibu Hamil Terbaru',
+    align: 'left',
+    style: {
+      fontSize: '20px',  // Ukuran font judul
+      fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+      color: '#757575'  // Warna font judul
+    }
+  },
+  grid: {
+    row: {
+      colors: ['#f3f3f3', 'transparent'],
+      opacity: 0.5
+    },
+  },
+  stroke: {
+  curve: 'smooth',
+},
+colors: ['#876AFE', '#FFBC02'],
+  xaxis: {
+    categories: [
+      'Jan', 
+      'Feb', 
+      'Mar', 
+      'Apr', 
+      'May', 
+      'Jun', 
+      'Jul', 
+      'Aug', 
+      'Sep'
+    ],
+    labels: {
+      style: {
+        fontSize: '12px',  // Ukuran font
+        fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+        color: '#E0E0E0'
+      }
+    }
+  },
+
+  yaxis: {
+    labels: {
+      style: {
+        fontSize: '12px',  // Ukuran font
+        fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+        color: '#E0E0E0'      
+      }
+    }
+  },
+  
+  legend: {
+    position: 'top', // Mengatur posisi legenda ke atas chart
+    offsetY: -10,
+    fontSize: '14px', // Ukuran font legenda
+    fontFamily: 'Poppins, sans-serif',  // Ganti dengan font yang diinginkan
+    colors: ['#000000', '#000000'],
+    style: {
+        color: '#000000'      
+      }
+
+  },
+};
+
+var lineChart = new ApexCharts(document.querySelector("#lineChart"), lineChartOptions);
+lineChart.render();
+</script>
+
 
 @endsection

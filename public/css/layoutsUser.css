@@ -4,6 +4,18 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
+.a-link{
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
 /* buat navbar bawah */
 .nav{
     position: sticky;
@@ -29,7 +41,12 @@ body{
 
 .nav-item:hover .nav-link {
     color: #2563EB; /* Ganti dengan warna yang Anda inginkan saat hover */
-  }
+}
+
+.nav-item{
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 
 
