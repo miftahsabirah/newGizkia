@@ -15,95 +15,83 @@
 </head>
 <body>
 
-<nav class="navbar1">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><b>BANK DATA GIZKIA</b></a>
+    <div>
+        <nav class="navbar1 navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><b>BANK DATA GIZKIA</b></a>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="fa fa-home"></i>
+                                <b>Home</b>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-female" aria-hidden="true"></i>
+                                <b>Bumil</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Ibu Hamil</a></li>
+                                <li><a class="dropdown-item" href="#">Ibu Hamil Risti</a></li>
+                                <li><a class="dropdown-item" href="#">Ibu Melahirkan</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-tasks" aria-hidden="true"></i>
+                                <b>Rekapitulasi</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Rekap Bumil</a></li>
+                                <li><a class="dropdown-item" href="#">Rekap Balita</a></li>
+                                <li><a class="dropdown-item" href="#">Rekap Imunisasi</a></li>
+                                <li><a class="dropdown-item" href="#">Rekap Gizi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-map-marked"></i>
+                                <b>Peta Temuan</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Peta Bumil</a></li>
+                                <li><a class="dropdown-item" href="#">Peta Balita</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-chart-bar"></i>
+                                <b>Visualisasi Data</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Grafik Data Bumil</a></li>
+                                <li><a class="dropdown-item" href="#">Grafik Data Balita</a></li>
+                                <li><a class="dropdown-item" href="#">Visualisasi Data</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-</nav>
 
-<ul class="nav justify-content-center">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">
-            <i class="fa fa-home"></i>
-            Home
-        </a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-female" aria-hidden="true"></i>
-            Bumil
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Ibu Hamil</a></li>
-            <li><a class="dropdown-item" href="#">Ibu Hamil Risti</a></li>
-            <li><a class="dropdown-item" href="#">Ibu Melahirkan</a></li>
-        </ul>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-tasks" aria-hidden="true"></i>
-            Rekapitulasi
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Rekap Bumil</a></li>
-            <li><a class="dropdown-item" href="#">Rekap Balita</a></li>
-            <li><a class="dropdown-item" href="#">Rekap Imunisasi</a></li>
-            <li><a class="dropdown-item" href="#">Rekap Gizi</a></li>
-        </ul>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-map-marked"></i>
-            Peta Temuan
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Peta Bumil</a></li>
-            <li><a class="dropdown-item" href="#">Peta Balita</a></li>
-        </ul>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fas fa-chart-bar"></i>
-            Visualisasi Data
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Grafik Data Bumil</a></li>
-            <li><a class="dropdown-item" href="#">Grafik Data Balita</a></li>
-            <li><a class="dropdown-item" href="#">Visualisasi Data</a></li>
-        </ul>
-    </li>
-</ul>
 
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<p>k</p>
-<!-- ... -->
+		
+		
+@yield('isi')
+			
+			
 
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

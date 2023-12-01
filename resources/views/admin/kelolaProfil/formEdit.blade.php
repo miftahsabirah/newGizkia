@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+@extends('master.layoutsAdmin')
+
+@section('link')
     <link rel="stylesheet" href="css/formData.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
+@endsection
+
+@section('title')
+    Form Data Ibu Melahirkan
+@endsection
+
+
+<!-- MAIN -->
+
+@section('isi')
         <div class="formbold-main-wrapper">
           <div class="formbold-form-wrapper">
             <h2 class="formbold-heading">Edit Petugas Kesehatan</h2>
@@ -105,33 +108,37 @@
                 </div>
         
       
-          <div class="formbold-btn-wrapper">
-              <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
-                  Simpan
-              </button>
-              <button class="formbold-btn cancel">Batal</button>
-
-          </div>
-          
-          <!-- Modal 2 -->
-              <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                          <div class="modal-header d-flex justify-content-center">
-                            <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
-                          </div>
-                          <div class="modal-body">
-                              <div class="formbold-mb-3 d-flex justify-content-center">
-                                  Apakah Anda ingin menyimpan data ini?
+                <div class="formbold-btn-wrapper">
+                  <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                      Simpan
+                  </button>
+                  <button type="button" class="formbold-btn cancel">
+                    <a href="{{ route('manajemenPetugas') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+                  </button>
+    
+              </div>
+              
+              <!-- Modal 2 -->
+                  <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                              <div class="modal-header d-flex justify-content-center">
+                                <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Penyimpanan</h5>
                               </div>
-                          </div>
-                          <div class="modal-footer d-flex justify-content-center">
-                              <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
-                              <button type="button" class="btn btn-primary w-25">Ya</button>
+                              <div class="modal-body">
+                                  <div class="formbold-mb-3 d-flex justify-content-center">
+                                      Apakah Anda ingin menyimpan data ini?
+                                  </div>
+                              </div>
+                              <div class="modal-footer d-flex justify-content-center">
+                                  <button type="button" class="btn btn-secondary w-25" data-bs-dismiss="modal">Tidak</button>
+                                  <button type="button" class="btn btn-primary w-25">
+                                    <a href="{{ route('manajemenPetugas') }}" style="color: #ffffff; text-decoration: none;">Ya</a>
+                                  </button>
+                              </div>
                           </div>
                       </div>
                   </div>
-              </div>
   
             </div>
 
@@ -141,5 +148,4 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
-</html>
+@endsection

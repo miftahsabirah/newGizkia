@@ -49,7 +49,9 @@
                         <td><span class="badge rounded-pill bg-success">Terima</span></td>
                         <td>
                             <button class="icon-button">
-                                <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
+                                <a href="{{ route('editAkses') }}">
+                                    <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
+                                </a>
                             </button>
                             <span style="margin-right: 10px;"></span>
                             <button class="icon-button">

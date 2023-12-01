@@ -17,7 +17,7 @@ Rekapitulasi Bumil
 
 
 <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <a href="{{ route('formDataBalita') }}" type="button" class="add-data" style="margin-left: auto;">
+    <a href="{{ route('tambahBumil') }}" type="button" class="add-data" style="margin-left: auto;">
       <i class="fi fi-rr-plus-small add-icon"></i> Tambah Rekap Bumil
     </a>
 </div>

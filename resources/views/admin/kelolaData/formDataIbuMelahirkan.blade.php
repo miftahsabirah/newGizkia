@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+@extends('master.layoutsAdmin')
+
+@section('link')
     <link rel="stylesheet" href="css/formData.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
+@endsection
+
+@section('title')
+    Form Data Ibu Melahirkan
+@endsection
+
+
+<!-- MAIN -->
+
+@section('isi')
 <div class="formbold-main-wrapper">
     <div class="formbold-form-wrapper">
         <h2 class="formbold-heading">Tambah Data Ibu Melahirkan</h2>
@@ -187,7 +190,4 @@
     </div>  
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+@endsection
