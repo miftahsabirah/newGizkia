@@ -1,9 +1,6 @@
 @extends('master.layoutsAdmin')
 
 @section('link')
-@extends('master.layoutsAdmin')
-
-@section('link')
     <link rel="stylesheet" href="css/formData.css">
 @endsection
 

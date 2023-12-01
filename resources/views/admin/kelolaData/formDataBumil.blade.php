@@ -46,37 +46,6 @@
                             @endif
                         </div>
                     </div>
-@endsection
-
-@section('title')
-    Form Data Bumil
-@endsection
-
-
-<!-- MAIN -->
-
-@section('isi')
-<div class="formbold-main-wrapper">
-    <div class="formbold-form-wrapper">
-        <h2 class="formbold-heading">Tambah Data Ibu Hamil</h2>
-        <div class="color-container">
-          <h5 class="sub-header">Data Diri Ibu Hamil</h5>
-          <div class="formbold-input-flex">
-              <div class="formbold-w-45">
-                <label for="noIndex" class="formbold-form-label"> No. Index </label>
-                <input
-                  type="text"
-                  name="noIndex"
-                  id="noIndex"
-                  class="formbold-form-input"
-                />
-              </div>
-        
-              <div class="formbold-w-45">
-                <label for="reg" class="formbold-form-label"> Tgl Reg </label>
-                <input type="date" name="reg" id="reg" class="formbold-form-input" />
-              </div>
-            </div>
 
                     <div class="formbold-input-flex">
                         <div class="formbold-w-45">
