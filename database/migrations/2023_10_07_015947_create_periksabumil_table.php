@@ -14,23 +14,23 @@ return new class extends Migration
         Schema::create('periksabumil', function (Blueprint $table) {
             $table->bigIncrements('id'); // Kolom 'id' adalah primary key
             $table->date('tanggal_periksa');
-            $table->string('jenis_periksa', 2);
-            $table->string('tempat_periksa', 10);
+            $table->string('jenis_periksa');
+            $table->string('tempat_periksa');
             $table->tinyInteger('luar_gedung');
-            $table->string('kode_petugas', 10);
+            $table->string('kode_petugas');
             $table->tinyInteger('umur_kehamilan');
-            $table->string('keluhan', 50);
-            $table->double('lila', 6, 2);
+            $table->string('keluhan');
+            $table->double('lila');
             $table->tinyInteger('sistole');
             $table->tinyInteger('diastole');
-            $table->double('hb', 6, 2);
-            $table->double('berad_badan', 6, 2);
-            $table->double('tinggi_fundus', 6, 2);
+            $table->double('hb');
+            $table->double('berad_badan');
+            $table->double('tinggi_fundus');
             $table->tinyInteger('jumlah_janin');
-            $table->string('letak_janin', 1);
-            $table->string('posisi_janin', 1);
+            $table->string('letak_janin');
+            $table->string('posisi_janin');
             $table->double('denyut_janin');
-            $table->string('lab', 2);
+            $table->string('lab');
             $table->tinyInteger('yodium');
             $table->tinyInteger('tindakan_fe');
             $table->tinyInteger('fe1');
@@ -41,19 +41,19 @@ return new class extends Migration
             $table->tinyInteger('tt2');
             $table->tinyInteger('tt3');
             $table->tinyInteger('dirujuk');
-            $table->string('posisitbj', 1);
-            $table->double('tbj', 6, 2);
-            $table->string('kodefe', 2);
+            $table->string('posisitbj');
+            $table->double('tbj');
+            $table->string('kodefe');
             $table->smallInteger('jumlahfe');
             $table->tinyInteger('obatcacing');
             $table->tinyInteger('tt4');
             $table->tinyInteger('tt5');
             $table->tinyInteger('hbsag');
             $table->tinyInteger('rapid_test');
-            $table->string('protein_urine', 1);
+            $table->string('protein_urine');
             $table->smallInteger('gds');
             $table->tinyInteger('ims');
-            $table->string('nama', 20);
+            $table->string('nama');
         });
     }
 

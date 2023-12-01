@@ -1,11 +1,11 @@
 @extends('master.layoutsAdmin')
 
 @section('link')
-        <link rel="stylesheet" href="css/manajemenProfil.css">
+    <link rel="stylesheet" href="css/manajemenProfil.css">
 @endsection
 
 @section('title')
-        Data Bumil
+    Data Bumil
 @endsection
 
 
@@ -24,7 +24,8 @@
                 <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
             </div>
         </div>
-    <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
+
+        {{-- <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
         <div>
             <button class="btn btn-color dropdown-toggle button1" type="button" id="dropdownMenuButton"
                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #D9D9D9">
@@ -35,13 +36,13 @@
                 <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
                 <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
             </div>
-        </div>
+        </div> --}}
 
 
-    <a href="{{ route('formDataBumil') }}" type="button" class="add-data2">
-      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
-    </a>
-  </div>
+        <a href="{{ route('createbumil') }}" type="button" class="add-data2">
+            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil
+        </a>
+    </div>
 
 
 
@@ -238,10 +239,10 @@
                 <tbody>
                     @foreach ($databumilList as $data)
                         <tr>
-                            <td>{{ $data->tgl_register}}</td>
+                            <td>{{ $data->tgl_register }}</td>
                             <td>
-                              {{ $data->periksabumil->tanggal_periksa }}
-                          </td>
+                                {{ $data->periksabumil->tanggal_periksa }}
+                            </td>
                             <td>
                                 <button class="icon-button">
                                     <i class="fi fi-rr-edit" style="color: #624DE3;"></i>
@@ -275,5 +276,3 @@
         });
     </script>
 @endsection
-
-

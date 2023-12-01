@@ -15,7 +15,7 @@ class Infoawalbumil extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'no_indek_infobumil',
+        'no_index_infobumil',
         'kode_posyandu',
         'tgl_informasi',
         'nama',
@@ -30,7 +30,7 @@ class Infoawalbumil extends Model
 
     public function posyandu()
     {
-        return $this->belongsTo(Posyandu::class, 'kode_posyandu', 'kode_posyandu');
+        return $this->hasMany(Posyandu::class, 'kode_posyandu', 'kode_posyandu');
     }
     public $timestamps = false;
 }

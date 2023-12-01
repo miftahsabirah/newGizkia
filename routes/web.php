@@ -149,11 +149,13 @@ Route::controller(ManajemenPetugasKesehatanController::class)->group(function ()
 
 route::controller(DatabayiController::class)->group(function() {
     Route::get('/indexbayi', 'indexbayi')->name('indexbayi');
-
+    Route::post('/storedatabayi', 'storedatabayi')->name('storedatabayi');
 });
 
 route::controller(DatabumilController::class)->group(function() {
     Route::get('/indexbumil', 'indexbumil')->name('indexbumil');
+    Route::get('createbumil', 'createbumil')->name('createbumil');
+    Route::post('/postbumil', 'postbumil')->name('postbumil');
 
 });
 
@@ -172,8 +174,7 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/formDataBalita', 'formDataBalita')->name('formDataBalita');
     Route::get('/formDataImunisasi', 'formDataImunisasi')->name('formDataImunisasi');
 
-    
-
+    Route::post('/storeadmin', 'storeadmin')->name('storeadmin');
 });
 
 Route::get('/maps', 'MapsController@showMap');
