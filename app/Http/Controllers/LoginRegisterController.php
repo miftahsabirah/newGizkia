@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+// risize image
+use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -45,8 +47,7 @@ class LoginRegisterController extends Controller
      */
     public function store(Request $request)
     {
-
-        $request->validate([
+        $validated = $request->validate([
             'username' => 'required',
             'password' => 'required',
             'nama' => 'required',
@@ -56,7 +57,10 @@ class LoginRegisterController extends Controller
             'pwd' => 'required',
             'kode_pkm' => 'required',
             'email' => 'required',
+            
         ]);
+
+      
 
         User::create([
             'username' => $request->username,
@@ -68,18 +72,22 @@ class LoginRegisterController extends Controller
             'pwd' => $request->pwd,
             'kode_pkm' => $request->kode_pkm,
             'role_id' => 'petugas',
+            'status' =>  'proses',
             'email' => $request->email,
         ]);
+
+
 
 
         $credentials = $request->only('username', 'password');
 
         Auth::attempt($credentials);
-      
+
         $request->session()->regenerate();
         return redirect()->route('login')
             ->withSuccess('You have successfully registered & logged in!');
     }
+
 
     /**
      * Display a login form.
@@ -127,7 +135,6 @@ class LoginRegisterController extends Controller
         if (Auth::check()) {
 
             return view('admin.kelolaProfil.manajemenPetugasKesehatan');
-
         }
 
         return redirect()->route('login')
@@ -135,7 +142,6 @@ class LoginRegisterController extends Controller
 
                 'username' => 'Please login to access the dashboard.',
             ])->onlyInput('username');
-
     }
 
     /**
@@ -150,6 +156,6 @@ class LoginRegisterController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect()->route('login')
-        ->withSuccess('You have logged out successfully!');
+            ->withSuccess('You have logged out successfully!');
     }
 }
