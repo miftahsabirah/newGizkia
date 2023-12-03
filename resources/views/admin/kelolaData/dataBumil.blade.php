@@ -225,10 +225,10 @@
                 <tbody>
                     @foreach ($databumilList as $data)
                         <tr>
-                            <td>{{ $data->tgl_register }}</td>
+                            <td>{{ $data->tgl_register  }}</td>
                             <td>
-                                {{ $data->periksabumil->tanggal_periksa }}
-                            </td>
+                                  {{ $data->periksabumil->tanggal_periksa }}
+                              </td>
                             <td>
                                 <button class="icon-button">
                                     <i class="fi fi-rr-edit" style="color: #624DE3;"></i>

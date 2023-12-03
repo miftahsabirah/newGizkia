@@ -30,6 +30,7 @@ class User extends Authenticatable
         'role_id',
         'jenis_petugas',
         'kode_pkm',
+        'status',
     ];
     public $timestamps = false;
 

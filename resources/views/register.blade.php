@@ -106,38 +106,39 @@
                     @endif
                 </div>
 
-            {{-- <div class="formbold-mb-3">
-              <label for="foto" class="formbold-form-label"> Foto </label>
-              <input
-                name="foto"
-                id="foto"
-                placeholder="Pilih foto untuk di unggah"
-                class="formbold-form-input"
-                disabled
-              />
-            </div>
-      
-            <div class="dropzone">
-              <label for="dropzone-file" class="dropzone-label">
-                  <div class="dropzone-content">
-                      <svg class="dropzone-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                      </svg>
-                      <p class="dropzone-text">
-                          <span class="font-semibold">Click to upload</span> or drag and drop
-                      </p>
-                      <p class="dropzone-hint">
-                          SVG, PNG, JPG or GIF (MAX. 800x400px)
-                      </p>
-                  </div>
-                  <input id="dropzone-file" type="file" class="hidden" />
-              </label>
-          </div>--}}
-  
-        <button class="formbold-btn">Submit</button>
-      </form>
+                {{-- <div class="formbold-mb-3">
+                    <label for="image" class="formbold-form-label"> Foto </label>
+                    <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" placeholder="Pilih foto untuk di unggah" 
+                        class="formbold-form-input" />
+                    @if ($errors->has('image'))
+                        <span class="text-danger">{{ $errors->first('image') }}</span>
+                    @endif
+                </div> --}}
+
+                {{-- <div class="dropzone">
+                    <label for="dropzone-file" class="dropzone-label">
+                        <div class="dropzone-content">
+                            <svg class="dropzone-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 20 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                            </svg>
+                            <p class="dropzone-text">
+                                <span class="font-semibold">Click to upload</span> or drag and drop
+                            </p>
+                            <p class="dropzone-hint">
+                                SVG, PNG, JPG or GIF (MAX. 800x400px)
+                            </p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </div> --}}
+
+                <button class="formbold-btn">Submit</button>
+            </form>
+        </div>
     </div>
-  </div> 
 
 
 </body>

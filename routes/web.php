@@ -161,7 +161,13 @@ Route::controller(LoginRegisterController::class)->group(function () {
 Route::controller(ManajemenPetugasKesehatanController::class)->group(function () {
     Route::get('/Formtambah', 'Formtambah')->name('Formtambah');
     Route::post('/storepetugas', 'storepetugas')->name('storepetugas');
-    Route::get('/manpetugas', 'manpetugas')->name('manpetugas');
+    Route::get('/hapuspetugas/{id}', 'hapus')->name('hapuspetugas');
+    Route::get('/editpetugas/{id}', 'editpetugas')->name('editpetugas');
+    Route::get('/indexpetugas', 'indexpetugas')->name('indexpetugas');
+    Route::get('/indexpetugasblmterdaftar', 'indexpetugasblmterdaftar')->name('indexpetugasblmterdaftar');
+    Route::get('/terimaPetugas/{id}', 'terimaPetugas')->name('terimaPetugas');
+    Route::get('/tolakPetugas/{id}', 'tolakPetugas')->name('tolakPetugas');
+    
 
 });
 

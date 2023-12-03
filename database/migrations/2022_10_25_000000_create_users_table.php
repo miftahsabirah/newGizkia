@@ -22,7 +22,8 @@ return new class extends Migration
             $table->enum('jenis_petugas',['bidan', 'dokter']);
             $table->string('email');
             $table->string('pwd');
-            $table->enum('role_id', ['admin', 'petugas']);
+            $table->enum('role_id', ['super admin','admin', 'petugas']);
+            $table->enum('status', ['diterima ','proses', 'ditolak']);
             $table->dateTime('last_login')->nullable();
             $table->integer('login_count')->nullable();
         });

@@ -35,8 +35,8 @@
 			<li>
 				<a href="#" class="a-link"><i class="fi fi-rr-user icon"></i></i> Kelola Profil <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="{{ route('manajemenAkses')}}" class="a-link">Manajemen Akses</a></li>
-					<li><a href="{{ route('manajemenPetugas') }}" class="a-link">Manajemen Petugas Kesehatan</a></li>
+					<li><a href="{{ route('indexpetugasblmterdaftar')}}" class="a-link">Manajemen Akses</a></li>
+					<li><a href="{{ route('indexpetugas') }}" class="a-link">Manajemen Petugas Kesehatan</a></li>
 				</ul>
 			</li>
 
