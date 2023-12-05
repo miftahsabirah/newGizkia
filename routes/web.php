@@ -167,6 +167,7 @@ Route::controller(ManajemenPetugasKesehatanController::class)->group(function ()
     Route::get('/indexpetugasblmterdaftar', 'indexpetugasblmterdaftar')->name('indexpetugasblmterdaftar');
     Route::get('/terimaPetugas/{id}', 'terimaPetugas')->name('terimaPetugas');
     Route::get('/tolakPetugas/{id}', 'tolakPetugas')->name('tolakPetugas');
+    Route::put('/updatepetugas/{id}', 'updatepetugas')->name('updatepetugas');
     
 
 });
