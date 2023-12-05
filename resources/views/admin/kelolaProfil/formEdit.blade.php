@@ -72,7 +72,7 @@
                             <option value="bidan" {{ old('jenis_petugas', $petugas->jenis_petugas) == 'bidan' ? 'selected' : '' }}>bidan
                             </option>
                             <option value="dokter" {{ old('jenis_petugas', $petugas->jenis_petugas) == 'dokter' ? 'selected' : '' }}>
-                                dokter</option>
+                                dokter</option> 
                         </select>
                         @if ($errors->has('jenis_petugas'))
                             <span class="text-danger">{{ $errors->first('jenis_petugas') }}</span>
