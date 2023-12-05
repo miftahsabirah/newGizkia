@@ -1,11 +1,11 @@
 @extends('master.layoutsAdmin')
 
 @section('link')
-    <link rel="stylesheet" href="css/formData.css">
+    <link rel="stylesheet" href="{{asset('css/formData.css')}}">
 @endsection
 
 @section('title')
-    Form Data Ibu Melahirkan
+    Form Tambah Petugas
 @endsection
 
 
@@ -174,6 +174,5 @@
     </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 @endsection
