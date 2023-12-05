@@ -94,7 +94,38 @@ class ManajemenPetugasKesehatanController extends Controller
 
     public function editpetugas($id)
     {
+
         $petugas = User::findOrFail($id);
+
         return view('admin.kelolaProfil.formEdit', compact('petugas'));
+    }
+    
+    public function updatepetugas(Request $request, $id)
+    {
+        $request->validate([
+            'username' => 'required',
+            'nama' => 'required',
+            'telepon' => 'required',
+            'jenis_petugas' => 'required',
+            'nip' => 'required',
+            'pwd' => 'required',
+            'kode_pkm' => 'required',
+            'email' => 'required',
+        ]);
+
+        $petugas = User::findOrFail($id);
+        $petugas->update([
+            'username' => $request->username,
+            'nama' => $request->nama,
+            'telepon' => $request->telepon,
+            'jenis_petugas' => $request->jenis_petugas,
+            'nip' => $request->nip,
+            'pwd' => $request->pwd,
+            'kode_pkm' => $request->kode_pkm,
+            'email' => $request->email,
+        ]);
+
+        return redirect()->route('indexpetugas')
+            ->withSuccess('You have successfully updated petugas');
     }
 }
