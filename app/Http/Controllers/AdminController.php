@@ -13,10 +13,6 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    public function dashboard()
-    {
-        return view('admin.dashboard');
-    }
 
     public function manajemenAkses()
     {
