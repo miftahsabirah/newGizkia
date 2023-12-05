@@ -6,14 +6,52 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Psy\Util\Str;
 
 class ManajemenPetugasKesehatanController extends Controller
 {
-    public function Formtambah(){
+    public function Formtambah()
+    {
         return view('admin.kelolaProfil.formTambah');
     }
 
-    public function storepetugas(Request $request){
+    public function indexpetugas()
+    {
+        $datapetugas = User::where('role_id', 'petugas')
+            ->where('status', 'diterima')
+            ->get();
+        // dd($datapetugas);
+        return view('admin.kelolaProfil.manajemenPetugasKesehatan', compact('datapetugas'));
+    }
+    public function indexpetugasblmterdaftar()
+    {
+        $datapetugas = User::where('role_id', 'petugas')
+            ->where(function ($query) {
+                $query->where('status', 'proses')
+                    ->orWhere('status', 'ditolak');
+            })
+            ->get();
+        return view('admin.kelolaProfil.manajemenAkses', compact('datapetugas'));
+    }
+    public function terimaPetugas($id)
+    {
+        $petugas = User::findOrFail($id);
+        $petugas->update(['status' => 'diterima']);
+
+        return redirect()->route('indexpetugasblmterdaftar')
+            ->withSuccess('You have successfully deleted the petugas');
+    }
+    public function tolakPetugas($id)
+    {
+        $petugas = User::findOrFail($id);
+        $petugas->update(['status' => 'ditolak']);
+
+        return redirect()->route('indexpetugasblmterdaftar')
+            ->withSuccess('You have successfully deleted the petugas');
+    }
+
+    public function storepetugas(Request $request)
+    {
 
         $request->validate([
             'username' => 'required',
@@ -37,15 +75,26 @@ class ManajemenPetugasKesehatanController extends Controller
             'pwd' => $request->pwd,
             'kode_pkm' => $request->kode_pkm,
             'role_id' => 'petugas',
+            'status' =>  'diterima',
             'email' => $request->email,
         ]);
 
         $request->session()->regenerate();
-        return redirect()->route('manpetugas')
+        return redirect()->route('indexpetugas')
             ->withSuccess('You have successfully add petugas');
     }
-    public function manpetugas()
+
+    public function hapus($id)
     {
-        return view('admin.kelolaProfil.manajemenPetugasKesehatan');
+        $petugas = User::findOrFail($id);
+        $petugas->delete();
+        return redirect()->route('indexpetugas')
+            ->withSuccess('You have successfully deleted the petugas');
+    }
+
+    public function editpetugas($id)
+    {
+        $petugas = User::findOrFail($id);
+        return view('admin.kelolaProfil.formEdit', compact('petugas'));
     }
 }
