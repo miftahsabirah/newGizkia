@@ -77,6 +77,7 @@ class DatabumilController extends Controller
         return redirect()->route('indexinfoawalbumil')->with('success', 'Data berhasil disimpan.');
     }
 
+
     public function deleteinfobumil($no_index_infobumil){
         $datainfobumildelete = Infoawalbumil::findOrFail($no_index_infobumil);
 
@@ -139,6 +140,7 @@ class DatabumilController extends Controller
         $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])->get();
         // dd($databayii->posyandu);
         // return $databayii;
+        return view('admin.keloladata.dataBumilRisti', ['databumilList' => $databumil]);
         return view('admin.keloladata.dataBumilRisti', ['databumilList' => $databumil]);
     }
 

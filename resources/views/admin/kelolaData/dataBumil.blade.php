@@ -2,6 +2,8 @@
 
 @section('link')
     <link rel="stylesheet" href="css/manajemenProfil.css">
+
+
 @endsection
 
 @section('title')
@@ -19,6 +21,7 @@
                 -- Ibu Hamil --
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
                 <a class="dropdown-item" href="{{ route('indexinfoawalbumil') }}">Ibu Hamil</a>
                 <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
                 <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
@@ -268,32 +271,38 @@
             </table>
         </div>
     </div>
+    
 @endsection
 
 @section('addScript')
     <script>
-        $(document).ready(function() {
+       $(document).ready(function() {
             $('#example').DataTable({
                 columnDefs: [{
-                        targets: [12],
-                        orderable: false
-                    } // Kolom 10, 11, dan 16 tidak dapat di-sorting
-                ]
+                    targets: [12],
+                    orderable: false
+                }],
+                paging: true, // Tambahkan opsi ini
             });
         });
 
+
+
         function applyFilter() {
-            // Get the selected value from the "Posyandu" filter
-            var selectedPosyandu = document.getElementById('PosyanduFilter').value;
+        // Get the selected value from the "Posyandu" filter
+        var selectedPosyandu = document.getElementById('PosyanduFilter').value;
 
-            // You can perform additional logic based on the selectedPosyandu value if needed
+        // You can perform additional logic based on the selectedPosyandu value if needed
 
-            // For now, let's just log the selected value to the console
-            console.log('Selected Posyandu:', selectedPosyandu);
+        // For now, let's just log the selected value to the console
+        console.log('Selected Posyandu:', selectedPosyandu);
 
-            // Here, you can make an AJAX request to the server with the selected filter value
-            // Update the DataTable or reload the page accordingly
-            // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
-        }
+        // Here, you can make an AJAX request to the server with the selected filter value
+        // Update the DataTable or reload the page accordingly
+        // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
+    }
+
     </script>
+
+    
 @endsection

@@ -40,7 +40,7 @@ Dashboard
 
 <div class="table-pengaturan">
   <div class="d-flex justify-content-between mb-4">
-    <h3>Statistik Bayi di Boyolali</h3>
+    <h3>Statistik Bayi Lahir di Boyolali</h3>
 
     <select id="yearFilter" class="btn-table-dash">
       <option value="2011">2011</option>

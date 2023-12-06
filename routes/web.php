@@ -145,8 +145,16 @@ Route::get('/visualisasi', function () {
     return view('user.grafik.visualisasiData');
 });
 
+Route::get('/grafik', function () {
+    return view('user.grafik.dataBalita');
+});
+
 Route::get('/tambahAnak', function () {
     return view('admin.rekapitulasi.tambahAnak');
+});
+
+Route::get('/home', function () {
+    return view('user.home');
 });
 
 Route::controller(LoginRegisterController::class)->group(function () {
@@ -178,6 +186,7 @@ route::controller(DatabayiController::class)->group(function() {
 });
 
 route::controller(DatabumilController::class)->group(function() {
+
     // bagian route info bumil
     Route::get('/indexinfoawalbumil', 'indexinfoawalbumil')->name('indexinfoawalbumil');
     Route::post('/postinfoawalbumil', 'postinfoawalbumil')->name('postinfoawalbumil');
@@ -186,6 +195,7 @@ route::controller(DatabumilController::class)->group(function() {
     Route::put('/updateinfobumil/{no_index_infobumil}', 'updateinfobumil')->name('updateinfobumil');
 
     // bagian data bumil
+
     Route::get('/indexbumil', 'indexbumil')->name('indexbumil');
     Route::get('createbumil', 'createbumil')->name('createbumil');
     Route::post('/postbumil', 'postbumil')->name('postbumil');
