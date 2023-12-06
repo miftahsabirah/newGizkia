@@ -65,6 +65,19 @@ class DatabayiController extends Controller
             'bblr' => 'nullable|string',
             'komplikasi_lain' => 'nullable|string',
 
+            //rekapbalita
+            'umur_bayi_meniggal' => 'nullable|string',
+            'tempat_bayi_meniggal' => 'nullable|string',
+            'penyebab_bayi_meniggal' => 'nullable|string',
+            'meniggal' => 'nullable|string',
+            'tanggal_meniggal' => 'nullable|date',
+            'gizi_buruk' => 'nullable|string',
+            'berat_bayi' => 'nullable|numeric',
+            'linkar_kepala' => 'nullable|numeric',
+            'pindah' => 'nullable|string',
+            'tanggal_pindah' => 'nullable|date',
+            'status_tumbuh_kembang' => 'nullable|string',
+
             // Validation rules for Databayi model
             'no_index_balita' => 'required|string',
             'kode_posyandu' => 'required|string',
@@ -108,10 +121,6 @@ class DatabayiController extends Controller
             'bayi_kategori' => 'nullable|string',
             'aktif' => 'nullable|string',
         ]);
-
-        $dataposyandu = $request->input('posyandu');
-        $data = Posyandu::where('posyandu', $dataposyandu)->get();
-
         // dd($dataposyandu);
         Databayi::created([
             'no_index_balita' => $request->no_index_balita,
@@ -166,7 +175,17 @@ class DatabayiController extends Controller
             'jenis' => $request->jenis,
         ]);
         Rekapbalita::created([
-            'nama' => $request->nama
+            'umur_bayi_meniggal' => $request->umur_bayi_meniggal,
+            'tempat_bayi_meniggal' => $request->tempat_bayi_meniggal,
+            'penyebab_bayi_meniggal' => $request->penyebab_bayi_meniggal,
+            'meniggal' => $request->meniggal,
+            'tanggal_meniggal' => $request->tanggal_meniggal,
+            'gizi_buruk' => $request->gizi_buruk,
+            'berat_bayi' => $request->berat_bayi,
+            'linkar_kepala' => $request->linkar_kepala,
+            'pindah' => $request->pindah,
+            'tanggal_pindah' => $request->tanggal_pindah,
+            'status_tumbuh_kembang' => $request->status_tumbuh_kembang
         ]);
         Penyakit::created([
             'asfiksia' => $request->asfiksia,

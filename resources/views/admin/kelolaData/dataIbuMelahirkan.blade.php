@@ -19,7 +19,7 @@ Data Ibu Melahirkan
             -- Ibu Melahirkan --
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="{{ route('dataBumil') }}">Ibu Hamil</a>
+          <a class="dropdown-item" href="{{ route('indexinfoawalbumil') }}">Ibu Hamil</a>
           <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
           <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
         </div>

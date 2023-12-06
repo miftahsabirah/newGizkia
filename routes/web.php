@@ -171,6 +171,7 @@ Route::controller(ManajemenPetugasKesehatanController::class)->group(function ()
     Route::get('/indexpetugasblmterdaftar', 'indexpetugasblmterdaftar')->name('indexpetugasblmterdaftar');
     Route::get('/terimaPetugas/{id}', 'terimaPetugas')->name('terimaPetugas');
     Route::get('/tolakPetugas/{id}', 'tolakPetugas')->name('tolakPetugas');
+    Route::put('/updatepetugas/{id}', 'updatepetugas')->name('updatepetugas');
     
 
 });
@@ -181,9 +182,12 @@ route::controller(DatabayiController::class)->group(function() {
 });
 
 route::controller(DatabumilController::class)->group(function() {
+    Route::get('/indexinfoawalbumil', 'indexinfoawalbumil')->name('indexinfoawalbumil');
+    Route::post('/postinfoawalbumil', 'postinfoawalbumil')->name('postinfoawalbumil');
     Route::get('/indexbumil', 'indexbumil')->name('indexbumil');
     Route::get('createbumil', 'createbumil')->name('createbumil');
     Route::post('/postbumil', 'postbumil')->name('postbumil');
+
 
 });
 
