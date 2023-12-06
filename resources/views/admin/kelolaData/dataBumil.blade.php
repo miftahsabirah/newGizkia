@@ -19,7 +19,8 @@
                 -- Ibu Hamil --
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="{{ route('indexinfoawalbumil') }}">Info Awal Bumil</a>
+
+                <a class="dropdown-item" href="{{ route('indexinfoawalbumil') }}">Ibu Hamil</a>
                 <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
                 <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
             </div>
@@ -246,13 +247,19 @@
                             <td>{{ $datainfobumil->lng }}</td>
                             <td>
                                 <button class="icon-button">
-                                    <i class="fi fi-rr-edit" style="color: #624DE3;"></i>
-                                    <!-- Ikon pertama menjadi merah -->
+                                    <a
+                                        href="{{ route('editinfoawalbumil',$datainfobumil->no_index_infobumil) }}">
+                                        <i class="fi fi-rr-edit" style="color: #624DE3;"></i>
+                                        <!-- Ikon pertama menjadi merah -->
+                                    </a>
                                 </button>
                                 <span style="margin-right: 10px;"></span>
                                 <button class="icon-button">
-                                    <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
-                                    <!-- Ikon kedua menjadi hijau -->
+                                    <a
+                                        href="{{ route('deleteinfobumil',$datainfobumil->no_index_infobumil) }}">
+                                        <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
+                                        <!-- Ikon kedua menjadi hijau -->
+                                    </a>
                                 </button>
                             </td>
 
@@ -289,5 +296,6 @@
         // Update the DataTable or reload the page accordingly
         // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
     }
+
     </script>
 @endsection

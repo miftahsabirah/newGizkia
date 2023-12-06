@@ -178,8 +178,16 @@ route::controller(DatabayiController::class)->group(function() {
 });
 
 route::controller(DatabumilController::class)->group(function() {
+
+    // bagian route info bumil
     Route::get('/indexinfoawalbumil', 'indexinfoawalbumil')->name('indexinfoawalbumil');
     Route::post('/postinfoawalbumil', 'postinfoawalbumil')->name('postinfoawalbumil');
+    Route::get('/deleteinfobumil/{no_index_infobumil}', 'deleteinfobumil')->name('deleteinfobumil');
+    Route::get('/editinfoawalbumil/{no_index_infobumil}', 'editinfoawalbumil')->name('editinfoawalbumil');
+    Route::put('/updateinfobumil/{no_index_infobumil}', 'updateinfobumil')->name('updateinfobumil');
+
+    // bagian data bumil
+
     Route::get('/indexbumil', 'indexbumil')->name('indexbumil');
     Route::get('createbumil', 'createbumil')->name('createbumil');
     Route::post('/postbumil', 'postbumil')->name('postbumil');
