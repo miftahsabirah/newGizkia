@@ -14,23 +14,78 @@ use Illuminate\Http\Request;
 
 class DatabumilController extends Controller
 {
+    // fungsi bagian menampilkan infoawal bumil
+    public function indexinfoawalbumil()
+    {
+        $infobumil = Infoawalbumil::with(['posyandu'])->paginate(10);
+        // return $infobumil;
+        return view('admin.kelolaData.dataBumil', ['infobumilList' => $infobumil]);
+    }
+    // untuk mengambil data posyandu
+    public function createbumil()
+    {
+        $datainfobumil = Posyandu::all();
+        return view('admin.kelolaData.formDataBumil', ['databumilList' => $datainfobumil]);
+    }
+
+    // fungsi yang digunakan untuk memasukkan ke dalam table info bumil
+    public function postinfoawalbumil(Request $request)
+    {
+        // dd($request->validate([
+        //     //INFO bumil
+        //     'no_index_infobumil' =>     'required|string',
+        //     'kode_posyandu' => 'required|exists:posyandu,kode_posyandu',
+        //     'tgl_informasi' => 'required|date',
+        //     'nama' => 'required|string|max:255',
+        //     'suami' => 'required|string|max:255',
+        //     'alamat' => 'required|string|max:255',
+        //     'user_id_pelapor' => 'required|string',
+        //     'verifikasi' => 'required|string',
+        //     'lat' => 'required|decimal:7,100',
+        //     'lng' => 'required|decimal:7,100',
+        //     'no_telepon' => 'required|string|max:20',
+        // ]));
+
+        $request->validate([
+            //INFO bumil
+            'no_index_infobumil' => 'required|string',
+            'kode_posyandu' => 'required|exists:posyandu,kode_posyandu',
+            'tgl_informasi' => 'required|date',
+            'nama' => 'required|string|max:90',
+            'suami' => 'required|string|max:255',
+            'alamat' => 'required|string|max:255',
+            'user_id_pelapor' => 'required|string',
+            'verifikasi' => 'required|string',
+            'lat' => 'required|decimal:7,100',
+            'lng' => 'required|decimal:7,100',
+            'no_telepon' => 'required|string|max:20',
+        ]);
+
+        Infoawalbumil::create([
+            'no_index_infobumil' => $request->no_index_infobumil,
+            'kode_posyandu' => $request->kode_posyandu,
+            'tgl_informasi' => $request->tgl_informasi,
+            'nama' => $request->nama,
+            'suami' => $request->suami,
+            'alamat' => $request->alamat,
+            'user_id_pelapor' => $request->user_id_pelapor,
+            'verifikasi' => $request->verifikasi,
+            'lat' => $request->lat,
+            'lng' => $request->lng,
+            'no_telepon' => $request->no_telepon,
+        ]);
+        return redirect()->route('indexinfoawalbumil')->with('success', 'Data berhasil disimpan.');
+    }
+
     public function indexbumil()
     {
         $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])->get();
         // dd($databayii->posyandu);
         // return $databayii;
-        return view('admin.keloladata.dataBumil', ['databumilList' => $databumil]);
+        return view('admin.keloladata.dataBumilRisti', ['databumilList' => $databumil]);
     }
 
-    public function createbumil()
-    {
-        // $databumilList = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])->get();
-        // return $databumilList;
-        $datainfobumil = Posyandu::all();
-        // dd($datainfobumil);
-        // return $datainfobumil;
-        return view('admin.kelolaData.formDataBumil', ['databumilList' => $datainfobumil]);
-    }
+
 
     public function postbumil(Request $request)
     {
@@ -51,17 +106,17 @@ class DatabumilController extends Controller
 
         $validated = $request->validate([
             //INFO bumil
-            'no_index_infobumil' => 'required|string',
-            'kode_posyandu' => 'required|exists:posyandu,kode_posyandu',
-            'tgl_informasi' => 'required|date',
-            'nama' => 'required|string|max:90',
-            'suami' => 'required|string|max:255',
-            'alamat' => 'required|string|max:255',
-            'user_id_pelapor' => 'required|string',
-            'verifikasi' => 'required|string',
-            'lat' => 'required|decimal:7,100',
-            'lng' => 'required|decimal:7,100',
-            'no_telepon' => 'required|string|max:20',
+            // 'no_index_infobumil' => 'required|string',
+            // 'kode_posyandu' => 'required|exists:posyandu,kode_posyandu',
+            // 'tgl_informasi' => 'required|date',
+            // 'nama' => 'required|string|max:90',
+            // 'suami' => 'required|string|max:255',
+            // 'alamat' => 'required|string|max:255',
+            // 'user_id_pelapor' => 'required|string',
+            // 'verifikasi' => 'required|string',
+            // 'lat' => 'required|decimal:7,100',
+            // 'lng' => 'required|decimal:7,100',
+            // 'no_telepon' => 'required|string|max:20',
 
             //databumil
 

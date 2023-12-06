@@ -19,7 +19,7 @@
                 -- Ibu Hamil --
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="{{ route('dataBumil') }}">Ibu Hamil</a>
+                <a class="dropdown-item" href="{{ route('indexinfoawalbumil') }}">Info Awal Bumil</a>
                 <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
                 <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
             </div>
@@ -198,37 +198,52 @@
 
         </div>
 
-
+        {{-- Bagian tampilan data dari info awal bumil --}}
         <div class="table-container">
 
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th style="text-align: center;">No. Index</th>
-                        <th style="text-align: center;">Tgl Reg</th>
+                        <th style="text-align: center;">No</th>
+                        <th style="text-align: center;">No. Index infobumil</th>
+                        <th style="text-align: center;">Posyandu</th>
                         <th style="text-align: center;">Nama</th>
-                        <th style="text-align: center;">Tgl Lahir</th>
-                        <th style="text-align: center;">BB Awal</th>
-                        <th style="text-align: center;">Umur</th>
-                        <th style="text-align: center;">Umur Hamil</th>
-                        <th style="text-align: center;">Umur Kehamilan Sekarang</th>
+                        <th style="text-align: center;">Suami</th>
+                        <th style="text-align: center;">No Telepon</th>
+                        <th style="text-align: center;">Alamat</th>
+                        <th style="text-align: center;">Tgl informasi</th>
+                        <th style="text-align: center;">User_id_pelapor</th>
+                        <th style="text-align: center;">Verivikasi</th>
+                        <th style="text-align: center;">latitude </th>
+                        <th style="text-align: center;">longitude</th>
+                        {{-- <th style="text-align: center;">Umur Kehamilan Sekarang</th>
                         <th style="text-align: center;">Suami</th>
                         <th style="text-align: center;">No. Telp</th>
                         <th style="text-align: center;">No. Telp Suami</th>
                         <th style="text-align: center;">HTP</th>
                         <th style="text-align: center;">Desa</th>
                         <th style="text-align: center;">Puskesmas</th>
-                        <th style="text-align: center;">Kecamatan</th>
+                        <th style="text-align: center;">Kecamatan</th> --}}
                         <th style="text-align: center;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($databumilList as $data)
+                    @foreach ($infobumilList as $datainfobumil)
                         <tr>
-                            <td>{{ $data->tgl_register  }}</td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $datainfobumil->no_index_infobumil }}</td>
                             <td>
-                                  {{ $data->periksabumil->tanggal_periksa }}
-                              </td>
+                                {{ $datainfobumil->posyandu->posyandu }}
+                            </td>
+                            <td>{{ $datainfobumil->nama }}</td>
+                            <td>{{ $datainfobumil->suami }}</td>
+                            <td>{{ $datainfobumil->no_telepon }}</td>
+                            <td>{{ $datainfobumil->alamat }}</td>
+                            <td>{{ $datainfobumil->tgl_informasi }}</td>
+                            <td>{{ $datainfobumil->user_id_pelapor }}</td>
+                            <td>{{ $datainfobumil->verifikasi }}</td>
+                            <td>{{ $datainfobumil->lat }}</td>
+                            <td>{{ $datainfobumil->lng }}</td>
                             <td>
                                 <button class="icon-button">
                                     <i class="fi fi-rr-edit" style="color: #624DE3;"></i>
@@ -254,11 +269,25 @@
         $(document).ready(function() {
             $('#example').DataTable({
                 columnDefs: [{
-                        targets: [9, 10, 15],
+                        targets: [12],
                         orderable: false
                     } // Kolom 10, 11, dan 16 tidak dapat di-sorting
                 ]
             });
         });
+
+        function applyFilter() {
+        // Get the selected value from the "Posyandu" filter
+        var selectedPosyandu = document.getElementById('PosyanduFilter').value;
+
+        // You can perform additional logic based on the selectedPosyandu value if needed
+
+        // For now, let's just log the selected value to the console
+        console.log('Selected Posyandu:', selectedPosyandu);
+
+        // Here, you can make an AJAX request to the server with the selected filter value
+        // Update the DataTable or reload the page accordingly
+        // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
+    }
     </script>
 @endsection

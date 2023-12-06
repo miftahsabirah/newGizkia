@@ -18,7 +18,7 @@
     <div class="formbold-main-wrapper">
         <div class="formbold-form-wrapper">
             <h2 class="formbold-heading">Tambah Data Ibu Hamil</h2>
-            <form action="{{ route('postbumil') }}" method="POST">
+            <form action="{{ route('postinfoawalbumil') }}" method="POST">
                 @csrf
                 <div class="color-container">
                     <h5 class="sub-header">Data Diri Ibu Hamil</h5>
@@ -139,7 +139,7 @@
                         data-bs-target="#exampleModal-2">
                         Simpan
                     </button>
-                    <a href="{{ route('indexbumil') }}" class="button-modal formbold-btn cancel"
+                    <a href="{{ route('indexinfoawalbumil') }}" class="button-modal formbold-btn cancel"
                         style="text-decoration: none;">
                         Batal
                     </a>
