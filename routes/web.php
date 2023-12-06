@@ -149,6 +149,10 @@ Route::get('/tambahAnak', function () {
     return view('admin.rekapitulasi.tambahAnak');
 });
 
+Route::get('/home', function () {
+    return view('user.home');
+});
+
 Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('storeRegister');
