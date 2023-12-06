@@ -77,6 +77,7 @@ class DatabumilController extends Controller
         return redirect()->route('indexinfoawalbumil')->with('success', 'Data berhasil disimpan.');
     }
 
+
     public function deleteinfobumil($no_index_infobumil){
         $datainfobumildelete = Infoawalbumil::findOrFail($no_index_infobumil);
 
