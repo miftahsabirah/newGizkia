@@ -2,6 +2,8 @@
 
 @section('link')
     <link rel="stylesheet" href="css/manajemenProfil.css">
+
+
 @endsection
 
 @section('title')
@@ -262,19 +264,22 @@
             </table>
         </div>
     </div>
+    
 @endsection
 
 @section('addScript')
     <script>
-        $(document).ready(function() {
+       $(document).ready(function() {
             $('#example').DataTable({
                 columnDefs: [{
-                        targets: [12],
-                        orderable: false
-                    } // Kolom 10, 11, dan 16 tidak dapat di-sorting
-                ]
+                    targets: [12],
+                    orderable: false
+                }],
+                paging: true, // Tambahkan opsi ini
             });
         });
+
+
 
         function applyFilter() {
         // Get the selected value from the "Posyandu" filter
@@ -290,4 +295,6 @@
         // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
     }
     </script>
+
+    
 @endsection

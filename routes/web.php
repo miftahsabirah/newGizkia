@@ -145,6 +145,10 @@ Route::get('/visualisasi', function () {
     return view('user.grafik.visualisasiData');
 });
 
+Route::get('/grafik', function () {
+    return view('user.grafik.dataBalita');
+});
+
 Route::get('/tambahAnak', function () {
     return view('admin.rekapitulasi.tambahAnak');
 });
