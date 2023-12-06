@@ -83,7 +83,7 @@ class ManajemenPetugasKesehatanController extends Controller
         return redirect()->route('indexpetugas')
             ->withSuccess('You have successfully add petugas');
     }
-
+    
     public function hapus($id)
     {
         $petugas = User::findOrFail($id);

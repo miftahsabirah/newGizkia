@@ -77,6 +77,63 @@ class DatabumilController extends Controller
         return redirect()->route('indexinfoawalbumil')->with('success', 'Data berhasil disimpan.');
     }
 
+    public function deleteinfobumil($no_index_infobumil){
+        $datainfobumildelete = Infoawalbumil::findOrFail($no_index_infobumil);
+
+        if (!$datainfobumildelete) {
+            return redirect()->route('indexinfoawalbumil')
+                ->withError('Record not found');
+        }
+    
+        $datainfobumildelete->delete();
+        return redirect()->route('indexinfoawalbumil')
+            ->withSuccess('You have successfully deleted the petugas');
+
+    }
+
+    public function editinfoawalbumil($no_index_infobumil){
+        $infoeditawalbumil = Infoawalbumil::findOrFail($no_index_infobumil);
+        return view('admin.kelolaData.formEditDataBumil', compact('infoeditawalbumil'));
+    }
+
+    // fungsi update data dari info awal bumil
+    public function updateinfobumil(Request $request, $no_index_infobumil){
+        $request->validate([
+            'no_index_infobumil' => 'required|string',
+            'kode_posyandu' => 'required|exists:posyandu,kode_posyandu',
+            'tgl_informasi' => 'required|date',
+            'nama' => 'required|string|max:90',
+            'suami' => 'required|string|max:255',
+            'alamat' => 'required|string|max:255',
+            'user_id_pelapor' => 'required|string',
+            'verifikasi' => 'required|string',
+            'lat' => 'required|decimal:7,100',
+            'lng' => 'required|decimal:7,100',
+            'no_telepon' => 'required|string|max:20',
+        ]);
+
+        $updateinfobumil = Infoawalbumil::findOrFail($no_index_infobumil);
+        $updateinfobumil->update([
+            'no_index_infobumil' => $request->no_index_infobumil,
+            'kode_posyandu' => $request->kode_posyandu,
+            'tgl_informasi' => $request->tgl_informasi,
+            'nama' => $request->nama,
+            'suami' => $request->suami,
+            'alamat' => $request->alamat,
+            'user_id_pelapor' => $request->user_id_pelapor,
+            'verifikasi' => $request->verifikasi,
+            'lat' => $request->lat,
+            'lng' => $request->lng,
+            'no_telepon' => $request->no_telepon,
+        ]);
+
+        return redirect()->route('indexinfoawalbumil')
+        ->withSuccess('You have successfully updated Info awal bumil');
+    }
+
+
+
+    // fungsi dari data bumil
     public function indexbumil()
     {
         $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])->get();

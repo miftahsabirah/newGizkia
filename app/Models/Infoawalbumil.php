@@ -10,7 +10,7 @@ class Infoawalbumil extends Model
     use HasFactory;
 
     protected $table = 'infoawalbumil';
-    protected $primaryKey = 'no_indek_infobumil';
+    protected $primaryKey = 'no_index_infobumil';
     public $incrementing = false;
     protected $keyType = 'string';
 
