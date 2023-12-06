@@ -30,7 +30,7 @@ class Infoawalbumil extends Model
 
     public function posyandu()
     {
-        return $this->hasMany(Posyandu::class, 'kode_posyandu', 'kode_posyandu');
+        return $this->belongsTo(Posyandu::class, 'kode_posyandu', 'kode_posyandu');
     }
     public $timestamps = false;
 }

@@ -18,7 +18,7 @@ class InfoawalbumilFactory extends Factory
     public function definition(): array
     {
         return [
-            'no_indek_infobumil' => $this->faker->unique()->numberBetween(100000000000000000, 999999999999999999),
+            'no_index_infobumil' => $this->faker->unique()->numberBetween(100000000000000000, 999999999999999999),
             'kode_posyandu' => function () {
                 return Posyandu::inRandomOrder()->first()->kode_posyandu;
             },
