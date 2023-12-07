@@ -24,6 +24,10 @@ class Jenisristi extends Model
         'resiko11',
     ];
 
+    public function databumil(){
+        return $this->hasOne(Databumil::class);
+    }
+
     // Jika Anda memiliki timestamp (created_at, updated_at), tambahkan properti berikut
     public $timestamps = false;
 }
