@@ -100,10 +100,8 @@
     display: flex;
     align-items: center;
     justify-items: center;
-    background-color: #E6FFFD;
     justify-content: center;
-    padding: 5px;
-
+    margin-top: 60px;
 }
 
 .container-peta{
@@ -111,15 +109,18 @@
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    margin-top: 20px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
 }
+
 
 #map { 
     border-radius: 10px;
-    width: 800px;
+    width: 100%;
     height: 500px; 
-    margin-top: 10px;
-    margin-bottom: 50px;
 }
 
 .table-pengaturan{
@@ -208,3 +209,74 @@
     background-color: #FFF;
 }
 
+.btn-exp-dd{
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #E85AAD;
+    color: #FFF;
+    border-radius: 8px;
+    border: 0px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.btn-filter-dd{
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #26A4EA;
+    color: #FFF;
+    border-radius: 8px;
+    border: 0px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.table-container-dd {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+.container-dd{
+    border-radius: 20px;
+    margin: 70px;
+}
+.formbold-mb-3 {
+    margin-bottom: 15px;
+    flex: 1; 
+    margin-right: 10px; 
+    margin-right: 10px; 
+}
+
+.formbold-form-label {
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+.formbold-form-input {
+    width: 100%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #757575;
+    outline: none;
+    resize: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+.btn-card{
+background-color: #FF65B0;
+color: #FFF;
+margin-top: 10px;
+}
+
+.btn-card:hover {
+background-color: #FF65B0; 
+}

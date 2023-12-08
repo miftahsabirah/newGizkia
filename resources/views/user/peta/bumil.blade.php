@@ -23,7 +23,7 @@ Peta Anak
 @section('isi')
 
 <div class="title-peta">
-    <h2 style="margin-top: 5px">Lokasi Bumil</h2>
+    <h2>Peta Lokasi Bumil</h2>
 </div>
 
 <div class="container-peta">
