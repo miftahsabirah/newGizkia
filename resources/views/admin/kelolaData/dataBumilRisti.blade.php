@@ -24,12 +24,10 @@
                 <a class="dropdown-item" href="{{ route('indexbumilmelahirkan') }}">Ibu Melahirkan</a>
             </div>
         </div>
-
         <a href="{{ route('createdatabumil') }}" type="button" class="add-data2">
             <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Bumil Risti
         </a>
     </div>
-
 
 
     <div class="main-container">
