@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginRegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\userController;
 use App\Http\Controllers\DatabayiController;
 use App\Http\Controllers\DatabumilController;
 use App\Http\Controllers\ManajemenPetugasKesehatanController;
@@ -129,12 +130,23 @@ Route::get('/dash', function () {
 Route::get('/header', function () {
     return view('master.header');
 });
+Route::get('/puskesmas', function () {
+    return view('user.dataDasar.puskesmas');
+});
+
 Route::get('/dataDasar', function () {
-    return view('user.dataDasar');
+    return view('user.dataDasar.utama');
+});
+
+Route::get('/restore', function () {
+    return view('user.dataDasar.restore');
 });
 
 Route::get('/dataAnak', function () {
-    return view('user.data.ibuMelahirkan');
+    return view('user.data.anak');
+});
+Route::get('/dataImunisasiUser', function () {
+    return view('user.data.Imunisasi');
 });
 
 Route::get('/petaUser', function () {
@@ -155,6 +167,10 @@ Route::get('/tambahAnak', function () {
 
 Route::get('/home', function () {
     return view('user.home');
+});
+
+Route::get('/rekapitulasiUser', function () {
+    return view('user.rekapitulasi.anak');
 });
 
 Route::controller(LoginRegisterController::class)->group(function () {
@@ -238,6 +254,23 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/editAkses', 'editAkses')->name('editAkses');
 
     Route::post('/storeadmin', 'storeadmin')->name('storeadmin');
+});
+
+Route::controller(userController::class)->group(function () {
+    Route::get('/home', 'home')->name('home');
+    Route::get('/dataAnak', 'dataAnak')->name('dataAnak');
+    Route::get('/dataBumil', 'dataBumil')->name('dataBumil');
+    Route::get('/dataBumilRisti', 'dataBumilRisti')->name('dataBumilRisti');
+    Route::get('/dataIbuMelahirkan', 'dataIbuMelahirkan')->name('dataIbuMelahirkan');
+    Route::get('/petaBumil', 'petaBumil')->name('petaBumil');
+    Route::get('/petaAnak', 'petaAnak')->name('petaAnak');
+    Route::get('/petaBelumTerdaftar', 'petaBelumTerdaftar')->name('petaBelumTerdaftar');
+    Route::get('/home', 'home')->name('home');
+    Route::get('/visualisasi', 'visualisasi')->name('visualisasi');
+    Route::get('/grafikDataAnak', 'grafikDataAnak')->name('grafikDataAnak');
+    Route::get('/grafikDataBumil', 'grafikDataBumil')->name('grafikDataBumil');
+    Route::get('/grafikDataImunisasi', 'grafikDataImunisasi')->name('grafikDataImunisasi');
+
 });
 
 Route::get('/maps', 'MapsController@showMap');

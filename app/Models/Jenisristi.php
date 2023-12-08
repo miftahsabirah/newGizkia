@@ -23,6 +23,10 @@ class Jenisristi extends Model
         'resiko10',
         'resiko11',
     ];
+    
+    public function databumil(){
+        return $this->hasOne(Databumil::class);
+    }
 
     public function databumil(){
         return $this->hasOne(Databumil::class);

@@ -18,7 +18,7 @@ class DatabumilController extends Controller
     // fungsi bagian menampilkan infoawal bumil
     public function indexinfoawalbumil()
     {
-        $infobumil = Infoawalbumil::with(['posyandu'])->paginate(10);
+        $infobumil = Infoawalbumil::with(['posyandu'])->get();
         // return $infobumil;
         return view('admin.kelolaData.dataBumil', ['infobumilList' => $infobumil]);
     }

@@ -35,7 +35,7 @@ Grafik Data Bumil
      var options = {
         series: [{
             name: 'Bumil',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 20, 34]
+            data: [42, 44, 55, 57, 56, 61, 58, 63, 60, 66, 20, 34]
         }],
         chart: {
             type: 'bar',
@@ -57,7 +57,7 @@ Grafik Data Bumil
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
             axisBorder: {
             show: true, // Menyembunyikan garis pada sumbu x
             },
@@ -79,7 +79,7 @@ Grafik Data Bumil
         },
         fill: {
             opacity: 1,
-            colors: ['#861657'] ,
+            colors: ['#7aa6b3'] ,
         },
         tooltip: {
             y: {

@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" href="{{ route('home')}}">
                                 <i class="fa fa-home"></i>
                                 <b>Home</b>
                             </a>
@@ -43,9 +43,9 @@
                                 <b>Bumil</b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Ibu Hamil</a></li>
-                                <li><a class="dropdown-item" href="#">Ibu Hamil Risti</a></li>
-                                <li><a class="dropdown-item" href="#">Ibu Melahirkan</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dataBumil')}}">Ibu Hamil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dataBumilRisti')}}">Ibu Hamil Risti</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dataIbuMelahirkan')}}">Ibu Melahirkan</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -66,8 +66,9 @@
                                 <b>Peta Temuan</b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Peta Bumil</a></li>
-                                <li><a class="dropdown-item" href="#">Peta Balita</a></li>
+                                <li><a class="dropdown-item" href="{{ route('petaBumil')}}">Peta Bumil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('petaAnak')}}">Peta Anak</a></li>
+                                <li><a class="dropdown-item" href="{{ route('petaBelumTerdaftar')}}">Peta Bumil Belum Terdaftar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -76,9 +77,10 @@
                                 <b>Visualisasi Data</b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Grafik Data Bumil</a></li>
-                                <li><a class="dropdown-item" href="#">Grafik Data Balita</a></li>
-                                <li><a class="dropdown-item" href="#">Visualisasi Data</a></li>
+                                <li><a class="dropdown-item" href="{{ route('grafikDataBumil')}}">Grafik Data Bumil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('grafikDataAnak')}}">Grafik Data Anak</a></li>
+                                <li><a class="dropdown-item" href="{{ route('grafikDataImunisasi')}}">Grafik Data Imunisasi</a></li>
+                                <li><a class="dropdown-item" href="{{ route('visualisasi')}}">Visualisasi Data</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -93,7 +95,7 @@
 @yield('isi')
   
 
-{{-- <div class="footer">
+<div class="footer">
     <div class="d-flex flex-wrap justify-content-between align-items-center py-2 my-1 batas">
         <div class="col-md-4 d-flex align-items-center">
           <p class="mb-3 mb-md-0">© 2023 Gizkia. All rights reserved.</p>
@@ -106,7 +108,7 @@
         </div>
                  
     </div>
-</div> --}}
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>

@@ -24,6 +24,11 @@ class Jenispenyakit extends Model
         'jiwa',
         'pms',
     ];
+    
+    public function databumil(){
+        return $this->hasOne(Databumil::class);
+    }
+
 
     public function databumil(){
         return $this->hasOne(Databumil::class);
