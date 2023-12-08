@@ -35,7 +35,7 @@ Grafik Data Imunisasi
      var options = {
         series: [{
             name: 'IUmunisasi',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 20, 34]
+            data: [15, 44, 55, 57, 56, 61, 58, 63, 60, 66, 20, 34]
         }],
         chart: {
             type: 'bar',
@@ -57,7 +57,7 @@ Grafik Data Imunisasi
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
             axisBorder: {
             show: true, // Menyembunyikan garis pada sumbu x
             },
@@ -79,7 +79,7 @@ Grafik Data Imunisasi
         },
         fill: {
             opacity: 1,
-            colors: ['#861657'] ,
+            colors: ['#b37a9c'] ,
         },
         tooltip: {
             y: {

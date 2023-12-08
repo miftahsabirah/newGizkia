@@ -12,9 +12,77 @@ Data Anak
 
 
 <div class="dropdown" style="display: flex; justify-content: flex-end; align-items: center; margin-left: auto;">
-    <a href="#" type="button" class="btn-filter">
-        <i class="fi fi-rr-filter"></i> Filter Data
+    <a href="#" type="button" class="btn-filter" data-bs-toggle="modal" data-bs-target="#exampleModal-1">
+        <i class="fi fi-rr-filter"></i> Filter Data Anak
     </a>
+
+    <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Filter Data Anak</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="formbold-mb-3">
+                            <label class="formbold-form-label">Kelompok Umur</label>
+
+                            <select class="formbold-form-input" name="Puskesmas" id="puskesmas">
+                                <option value="Pilih Desa">--Pilih Desa--</option>
+                                <option value="Puskesmas1">Puskesmas 1</option>
+                                <option value="Puskesmas2">Puskesmas 2</option>
+                                <option value="Puskesmas3">Puskesmas 3</option>
+                            </select>
+                        </div>
+
+                        <div class="formbold-mb-3">
+                            <label class="formbold-form-label">Jenis Anak</label>
+
+                            <select class="formbold-form-input" name="Puskesmas" id="puskesmas">
+                                <option value="Pilih Desa">--Pilih Desa--</option>
+                                <option value="Puskesmas1">Puskesmas 1</option>
+                                <option value="Puskesmas2">Puskesmas 2</option>
+                                <option value="Puskesmas3">Puskesmas 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <div class="formbold-mb-3">
+                            <label class="formbold-form-label">Posyandu</label>
+
+                            <select class="formbold-form-input" name="Puskesmas" id="puskesmas">
+                                <option value="Pilih Desa">--Pilih Desa--</option>
+                                <option value="Puskesmas1">Puskesmas 1</option>
+                                <option value="Puskesmas2">Puskesmas 2</option>
+                                <option value="Puskesmas3">Puskesmas 3</option>
+                            </select>
+                        </div>
+
+                        <div class="formbold-mb-3">
+                            <label class="formbold-form-label">Status Anak</label>
+
+                            <select class="formbold-form-input" name="Puskesmas" id="puskesmas">
+                                <option value="Pilih Desa">--Pilih Desa--</option>
+                                <option value="Puskesmas1">Puskesmas 1</option>
+                                <option value="Puskesmas2">Puskesmas 2</option>
+                                <option value="Puskesmas3">Puskesmas 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Terapkan</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <a href="#" type="button" class="btn-exp">
         <i class="fi fi-rr-file-export"></i> Export Data 
@@ -26,8 +94,6 @@ Data Anak
         <h3 class="title-container">Data Balita</h3>
       </div>
     
-    
-
       <div class="table-container">
 
           <table id="example" class="table table-striped" style="width:100%">
