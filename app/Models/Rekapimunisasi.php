@@ -36,7 +36,8 @@ class Rekapimunisasi extends Model
 
     public function databayi()
     {
-        return $this->hasMany(Databayi::class);
+        return $this->hasOne(Databayi::class);
     }
+    
 
 }

@@ -25,6 +25,10 @@ class Rekapbalita extends Model
         'status_tumbuh_kembang',
     ];
 
-    protected $dates = ['tanggal_meniggal', 'tanggal_pindah'];
+    public function databayi()
+    {
+        return $this->hasOne(Databayi::class);
+    }
+    
     public $timestamps = false;
 }
