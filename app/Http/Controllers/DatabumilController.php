@@ -9,7 +9,6 @@ use App\Models\Jenisfaktor;
 use App\Models\Jenispenyakit;
 use App\Models\Jenisristi;
 use App\Models\Periksabumil;
-use App\Models\Periksabumil;
 use App\Models\Posyandu;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
