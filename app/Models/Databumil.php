@@ -19,6 +19,7 @@ class Databumil extends Model
         'id_jenisfaktor',
         'id_jenisristi',
         'id_periksabumil',
+        'id_no_index_infobumil',
         'tgl_register',
         'tgl_lahir',
         'bbawal',
@@ -48,24 +49,25 @@ class Databumil extends Model
 
     public function jenispenyakit()
     {
-        return $this->belongsTo(Jenispenyakit::class, 'id_jenispenyakit');
+        return $this->belongsTo(Jenispenyakit::class, 'id_jenispenyakit', 'id');
     }
 
     public function jenisfaktor()
     {
-        return $this->belongsTo(Jenisfaktor::class, 'id_jenisfaktor');
+        return $this->belongsTo(Jenisfaktor::class, 'id_jenisfaktor', 'id');
     }
 
     public function jenisristi()
     {
-        return $this->belongsTo(Jenisristi::class, 'id_jenisristi');
+        return $this->belongsTo(Jenisristi::class, 'id_jenisristi', 'id');
     }
 
     public function periksabumil()
     {
-        return $this->belongsTo(Periksabumil::class, 'id_periksabumil');
+        return $this->belongsTo(Periksabumil::class, 'id_periksabumil', 'id');
     }
     public function infoawalbumil() {
-        return $this->belongsTo(infoawalbumil::class, 'id_periksabumil', 'no_index_infobumil');
+        return $this->belongsTo(infoawalbumil::class, 'id_no_index_infobumil', 'no_index_infobumil');
     }
+    public $timestamps = false;
 }

@@ -35,7 +35,7 @@ Grafik Data Anak
      var options = {
         series: [{
             name: 'Anak',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 20, 34]
+            data: [53, 44, 55, 57, 56, 61, 58, 63, 60, 66, 20, 34]
         }],
         chart: {
             type: 'bar',
@@ -57,7 +57,7 @@ Grafik Data Anak
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Des'],
             axisBorder: {
             show: true, // Menyembunyikan garis pada sumbu x
             },
@@ -79,7 +79,7 @@ Grafik Data Anak
         },
         fill: {
             opacity: 1,
-            colors: ['#861657'] ,
+            colors: ['#FCAABE'] ,
         },
         tooltip: {
             y: {

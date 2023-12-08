@@ -18,6 +18,9 @@ class Jenisfaktor extends Model
         'faktor5',
         'faktor6',
     ];
+    public function databumil(){
+        return $this->hasOne(Databumil::class);
+    }
 
     // Jika Anda memiliki timestamp (created_at, updated_at), tambahkan properti berikut
     public $timestamps = false;

@@ -22,7 +22,7 @@ class Periksabumil extends Model
         'sistole',
         'diastole',
         'hb',
-        'berat_badan',
+        'berad_badan',
         'tinggi_fundus',
         'jumlah_janin',
         'letak_janin',
@@ -39,11 +39,11 @@ class Periksabumil extends Model
         'tt2',
         'tt3',
         'dirujuk',
-        'posisi_tbj',
+        'posisitbj',
         'tbj',
-        'kode_fe',
-        'jumlah_fe',
-        'obat_cacing',
+        'kodefe',
+        'jumlahfe',
+        'obatcacing',
         'tt4',
         'tt5',
         'hbsag',
@@ -53,6 +53,10 @@ class Periksabumil extends Model
         'ims',
         'nama',
     ];
+
+    public function databumil(){
+        return $this->hasOne(Databumil::class);
+    }
 
     // Jika Anda memiliki timestamp (created_at, updated_at), tambahkan properti berikut
     public $timestamps = false;
