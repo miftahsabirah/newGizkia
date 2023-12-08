@@ -213,8 +213,13 @@ route::controller(DatabumilController::class)->group(function() {
 
     // bagian data bumil
     Route::get('/indexbumil', 'indexbumil')->name('indexbumil');
+    Route::get('/indexbumilmelahirkan', 'indexbumilmelahirkan')->name('indexbumilmelahirkan');
     Route::get('createdatabumil', 'createdatabumil')->name('createdatabumil');
     Route::post('/postbumil', 'postbumil')->name('postbumil');
+    Route::get('/deletedatabumil/{no_index_bumil}', 'deletedatabumil')->name('deletedatabumil');
+    Route::get('/editbumil/{no_index_bumil}', 'editbumil')->name('editbumil');
+    Route::put('/updatebumil/{no_index_bumil}', 'updatebumil')->name('updatebumil');
+
 
 
 });

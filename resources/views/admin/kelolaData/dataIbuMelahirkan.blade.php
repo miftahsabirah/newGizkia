@@ -20,8 +20,8 @@ Data Ibu Melahirkan
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="{{ route('indexinfoawalbumil') }}">Ibu Hamil</a>
-          <a class="dropdown-item" href="{{ route('dataBumilRisti') }}">Bumil Risti</a>
-          <a class="dropdown-item" href="{{ route('dataIbuMelahirkan') }}">Ibu Melahirkan</a>
+          <a class="dropdown-item" href="{{ route('indexbumil') }}">Bumil Risti</a>
+          <a class="dropdown-item" href="{{ route('indexbumilmelahirkan') }}">Ibu Melahirkan</a>
         </div>
     </div>
 
@@ -204,21 +204,22 @@ Data Ibu Melahirkan
                     </tr>
                 </thead>
                 <tbody>
+                  @foreach ($databumilList as $item)
                     <tr>
-                        <td>012345671</td>
-                        <td>Resanti Dwi Cahyani</td>
-                        <td>Doni Kurnia</td>                        
-                        <td>Posyanduu</td>
-                        <td>5</td>
-                        <td>2</td>
-                        <td>Klakah</td>
-                        <td>Klakah</td>
-                        <td>2011-04-25</td>
-                        <td>Dipsi Lala</td>
-                        <td>Normal</td>
-                        <td>Sehat</td>
-                        <td>Sehat</td>
-                        <td>-</td>
+                        <td>{{ $item->no_index_bumil }}</td>
+                        <td>{{ $item ->infoawalbumil->nama }}</td>
+                        <td>{{ $item ->infoawalbumil->suami }}</td>                       
+                        <td>{{ $item ->infoawalbumil->posyandu->posyandu }}</td>  
+                        <td>{{ $item ->rt }}</td>                        
+                        <td>{{ $item ->rw }}</td>  
+                        <td>{{ $item ->infoawalbumil->posyandu->dusun->nama }}</td>                        
+                        <td>{{ $item ->infoawalbumil->posyandu->desa->nama }}</td>  
+                        <td>{{ $item->tanggal_melahirkan }}</td>
+                        <td>{{ $item->cara_lahir }}</td>
+                        <td>{{ $item->penolong }}</td>
+                        <td>{{ $item->kondisi_bayi }}</td>
+                        <td>{{ $item->kondisi_ibu }}</td>
+                        <td>{{ $item->konseling_pasca_salin }}</td>
                         <td>
                           <button class="icon-button">
                             <i class="fi fi-rr-edit" style="color: #624DE3;"></i> <!-- Ikon pertama menjadi merah -->
@@ -228,9 +229,8 @@ Data Ibu Melahirkan
                             <i class="fi fi-rr-trash" style="color: #A30D11;"></i> <!-- Ikon kedua menjadi hijau -->
                           </button>
                         </td>
-                      
                     </tr>
-
+                    @endforeach
                 </tbody>
             </table>
         </div>
