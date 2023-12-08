@@ -54,7 +54,7 @@
 				<ul class="side-dropdown">
 					<li><a href="{{ route('indexinfoawalbumil') }}" class="a-link">Data Bumil</a></li>
 					<li><a href="{{ route('indexbayi') }}" class="a-link">Data Anak</a></li>
-					<li><a href="{{ route('dataImunisasi') }}" class="a-link">Data Imunisasi</a></li>
+					<li><a href="{{ route('indexbayirekap') }}" class="a-link">Data Imunisasi</a></li>
 				</ul>
 			</li>
 

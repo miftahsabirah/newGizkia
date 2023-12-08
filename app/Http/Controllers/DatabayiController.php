@@ -6,6 +6,7 @@ use App\Models\Databayi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Penyakit;
+use App\Models\Periksabumil;
 use App\Models\Posyandu;
 use App\Models\Rekapbalita;
 use App\Models\Rekapimunisasi;
@@ -28,7 +29,8 @@ class DatabayiController extends Controller
         return view('admin.keloladata.dataBalita', compact('data'));
     }
 
-    public function createbayi(){
+    public function createbayi()
+    {
         $databalita = Posyandu::all();
 
         return view('admin.kelolaData.formDataBalita', ['databumilList' => $databalita]);
@@ -38,32 +40,32 @@ class DatabayiController extends Controller
         $request->validate([
 
             // Validation rules for Rekapimunisasi model
-            'bcg' => 'nullable|string',
-            'dpt_1' => 'nullable|string',
-            'dpt_2' => 'nullable|string',
-            'dpt_3' => 'nullable|string',
-            'polio_1' => 'nullable|string',
-            'polio_2' => 'nullable|string',
-            'polio_3' => 'nullable|string',
-            'ipv' => 'nullable|string',
-            'campak' => 'nullable|string',
-            'boosterpentavalen' => 'nullable|string',
-            'boostercampak' => 'nullable|string',
-            'hepatitis_0' => 'nullable|string',
-            'hepatitis_1' => 'nullable|string',
-            'hepatitis_2' => 'nullable|string',
-            'hepatitis_3' => 'nullable|string',
-            'noe_natal_1' => 'nullable|string',
-            'noe_natal_2' => 'nullable|string',
-            'noe_natal_3' => 'nullable|string',
+            'bcg' => 'nullable|date',
+            'dpt_1' => 'nullable|date',
+            'dpt_2' => 'nullable|date',
+            'dpt_3' => 'nullable|date',
+            'polio_1' => 'nullable|date',
+            'polio_2' => 'nullable|date',
+            'polio_3' => 'nullable|date',
+            'ipv' => 'nullable|date',
+            'campak' => 'nullable|date',
+            'boosterpentavalen' => 'nullable|date',
+            'boostercampak' => 'nullable|date',
+            'hepatitis_0' => 'nullable|date',
+            'hepatitis_1' => 'nullable|date',
+            'hepatitis_2' => 'nullable|date',
+            'hepatitis_3' => 'nullable|date',
+            'noe_natal_1' => 'nullable|date',
+            'noe_natal_2' => 'nullable|date',
+            'noe_natal_3' => 'nullable|date',
 
             // Validation rules for Penyakit model
-            'asfiksia' => 'nullable|string',
-            'hipotermi' => 'nullable|string',
-            'infeksi' => 'nullable|string',
-            'tetanus' => 'nullable|string',
-            'bblr' => 'nullable|string',
-            'komplikasi_lain' => 'nullable|string',
+            'asfiksia' => 'nullable|integer',
+            'hipotermi' => 'nullable|integer',
+            'infeksi' => 'nullable|integer',
+            'tetanus' => 'nullable|integer',
+            'bblr' => 'nullable|integer',
+            'komplikasi_lain' => 'nullable|integer',
 
             //rekapbalita
             'umur_bayi_meniggal' => 'nullable|string',
@@ -78,24 +80,25 @@ class DatabayiController extends Controller
             'tanggal_pindah' => 'nullable|date',
             'status_tumbuh_kembang' => 'nullable|string',
 
-            // Validation rules for Databayi model
+            // // Validation rules for Databayi model
             'no_index_balita' => 'required|string',
             'kode_posyandu' => 'required|string',
-            'rekapimunisasi_id' => 'nullable|exists:rekapimunisasis,id',
-            'rekapbalita_id' => 'nullable|exists:rekapbalitas,id',
-            'penyakit_id' => 'nullable|exists:penyakits,id',
-            'penyakit' => 'nullable|string',
+            // // // 'rekapimunisasi_id' => 'nullable|exists:rekapimunisasis,id',
+            // // // 'rekapbalita_id' => 'nullable|exists:rekapbalitas,id',
+            // // // 'penyakit_id' => 'nullable|exists:penyakits,id',
+            // // // 'penyakit' => 'nullable|string',
             'no_index' => 'required|string',
             'akte' => 'nullable|string',
             'nokk' => 'nullable|string',
             'nama_bayi' => 'required|string',
             'tanggal_lahir' => 'required|date',
-            'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
+            'jenis_kelamin' => 'required',
             'nama_ibu' => 'required|string',
             'nama_ayah' => 'required|string',
             'gakin' => 'nullable|string',
             'rt' => 'nullable|string',
             'rw' => 'nullable|string',
+
             'tb_terakhir' => 'nullable|numeric',
             'bb_terakhir' => 'nullable|numeric',
             'tanggal_timbang_terakhir' => 'nullable|date',
@@ -121,13 +124,57 @@ class DatabayiController extends Controller
             'bayi_kategori' => 'nullable|string',
             'aktif' => 'nullable|string',
         ]);
+        Rekapbalita::create([
+            'umur_bayi_meniggal' => $request->umur_bayi_meniggal,
+            'tempat_bayi_meniggal' => $request->tempat_bayi_meniggal,
+            'penyebab_bayi_meniggal' => $request->penyebab_bayi_meniggal,
+            'meniggal' => $request->meniggal,
+            'tanggal_meniggal' => $request->tanggal_meniggal,
+            'gizi_buruk' => $request->gizi_buruk,
+            'berat_bayi' => $request->berat_bayi,
+            'linkar_kepala' => $request->linkar_kepala,
+            'pindah' => $request->pindah,
+            'tanggal_pindah' => $request->tanggal_pindah,
+            'status_tumbuh_kembang' => $request->status_tumbuh_kembang
+        ]);
+        Penyakit::create([
+            'asfiksia' => $request->asfiksia,
+            'hipotermi' => $request->hipotermi,
+            'infeksi' => $request->infeksi,
+            'tetanus' => $request->tetanus,
+            'bblr' => $request->bblr,
+            'komplikasi_lain' => $request->komplikasi_lain,
+        ]);
+        Rekapimunisasi::create([
+            'polio_1' => $request->polio_1,
+            'polio_2' => $request->polio_2,
+            'polio_3' => $request->polio_3,
+            'ipv' => $request->ipv,
+            'campak' => $request->campak,
+            'boosterpentavalen' => $request->boosterpentavalen,
+            'boostercampak' => $request->boostercampak,
+            'hepatitis_0' => $request->hepatitis_0,
+            'hepatitis_1' => $request->hepatitis_1,
+            'hepatitis_2' => $request->hepatitis_2,
+            'hepatitis_3' => $request->hepatitis_3,
+            'noe_natal_1' => $request->noe_natal_1,
+            'noe_natal_2' => $request->noe_natal_2,
+            'noe_natal_3' => $request->noe_natal_3,
+        ]);
+
+
+        //  dd($request->all());
         // dd($dataposyandu);
+        $rekapbalita = Rekapbalita::orderBy('id', 'DESC')->first();
+        $rekapimunisasi = Rekapimunisasi::orderBy('id', 'DESC')->first();
+        // dd($rekapimunisasi);
+        $Penyakit = Penyakit::orderBy('id', 'DESC')->first();
         Databayi::created([
             'no_index_balita' => $request->no_index_balita,
             'kode_posyandu' => $request->kode_posyandu,
-            'id_rekapimunisasi' => $request->id_rekapimunisasi,
-            'id_rekapbalita' => $request->id_rekapbalita,
-            'penyakit' => $request->penyakit,
+            'id_rekapimunisasi' => $rekapimunisasi->id,
+            'id_rekapbalita' => $rekapbalita->id,
+            'penyakit' => $Penyakit->id,
             'no_index' => $request->no_index,
             'akte' => $request->akte,
             'nokk' => $request->nokk,
@@ -165,53 +212,15 @@ class DatabayiController extends Controller
             'aktif' => $request->aktif,
         ]);
 
-        Posyandu::created([
-            'kode_posyandu' => $request->kode_posyandu,
-            'kode_desa' => $request->kode_desa,
-            'kode_dusun' => $request->kode_dusun,
-            'posyandu' => $request->posyandu,
-            'kode_bidan' => $request->kode_bidan,
-            'jumlah_kader' => $request->jumlah_kader,
-            'jenis' => $request->jenis,
-        ]);
-        Rekapbalita::created([
-            'umur_bayi_meniggal' => $request->umur_bayi_meniggal,
-            'tempat_bayi_meniggal' => $request->tempat_bayi_meniggal,
-            'penyebab_bayi_meniggal' => $request->penyebab_bayi_meniggal,
-            'meniggal' => $request->meniggal,
-            'tanggal_meniggal' => $request->tanggal_meniggal,
-            'gizi_buruk' => $request->gizi_buruk,
-            'berat_bayi' => $request->berat_bayi,
-            'linkar_kepala' => $request->linkar_kepala,
-            'pindah' => $request->pindah,
-            'tanggal_pindah' => $request->tanggal_pindah,
-            'status_tumbuh_kembang' => $request->status_tumbuh_kembang
-        ]);
-        Penyakit::created([
-            'asfiksia' => $request->asfiksia,
-            'hipotermi' => $request->hipotermi,
-            'infeksi' => $request->infeksi,
-            'tetanus' => $request->tetanus,
-            'bblr' => $request->bblr,
-            'komplikasi_lain' => $request->komplikasi_lain,
-        ]);
-        Rekapimunisasi::created([
-            'polio_1' => $request->polio_1,
-            'polio_2' => $request->polio_2,
-            'polio_3' => $request->polio_3,
-            'ipv' => $request->ipv,
-            'campak' => $request->campak,
-            'boosterpentavalen' => $request->boosterpentavalen,
-            'boostercampak' => $request->boostercampak,
-            'hepatitis_0' => $request->hepatitis_0,
-            'hepatitis_1' => $request->hepatitis_1,
-            'hepatitis_2' => $request->hepatitis_2,
-            'hepatitis_3' => $request->hepatitis_3,
-            'noe_natal_1' => $request->noe_natal_1,
-            'noe_natal_2' => $request->noe_natal_2,
-            'noe_natal_3' => $request->noe_natal_3,
-        ]);
 
         return redirect()->route('indexbayi')->with('success', 'Data berhasil disimpan.');
+    }
+
+    public function indexbayirekap()
+    {
+        $databayii = Databayi::with(['posyandu', 'rekapbalita', 'rekapimunisasi', 'penyakit'])->get();
+        // dd($databayii->posyandu);
+        // return $databayii;
+        return view('admin.keloladata.dataImunisasi', ['databayiList' => $databayii]);
     }
 }

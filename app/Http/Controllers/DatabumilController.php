@@ -16,11 +16,24 @@ use Illuminate\Http\Request;
 class DatabumilController extends Controller
 {
     // fungsi bagian menampilkan infoawal bumil
-    public function indexinfoawalbumil()
+    public function indexinfoawalbumil(Request $request)
     {
-        $infobumil = Infoawalbumil::with(['posyandu'])->paginate(10);
-        // return $infobumil;
-        return view('admin.kelolaData.dataBumil', ['infobumilList' => $infobumil]);
+        $filterPosyandu = $request->input('posyandu');
+
+        // Retrieve all unique Posyandu values with their names
+        $allPosyanduValues = Posyandu::pluck('posyandu', 'kode_posyandu')->toArray();
+    
+        $infobumil = Infoawalbumil::with(['posyandu'])
+            ->when($filterPosyandu, function ($query) use ($filterPosyandu) {
+                return $query->where('kode_posyandu', $filterPosyandu);
+            })
+            ->get();
+    
+        return view('admin.kelolaData.dataBumil', [
+            'infobumilList' => $infobumil,
+            'allPosyanduValues' => $allPosyanduValues,
+            'filterPosyandu' => $filterPosyandu,
+        ]);
     }
     // untuk mengambil data posyandu
     public function createbumil()
@@ -420,12 +433,12 @@ class DatabumilController extends Controller
     public function editbumil($no_index_bumil)
     {
         $editbumil = Databumil::with('jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil')
-        ->findOrFail($no_index_bumil);
+            ->findOrFail($no_index_bumil);
         // dd($editbumil);
         return view('admin.kelolaData.formEditDataBumilristi', compact('editbumil'));
     }
-    
-    public function updatebumil(Request $request, $no_index_bumil)
+
+    public function updatebumil(Request $request, $no_index_bumil, $id)
     {
         $request->validate([
             //jenisristi
@@ -541,17 +554,18 @@ class DatabumilController extends Controller
 
 
         ]);
-        $jenisPenyakit = Jenispenyakit::orderBy('id', 'DESC')->first();
-        $jenisFaktor = Jenisfaktor::orderBy('id', 'DESC')->first();
-        $jenisRisti = Jenisristi::orderBy('id', 'DESC')->first();
-        $PeriksaBumil = Periksabumil::orderBy('id', 'DESC')->first();
+        $jenisPenyakit = Jenispenyakit::findOrFail($id);
+        dd($jenisPenyakit);
+        $jenisFaktor = Jenisfaktor::findOrFail($id);
+        $jenisRisti = Jenisristi::findOrFail($id);
+        $PeriksaBumil = Periksabumil::findOrFail($id);
 
         $updatebumill = Databumil::findOrFail($no_index_bumil);
         // $updatebumilristi = Jenisristi::findOrFail($id);
         // $updateJenisfaktor = Jenisfaktor::findOrFail($id);
         // $updateJenisfaktor = Jenispenyakit::findOrFail($id);
         $updatePeriksabumil = Periksabumil::findOrFail($no_index_bumil);
-        $updatebumill->update([
+        $jenisRisti->update([
             //jenisristi
             'resiko1' => $request->resiko1,
             'resiko2' => $request->resiko2,
@@ -564,8 +578,10 @@ class DatabumilController extends Controller
             'resiko9' => $request->resiko9,
             'resiko10' => $request->resiko10,
             'resiko11' => $request->resiko11,
- 
-   
+        ]);
+
+        $jenisFaktor->update([
+
             //janis faktor
             'faktor1' => $request->faktor1,
             'faktor2' => $request->faktor2,
@@ -573,7 +589,8 @@ class DatabumilController extends Controller
             'faktor4' => $request->faktor4,
             'faktor5' => $request->faktor5,
             'faktor6' => $request->faktor6,
-   
+        ]);
+        $jenisPenyakit->update([
             //jenis penyakit 
             'jantung' => $request->jantung,
             'diabetes' => $request->diabetes,
@@ -588,6 +605,7 @@ class DatabumilController extends Controller
             'jiwa' => $request->jiwa,
             'pms' => $request->pms,
         ]);
+
         $updatePeriksabumil->update([
             // //periksa bumil
             'tanggal_periksa' => $request->tanggal_periksa,
