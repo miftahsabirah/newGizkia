@@ -2,8 +2,6 @@
 
 @section('link')
     <link rel="stylesheet" href="css/manajemenProfil.css">
-
-
 @endsection
 
 @section('title')
@@ -104,20 +102,22 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="formbold-mb-3">
-                                <label class="formbold-form-label">Puskesmas</label>
-
-                                <select class="formbold-form-input" name="Puskesmas" id="Puskesmas">
-                                    <option value="Pilih Puskesmas">--Pilih Puskesmas--</option>
-                                    <option value="Puskesmas1">Puskesmas 1</option>
-                                    <option value="Puskesmas2">Puskesmas 2</option>
-                                    <option value="Puskesmas3">Puskesmas 3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                            <button type="button" class="btn btn-primary">Terapkan</button>
+                            <form action="{{ route('indexinfoawalbumil') }}" method="get">
+                                @csrf
+                                <div class="formbold-mb-3">
+                                    <label for="Posyandu">Posyandu:</label>
+                                    <select name="posyandu" id="Posyandu" class="form-control">
+                                        <option value="">-- Pilih Posyandu --</option>
+                                        @foreach ($allPosyanduValues as $kodePosyandu => $posyanduName)
+                                            <option value="{{ $kodePosyandu }}" {{ $kodePosyandu == $filterPosyandu ? 'selected' : '' }}>
+                                                {{ $posyanduName }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                <button type="submit" class="btn btn-primary">Terapkan</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -249,16 +249,14 @@
                             <td>{{ $datainfobumil->lng }}</td>
                             <td>
                                 <button class="icon-button">
-                                    <a
-                                        href="{{ route('editinfoawalbumil',$datainfobumil->no_index_infobumil) }}">
+                                    <a href="{{ route('editinfoawalbumil', $datainfobumil->no_index_infobumil) }}">
                                         <i class="fi fi-rr-edit" style="color: #624DE3;"></i>
                                         <!-- Ikon pertama menjadi merah -->
                                     </a>
                                 </button>
                                 <span style="margin-right: 10px;"></span>
                                 <button class="icon-button">
-                                    <a
-                                        href="{{ route('deleteinfobumil',$datainfobumil->no_index_infobumil) }}">
+                                    <a href="{{ route('deleteinfobumil', $datainfobumil->no_index_infobumil) }}">
                                         <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
                                         <!-- Ikon kedua menjadi hijau -->
                                     </a>
@@ -271,12 +269,11 @@
             </table>
         </div>
     </div>
-    
 @endsection
 
 @section('addScript')
     <script>
-       $(document).ready(function() {
+        $(document).ready(function() {
             $('#example').DataTable({
                 columnDefs: [{
                     targets: [12],
@@ -289,22 +286,19 @@
 
 
         function applyFilter() {
-        // Get the selected value from the "Posyandu" filter
-        var selectedPosyandu = document.getElementById('PosyanduFilter').value;
+            // Get the selected value from the "Posyandu" filter
+            var selectedPosyandu = document.getElementById('PosyanduFilter').value;
 
-        // You can perform additional logic based on the selectedPosyandu value if needed
+            // You can perform additional logic based on the selectedPosyandu value if needed
 
-        // For now, let's just log the selected value to the console
-        console.log('Selected Posyandu:', selectedPosyandu);
+            // For now, let's just log the selected value to the console
+            console.log('Selected Posyandu:', selectedPosyandu);
 
-        // Here, you can make an AJAX request to the server with the selected filter value
-        // Update the DataTable or reload the page accordingly
-        // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
-    }
-
+            // Here, you can make an AJAX request to the server with the selected filter value
+            // Update the DataTable or reload the page accordingly
+            // Example: window.location.href = '/your-route?posyandu=' + selectedPosyandu;
+        }
     </script>
-
-    
 @endsection
 
 

@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Penyakit extends Model
 {
@@ -21,4 +21,10 @@ class Penyakit extends Model
 
     // Jika Anda memiliki timestamp (created_at, updated_at), tambahkan properti berikut
     public $timestamps = false;
+
+    public function databayi()
+    {
+        return $this->hasOne(Databayi::class);
+    }
+    
 }

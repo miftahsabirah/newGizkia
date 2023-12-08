@@ -16,7 +16,7 @@
 
   <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
     <h4>Data Balita</h4>
-    <a href="{{ route('formDataBalita') }}" type="button" class="add-data2">
+    <a href="{{ route('createbayi') }}" type="button" class="add-data2">
       <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
     </a>
   </div>
@@ -214,8 +214,8 @@
                         <th style="text-align: center;">Posyandu</th>
                         <th style="text-align: center;">RT</th>
                         <th style="text-align: center;">RW</th>
-                        <th style="text-align: center;">Dusun</th>
                         <th style="text-align: center;">Desa</th>
+                        <th style="text-align: center;">Dusun</th>
                         <th style="text-align: center;">TB Terakhir</th>
                         <th style="text-align: center;">BB Terakhir</th>
                         <th style="text-align: center;">Tgl Timbang</th>
@@ -232,50 +232,29 @@
                     @foreach ($databayiList as $data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>
-                                {{-- @foreach ($data->posyandu as $item) --}}
-                                {{ $data->posyandu->posyandu }}
-                                {{-- @endforeach --}}
-                            </td>
-                            {{-- <td> 
-                                {{-- {{ $data->rekapimunisasi }} --}}
-                            {{-- @foreach ($data->rekapbalita as $item)
-                                    {{ $item->umur_bayi_meninggal }}
-                                @endforeach --}}
-                            {{-- </td> --}}
-                            {{-- <td>
-                                @foreach ($data->rekapimunisasi as $item)
-                                    {{ $item->dpt_1 }}
-                                @endforeach
-                            </td> --}}
-                            {{-- <td>
-                                @foreach ($data->penyakit as $item)
-                                    {{ $item->asfiksia }}
-                                @endforeach
-                            </td>  --}}
-                            {{-- <td>{{ $data->akte }}</td>
-                            <td>{{ $data->nik }}</td>
+                            <td>{{ $data->akte }}</td>
+                            <td>{{ $data->nokk }}</td>
                             <td>{{ $data->nama_bayi }}</td>
                             <td>{{ $data->tanggal_lahir }}</td>
                             <td>{{ $data->akte }}</td>
-                            <td>{{ $data->jenis_kelamin }}</td> --}}
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
+                            <td>{{ $data->jenis_kelamin }}</td>
+                            <td>{{ $data->nama_ibu }}</td>
+                            <td>{{ $data->nama_ayah }}</td>
+                            <td>{{ $data->gakin }}</td>
+                            <td>{{ $data->posyandu->posyandu }}</td>
+                            <td>{{ $data->rt }}</td>
+                            <td>{{ $data->rw }}</td>
+                            <td>{{ $data->posyandu->desa->desa }}</td>
+                            <td>{{ $data->posyandu->dusun->nama}}</td>
+                            <td>{{ $data->tb_terakhir }}</td>
+                            <td>{{ $data->bb_terakhir }}</td>
+                            <td>{{ $data->tanggal_timbang_terakhir }}</td>
+                            <td>{{ $data->stunting }}</td>
+                            <td>{{ $data->cekidl }}</td>
+                            <td>{{ $data->cekbadutq }}</td>
+                            <td>{{ $data->status_bbu }}</td>
+                            <td>{{ $data->status_tbu }}</td>
+                            <td>{{ $data->status_bbtb }}</td>
 
                             <td>
                                 <button class="icon-button">

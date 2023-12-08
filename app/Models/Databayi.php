@@ -83,11 +83,6 @@ class Databayi extends Model
     {
         return $this->belongsTo(Penyakit::class, 'penyakit', 'id');
     }
-
-    public function infoawalbumil() {
-        return $this->hasOne(Penyakit::class, 'id_periksabumil', 'id');
-    }
-
     public $timestamps = false;
 
 }

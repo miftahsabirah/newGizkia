@@ -198,7 +198,11 @@ Route::controller(ManajemenPetugasKesehatanController::class)->group(function ()
 
 route::controller(DatabayiController::class)->group(function() {
     Route::get('/indexbayi', 'indexbayi')->name('indexbayi');
+
+    Route::get('/createbayi', 'createbayi')->name('createbayi');
     Route::post('/storedatabayi', 'storedatabayi')->name('storedatabayi');
+
+    Route::get('/indexbayirekap', 'indexbayirekap')->name('indexbayirekap');
 });
 
 route::controller(DatabumilController::class)->group(function() {
