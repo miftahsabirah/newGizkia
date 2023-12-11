@@ -2,26 +2,68 @@
 const allDropdown = document.querySelectorAll('#sidebar .side-dropdown');
 const sidebar = document.getElementById('sidebar');
 
-allDropdown.forEach(item=> {
-	const a = item.parentElement.querySelector('a:first-child');
-	a.addEventListener('click', function (e) {
-		e.preventDefault();
+allDropdown.forEach(item => {
+    const a = item.parentElement.querySelector('a:first-child');
 
-		if(!this.classList.contains('active')) {
-			allDropdown.forEach(i=> {
-				const aLink = i.parentElement.querySelector('a:first-child');
+    // Menggunakan sessionStorage untuk menyimpan status dropdown
+    item.isOpen = sessionStorage.getItem(`dropdown_${a.textContent}`) === 'true';
 
-				aLink.classList.remove('active');
-				i.classList.remove('show');
-			})
-		}
+    // Mengatur status dropdown saat memuat ulang halaman
+    if (item.isOpen) {
+        a.classList.add('active');
+        item.classList.add('show');
+    }
 
-		this.classList.toggle('active');
-		item.classList.toggle('show');
-	})
-})
+    a.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        const isActive = this.classList.contains('active');
 
+        if (!isActive) {
+            allDropdown.forEach(i => {
+                const aLink = i.parentElement.querySelector('a:first-child');
+
+                aLink.classList.remove('active');
+                i.classList.remove('show');
+
+                // Menandai dropdown sebagai tertutup
+                sessionStorage.setItem(`dropdown_${aLink.textContent}`, 'false');
+            });
+        }
+
+        this.classList.toggle('active');
+        item.classList.toggle('show');
+
+        // Mengubah status dropdown
+        item.isOpen = !item.isOpen;
+
+        // Menyimpan status dropdown di sessionStorage
+        sessionStorage.setItem(`dropdown_${this.textContent}`, item.isOpen);
+    });
+});
+
+// Menangani klik di luar dropdown untuk menutupnya
+document.addEventListener('click', function (e) {
+    // Periksa apakah yang diklik bukan bagian dari dropdown
+    if (!allDropdown.some(item => item.contains(e.target))) {
+        allDropdown.forEach(i => {
+            const aLink = i.parentElement.querySelector('a:first-child');
+
+            aLink.classList.remove('active');
+            i.classList.remove('show');
+
+            // Menandai dropdown sebagai tertutup
+            sessionStorage.setItem(`dropdown_${aLink.textContent}`, 'false');
+        });
+    }
+});
+
+// Mencegah klik di dalam dropdown menutup dropdown
+allDropdown.forEach(item => {
+    item.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+});
 
 
 

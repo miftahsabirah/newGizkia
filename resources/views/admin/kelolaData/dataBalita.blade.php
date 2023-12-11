@@ -2,7 +2,6 @@
 
 @section('link')
     <link rel="stylesheet" href="css/manajemenProfil.css">
-    <link rel="stylesheet" href="css/manajemenProfil.css">
 @endsection
 
 @section('title')

@@ -135,14 +135,15 @@
 
 
                 <div class="formbold-btn-wrapper">
-                    <button type="botton" class="button-modal formbold-btn save" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal-2">
-                        Simpan
-                    </button>
                     <a href="{{ route('indexinfoawalbumil') }}" class="button-modal formbold-btn cancel"
                         style="text-decoration: none;">
                         Batal
                     </a>
+                    
+                    <button type="botton" class="button-modal formbold-btn save" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal-2">
+                        Simpan
+                    </button>
                 </div>
 
                 <!-- Modal 2 -->

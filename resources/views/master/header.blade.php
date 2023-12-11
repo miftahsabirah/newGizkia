@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <link rel="stylesheet" href="{{asset('css/layoutsUser.css')}}">
 
@@ -43,9 +44,9 @@
                                 <b>Bumil</b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('dataBumil')}}">Ibu Hamil</a></li>
-                                <li><a class="dropdown-item" href="{{ route('dataBumilRisti')}}">Ibu Hamil Risti</a></li>
-                                <li><a class="dropdown-item" href="{{ route('dataIbuMelahirkan')}}">Ibu Melahirkan</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dataBumilUser')}}">Ibu Hamil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dataBumilRistiUser')}}">Ibu Hamil Risti</a></li>
+                                <li><a class="dropdown-item" href="{{ route('dataIbuMelahirkanUser')}}">Ibu Melahirkan</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -54,10 +55,10 @@
                                 <b>Rekapitulasi</b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Rekap Bumil</a></li>
-                                <li><a class="dropdown-item" href="#">Rekap Balita</a></li>
-                                <li><a class="dropdown-item" href="#">Rekap Imunisasi</a></li>
-                                <li><a class="dropdown-item" href="#">Rekap Gizi</a></li>
+                                <li><a class="dropdown-item" href="{{ route('rekapDataBumilUser')}}">Rekap Bumil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('rekapDataAnakUser')}}">Rekap Anak</a></li>
+                                <li><a class="dropdown-item" href="{{ route('rekapDataImunisasiUser')}}">Rekap Imunisasi</a></li>
+                                <li><a class="dropdown-item" href="{{ route('rekapDataGiziUser')}}">Rekap Gizi</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -66,9 +67,9 @@
                                 <b>Peta Temuan</b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('petaBumil')}}">Peta Bumil</a></li>
-                                <li><a class="dropdown-item" href="{{ route('petaAnak')}}">Peta Anak</a></li>
-                                <li><a class="dropdown-item" href="{{ route('petaBelumTerdaftar')}}">Peta Bumil Belum Terdaftar</a></li>
+                                <li><a class="dropdown-item" href="{{ route('petaBumilUser')}}">Peta Bumil</a></li>
+                                <li><a class="dropdown-item" href="{{ route('petaAnakUser')}}">Peta Anak</a></li>
+                                <li><a class="dropdown-item" href="{{ route('petaBelumTerdaftarUser')}}">Peta Bumil Belum Terdaftar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -96,7 +97,7 @@
   
 
 <div class="footer">
-    <div class="d-flex flex-wrap justify-content-between align-items-center py-2 my-1 batas">
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-2 batas">
         <div class="col-md-4 d-flex align-items-center">
           <p class="mb-3 mb-md-0">© 2023 Gizkia. All rights reserved.</p>
         </div>
@@ -115,6 +116,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
 @yield('addScript')
 

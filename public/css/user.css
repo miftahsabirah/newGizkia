@@ -280,3 +280,125 @@ margin-top: 10px;
 .btn-card:hover {
 background-color: #FF65B0; 
 }
+
+.big-text{
+    font-size: 55px;
+    margin-top: 80px;
+}
+
+.home-container {
+    width: 60%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px auto; /* Gunakan margin auto untuk menempatkannya di tengah */
+    background: linear-gradient(to bottom right, #DCFEF6, #54ADFC);
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.col-home{
+    text-align: center; /* Rata tengah secara horizontal */
+    display: flex; /* Membuat kontennya menjadi flex container */
+    flex-direction: column; /* Mengatur arah kolom agar elemen-elemen di dalamnya menjadi kolom */
+    align-items: center; /* Rata tengah secara vertikal */    
+}
+
+.count-container {
+    display: flex;
+    align-items: center;
+    }
+
+.icon {
+    font-size: 40px;
+    color: #2563EB;
+}
+
+.dynamic-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.caption {
+    font-size: 16px;
+    color: #212121;
+    margin-top: 5px;
+}
+
+.pink-bg {
+    position: relative;
+    z-index: 1;
+    background-color: #FEDEFF;
+    margin-top: -80px; /* Sesuaikan dengan setengah tinggi .pink-bg */
+    border-radius: 50px; /* Menerapkan border-radius agar sesuai dengan .home-container */
+}
+
+.card-home-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-home {
+  width: 250px;
+  height: 250px;
+  background-color: #FF65B0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  }
+
+.card-home:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk logo */
+.card-home img {
+  object-fit: cover;
+  transition: filter 0.3s ease-in-out; /* Tambahkan efek transisi */
+}
+
+.card-home:hover img {
+  filter: brightness(0.8); 
+}
+
+.text-card-home{
+color: #ffffff;
+margin-top: 10px;
+font-size: 20px; 
+}
+
+.card-home:hover .text-card-home {
+color: #2563EB;
+}
+
+.arrow {
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 5px;
+  bottom: 0;
+  right: 0;
+  font-size: 25px;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+  opacity: 0; /* Menyembunyikan panah secara default */
+  background-color: #2563EB;
+  border-radius: 30px 0 0 0px; /* Untuk bentuk setengah lingkaran */
+}
+
+.card-home:hover .arrow {
+  opacity: 1;
+}

@@ -696,92 +696,95 @@
                     </div>
                 </div>
                 <div class="color-container">
-                    <h5 class="sub-header">Jenis risti</h5>
-                    <div class="formbold-input-flex">
-                        <div class="formbold-w-20">
-                            <label for="resiko1" class="formbold-form-label"> resiko1 </label>
-                            <input type="checkbox" name="resiko1" id="resiko10" class="formbold-form-input"
+                    <h5 class="sub-header">Jenis Risti</h5>
+                    <div class="row justify-content-center" style="width: 80%">
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko1" id="resiko10" class="form-check-input"
                                    value="1" {{ old('resiko1', $editbumil->resiko1) == 1 ? 'checked' : '' }}>
-                            @if ($errors->has('resiko1'))
+                            <label for="resiko1" class="form-check-label"> Resiko 1 </label>
+                                   @if ($errors->has('resiko1'))
                                 <span class="text-danger">{{ $errors->first('resiko1') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko2" class="formbold-form-label"> resiko2 </label>
-                            <input type="checkbox" name="resiko2" id="resiko2" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko2" id="resiko2" class="form-check-input"
                                 value="1" {{ old('resiko2', $editbumil->resiko2) == 1 ? 'checked' : '' }}>
-                            @if ($errors->has('resiko2'))
+                            <label for="resiko2" class="form-check-label"> Resiko 2 </label>
+                                @if ($errors->has('resiko2'))
                                 <span class="text-danger">{{ $errors->first('resiko2') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko3" class="formbold-form-label"> resiko3 </label>
-                            <input type="checkbox" name="resiko3" id="resiko3" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko3" id="resiko3" class="form-check-input"
                                 value="1" {{ old('resiko3', $editbumil->resiko3) == 1 ? 'checked' : '' }}>
-                            @if ($errors->has('resiko3'))
+                            <label for="resiko3" class="form-check-label"> Resiko 3 </label>
+                                @if ($errors->has('resiko3'))
                                 <span class="text-danger">{{ $errors->first('resiko3') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko4" class="formbold-form-label"> resiko4 </label>
-                            <input type="checkbox" name="resiko4" id="resiko4" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko4" id="resiko4" class="form-check-input"
                                 value="1" {{ old('resiko4', $editbumil->resiko4) == 1 ? 'checked' : '' }}>
-                            @if ($errors->has('resiko4'))
+                            <label for="resiko4" class="form-check-label"> Resiko 4 </label>
+                                @if ($errors->has('resiko4'))
                                 <span class="text-danger">{{ $errors->first('resiko4') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko5" class="formbold-form-label"> resiko5 </label>
-                            <input type="checkbox" name="resiko5" id="resiko5" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko5" id="resiko5" class="form-check-input"
                                 value="1" {{ old('resiko5', $editbumil->resiko5) == 1 ? 'checked' : '' }}>
-                            @if ($errors->has('resiko5'))
+                            <label for="resiko5" class="form-check-label"> Resiko 5 </label>
+                                @if ($errors->has('resiko5'))
                                 <span class="text-danger">{{ $errors->first('resiko5') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko6" class="formbold-form-label"> resiko6 </label>
-                            <input type="checkbox" name="resiko6" id="resiko6" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko6" id="resiko6" class="form-check-input"
                                 value="1" {{ old('resiko6', $editbumil->resiko6) == 1 ? 'checked' : '' }}>
-                            @if ($errors->has('resiko6'))
+                            <label for="resiko6" class="form-check-label"> Resiko 6 </label>
+                                @if ($errors->has('resiko6'))
                                 <span class="text-danger">{{ $errors->first('resiko6') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko7" class="formbold-form-label"> resiko7 </label>
-                            <input type="checkbox" name="resiko7" id="resiko7" class="formbold-form-input"
+                    </div>
+
+                    <div class="row justify-content" style="width: 80%; margin-top:20px">
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko7" id="resiko7" class="form-check-input"
                                 value="1" {{ old('resiko7', $editbumil->resiko7) == 1 ? 'checked' : '' }}>
+                            <label for="resiko7" class="form-check-label"> Resiko 7 </label>
                             @if ($errors->has('resiko7'))
                                 <span class="text-danger">{{ $errors->first('resiko7') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko8" class="formbold-form-label"> resiko8 </label>
-                            <input type="checkbox" name="resiko8" id="resiko8" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko8" id="resiko8" class="form-check-input"
                                 value="1" {{ old('resiko8', $editbumil->resiko8) == 1 ? 'checked' : '' }}>
+                            <label for="resiko8" class="form-check-label"> Resiko 8 </label>
                             @if ($errors->has('resiko8'))
                                 <span class="text-danger">{{ $errors->first('resiko8') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko9" class="formbold-form-label"> resiko9 </label>
-                            <input type="checkbox" name="resiko9" id="resiko9" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko9" id="resiko9" class="form-check-input"
                                 value="1" {{ old('resiko9', $editbumil->resiko9) == 1 ? 'checked' : '' }}>
+                            <label for="resiko9" class="form-check-label"> Resiko 9 </label>
                             @if ($errors->has('resiko9'))
                                 <span class="text-danger">{{ $errors->first('resiko9') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko10" class="formbold-form-label"> resiko10 </label>
-                            <input type="checkbox" name="resiko10" id="resiko10" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko10" id="resiko10" class="form-check-input"
                                 value="1" {{ old('resiko10', $editbumil->resiko10) == 1 ? 'checked' : '' }}>
+                            <label for="resiko10" class="form-check-label"> Resiko 10 </label>
                             @if ($errors->has('resiko10'))
                                 <span class="text-danger">{{ $errors->first('resiko10') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="resiko11" class="formbold-form-label"> resiko11 </label>
-                            <input type="checkbox" name="resiko11" id="resiko11" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="resiko11" id="resiko11" class="form-check-input"
                                 value="1" {{ old('resiko11', $editbumil->resiko11) == 1 ? 'checked' : '' }}>
+                            <label for="resiko11" class="form-check-label"> Resiko 11 </label>
                             @if ($errors->has('resiko11'))
                                 <span class="text-danger">{{ $errors->first('resiko11') }}</span>
                             @endif
@@ -789,53 +792,53 @@
                     </div>
                 </div>
                 <div class="color-container">
-                    <h5 class="sub-header">janis faktor</h5>
-                    <div class="formbold-input-flex">
-                        <div class="formbold-w-20">
-                            <label for="faktor1" class="formbold-form-label"> faktor1 </label>
-                            <input type="checkbox" name="faktor1" id="faktor1" class="formbold-form-input"
+                    <h5 class="sub-header">Jenis Faktor</h5>
+                    <div class="row justify-content" style="width: 80%; margin-top:20px">
+                        <div class="col-md-2">
+                            <input type="checkbox" name="faktor1" id="faktor1" class="form-check-input"
                                 value="1" {{ old('faktor1', $editbumil->jenisfaktor->faktor1) == 1 ? 'checked' : '' }}>
+                            <label for="faktor1" class="form-check-label"> Faktor 1 </label>
                             @if ($errors->has('faktor1'))
                                 <span class="text-danger">{{ $errors->first('faktor1') }}</span>
                             @endif
                         </div>
 
-                        <div class="formbold-w-20">
-                            <label for="faktor2" class="formbold-form-label"> faktor2 </label>
-                            <input type="checkbox" name="faktor2" id="faktor2" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="faktor2" id="faktor2" class="form-check-input"
                                 value="1" {{ old('faktor2', $editbumil->jenisfaktor->faktor2) == 1 ? 'checked' : '' }}>
+                            <label for="faktor2" class="form-check-label"> Faktor 2 </label>
                             @if ($errors->has('faktor2'))
                                 <span class="text-danger">{{ $errors->first('faktor2') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="faktor3" class="formbold-form-label"> faktor3 </label>
-                            <input type="checkbox" name="faktor3" id="faktor3" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="faktor3" id="faktor3" class="form-check-input"
                                 value="1" {{ old('faktor3', $editbumil->jenisfaktor->faktor3) == 1 ? 'checked' : '' }}>
+                            <label for="faktor3" class="form-check-label"> Faktor 3 </label>
                             @if ($errors->has('faktor3'))
                                 <span class="text-danger">{{ $errors->first('faktor3') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="faktor4" class="formbold-form-label"> faktor4 </label>
-                            <input type="checkbox" name="faktor4" id="faktor4" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="faktor4" id="faktor4" class="form-check-input"
                                 value="1" {{ old('faktor4', $editbumil->jenisfaktor->faktor4) == 1 ? 'checked' : '' }}>
+                            <label for="faktor4" class="form-check-label"> Faktor 4 </label>
                             @if ($errors->has('faktor4'))
                                 <span class="text-danger">{{ $errors->first('faktor4') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="faktor5" class="formbold-form-label"> faktor5 </label>
-                            <input type="checkbox" name="faktor5" id="faktor5" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="faktor5" id="faktor5" class="form-check-input"
                                 value="1" {{ old('faktor5', $editbumil->jenisfaktor->faktor5) == 1 ? 'checked' : '' }}>
+                            <label for="faktor5" class="form-check-label"> Faktor 5 </label>
                             @if ($errors->has('faktor5'))
                                 <span class="text-danger">{{ $errors->first('faktor5') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="faktor6" class="formbold-form-label"> faktor6 </label>
-                            <input type="checkbox" name="faktor6" id="faktor6" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="faktor6" id="faktor6" class="form-check-input"
                                 value="1" {{ old('faktor6', $editbumil->jenisfaktor->faktor6) == 1 ? 'checked' : '' }}>
+                            <label for="faktor6" class="form-check-label"> Faktor 6 </label>
                             @if ($errors->has('faktor6'))
                                 <span class="text-danger">{{ $errors->first('faktor6') }}</span>
                             @endif
@@ -843,101 +846,105 @@
                     </div>
                 </div>
                 <div class="color-container">
-                    <h5 class="sub-header">jenis penyakit </h5>
-                    <div class="formbold-input-flex">
-                        <div class="formbold-w-20">
-                            <label for="jantung" class="formbold-form-label"> jantung </label>
-                            <input type="checkbox" name="jantung" id="jantung" class="formbold-form-input"
+                    <h5 class="sub-header">Jenis Penyakit </h5>
+                    <div class="row justify-content" style="width: 90%; margin-top:20px">
+                        <div class="col-md-2">
+                            <input type="checkbox" name="jantung" id="jantung" class="form-check-input"
                                 value="1" {{ old('jantung', $editbumil->jenispenyakit->jantung) == 1 ? 'checked' : '' }}>
+                            <label for="jantung" class="form-check-label"> Jantung </label>
                             @if ($errors->has('jantung'))
                                 <span class="text-danger">{{ $errors->first('jantung') }}</span>
                             @endif
                         </div>
 
-                        <div class="formbold-w-20">
-                            <label for="diabetes" class="formbold-form-label"> diabetes </label>
-                            <input type="checkbox" name="diabetes" id="diabetes" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="diabetes" id="diabetes" class="form-check-input"
                                 value="1" {{ old('diabetes', $editbumil->jenispenyakit->diabetes) == 1 ? 'checked' : '' }}>
+                            <label for="diabetes" class="form-check-label"> Diabetes </label>
                             @if ($errors->has('diabetes'))
                                 <span class="text-danger">{{ $errors->first('diabetes') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="paru_paru" class="formbold-form-label"> paru_paru </label>
-                            <input type="checkbox" name="paru_paru" id="paru_paru" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="paru_paru" id="paru_paru" class="form-check-input"
                                 value="1" {{ old('paru_paru', $editbumil->paru_paru) == 1 ? 'checked' : '' }}>
+                            <label for="paru_paru" class="form-check-label"> Paru-Paru </label>
                             @if ($errors->has('paru_paru'))
                                 <span class="text-danger">{{ $errors->first('paru_paru') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="ginjal" class="formbold-form-label"> ginjal </label>
-                            <input type="checkbox" name="ginjal" id="ginjal" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="ginjal" id="ginjal" class="form-check-input"
                                 value="1" {{ old('ginjal', $editbumil->ginjal) == 1 ? 'checked' : '' }}>
+                            <label for="ginjal" class="form-check-label"> Ginjal </label>
                             @if ($errors->has('ginjal'))
                                 <span class="text-danger">{{ $errors->first('ginjal') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="hati" class="formbold-form-label"> hati </label>
-                            <input type="checkbox" name="hati" id="hati" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="hati" id="hati" class="form-check-input"
                                 value="1" {{ old('hati', $editbumil->jenispenyakit->hati) == 1 ? 'checked' : '' }}>
+                            <label for="hati" class="form-check-label"> Hati </label>
                             @if ($errors->has('hati'))
                                 <span class="text-danger">{{ $errors->first('hati') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="kurang_darah" class="formbold-form-label"> kurang_darah </label>
-                            <input type="checkbox" name="kurang_darah" id="kurang_darah" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="kurang_darah" id="kurang_darah" class="form-check-input"
                                 value="1" {{ old('kurang_darah', $editbumil->jenispenyakit->kurang_darah) == 1 ? 'checked' : '' }}>
+                            <label for="kurang_darah" class="form-check-label"> Kurang Darah </label>
                             @if ($errors->has('kurang_darah'))
                                 <span class="text-danger">{{ $errors->first('kurang_darah') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="malaria" class="formbold-form-label"> malaria </label>
-                            <input type="checkbox" name="malaria" id="malaria" class="formbold-form-input"
+                    </div>
+
+
+                    <div class="row justify-content" style="width: 90%; margin-top:20px">
+                        <div class="col-md-2">
+                            <input type="checkbox" name="malaria" id="malaria" class="form-check-input"
                                 value="1" {{ old('malaria', $editbumil->jenispenyakit->malaria) == 1 ? 'checked' : '' }}>
+                            <label for="malaria" class="form-check-label"> Malaria </label>
                             @if ($errors->has('malaria'))
                                 <span class="text-danger">{{ $errors->first('malaria') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="asma" class="formbold-form-label"> asma </label>
-                            <input type="checkbox" name="asma" id="asma" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="asma" id="asma" class="form-check-input"
                                 value="1" {{ old('asma', $editbumil->jenispenyakit->asma) == 1 ? 'checked' : '' }}>
+                            <label for="asma" class="form-check-label"> Asma </label>
                             @if ($errors->has('asma'))
                                 <span class="text-danger">{{ $errors->first('asma') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="epilepsi" class="formbold-form-label"> epilepsi </label>
-                            <input type="checkbox" name="epilepsi" id="epilepsi" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="epilepsi" id="epilepsi" class="form-check-input"
                                 value="1" {{ old('epilepsi', $editbumil->jenispenyakit->epilepsi) == 1 ? 'checked' : '' }}>
+                            <label for="epilepsi" class="form-check-label"> Epilepsi </label>
                             @if ($errors->has('epilepsi'))
                                 <span class="text-danger">{{ $errors->first('epilepsi') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="jiwa" class="formbold-form-label"> jiwa </label>
-                            <input type="checkbox" name="jiwa" id="jiwa" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="jiwa" id="jiwa" class="form-check-input"
                                 value="1" {{ old('jiwa', $editbumil->jenispenyakit->jiwa) == 1 ? 'checked' : '' }}>
+                            <label for="jiwa" class="form-check-label"> Jiwa </label>
                             @if ($errors->has('jiwa'))
                                 <span class="text-danger">{{ $errors->first('jiwa') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="tbc" class="formbold-form-label"> tbc </label>
-                            <input type="checkbox" name="tbc" id="tbc" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="tbc" id="tbc" class="form-check-input"
                                 value="1" {{ old('tbc', $editbumil->jenispenyakit->tbc) == 1 ? 'checked' : '' }}>
+                            <label for="tbc" class="form-check-label"> TBC </label>
                             @if ($errors->has('tbc'))
                                 <span class="text-danger">{{ $errors->first('tbc') }}</span>
                             @endif
                         </div>
-                        <div class="formbold-w-20">
-                            <label for="pms" class="formbold-form-label"> pms </label>
-                            <input type="checkbox" name="pms" id="pms" class="formbold-form-input"
+                        <div class="col-md-2">
+                            <input type="checkbox" name="pms" id="pms" class="form-check-input"
                                 value="1" {{ old('pms', $editbumil->jenispenyakit->pms) == 1 ? 'checked' : '' }}>
+                            <label for="pms" class="form-check-label"> PMS </label>
                             @if ($errors->has('pms'))
                                 <span class="text-danger">{{ $errors->first('pms') }}</span>
                             @endif
@@ -946,12 +953,13 @@
                 </div>
 
                 <div class="formbold-btn-wrapper">
+                    <button type="button" class="formbold-btn cancel">
+                        <a href="{{ route('indexbumil') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+                    </button>
+                    
                     <button type="submit" class="button-modal formbold-btn save" data-bs-toggle="modal"
                         data-bs-target="#exampleModal-2">
                         Simpan
-                    </button>
-                    <button type="button" class="formbold-btn cancel">
-                        <a href="{{ route('indexbumil') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
                     </button>
                 </div>
             </form>

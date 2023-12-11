@@ -170,7 +170,26 @@ Route::get('/home', function () {
 });
 
 Route::get('/rekapitulasiUser', function () {
-    return view('user.rekapitulasi.anak');
+    return view('user.rekapitulasi.imunisasi');
+});
+
+Route::get('/editUserAnak', function () {
+    return view('user.data.editAnak');
+});
+Route::get('/editUserBumil', function () {
+    return view('user.data.editBumil');
+});
+Route::get('/editUserIbuMelahirkan', function () {
+    return view('user.data.editIbuMelahirkan');
+});
+Route::get('/editUserBumilRisti', function () {
+    return view('user.data.editBumilRisti');
+});
+Route::get('/backup', function () {
+    return view('user.dataDasar.backup');
+});
+Route::get('/restore', function () {
+    return view('user.dataDasar.restore');
 });
 
 Route::controller(LoginRegisterController::class)->group(function () {
@@ -262,18 +281,22 @@ Route::controller(AdminController::class)->group(function () {
 
 Route::controller(userController::class)->group(function () {
     Route::get('/home', 'home')->name('home');
-    Route::get('/dataAnak', 'dataAnak')->name('dataAnak');
-    Route::get('/dataBumil', 'dataBumil')->name('dataBumil');
-    Route::get('/dataBumilRisti', 'dataBumilRisti')->name('dataBumilRisti');
-    Route::get('/dataIbuMelahirkan', 'dataIbuMelahirkan')->name('dataIbuMelahirkan');
-    Route::get('/petaBumil', 'petaBumil')->name('petaBumil');
-    Route::get('/petaAnak', 'petaAnak')->name('petaAnak');
-    Route::get('/petaBelumTerdaftar', 'petaBelumTerdaftar')->name('petaBelumTerdaftar');
+    Route::get('/dataAnak', 'dataAnak')->name('dataAnakUser');
+    Route::get('/dataBumil', 'dataBumil')->name('dataBumilUser');
+    Route::get('/dataBumilRisti', 'dataBumilRisti')->name('dataBumilRistiUser');
+    Route::get('/dataIbuMelahirkan', 'dataIbuMelahirkan')->name('dataIbuMelahirkanUser');
+    Route::get('/petaBumilUser', 'petaBumilUser')->name('petaBumilUser');
+    Route::get('/petaAnakUser', 'petaAnakUser')->name('petaAnakUser');
+    Route::get('/petaBelumTerdaftarUser', 'petaBelumTerdaftarUser')->name('petaBelumTerdaftarUser');
     Route::get('/home', 'home')->name('home');
     Route::get('/visualisasi', 'visualisasi')->name('visualisasi');
     Route::get('/grafikDataAnak', 'grafikDataAnak')->name('grafikDataAnak');
     Route::get('/grafikDataBumil', 'grafikDataBumil')->name('grafikDataBumil');
     Route::get('/grafikDataImunisasi', 'grafikDataImunisasi')->name('grafikDataImunisasi');
+    Route::get('/rekapDataAnak', 'rekapDataAnak')->name('rekapDataAnakUser');
+    Route::get('/rekapDataBumil', 'rekapDataBumil')->name('rekapDataBumilUser');
+    Route::get('/rekapDataGizi', 'rekapDataGizi')->name('rekapDataGiziUser');
+    Route::get('/rekapDataImunisasi', 'rekapDataImunisasi')->name('rekapDataImunisasiUser');
 
 });
 
