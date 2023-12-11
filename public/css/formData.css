@@ -180,9 +180,9 @@ body {
   color: #536387;
 }
 
-.formbold-btn:hover {
-  background-color: #554fed;
-}
+/* .formbold-btn:hover {
+  background-color: #828282;
+} */
 
 
 .formbold-btn-wrapper {
@@ -267,3 +267,110 @@ input[type="file"] {
         flex: 0 0 100%;
       }
     }
+
+  #container {
+    max-width: 70%; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    padding-top: 80px;
+    border-radius: 20px; 
+  }
+
+  .title-editform{
+    margin-top: 50px;
+    margin-left: 240px;
+  }
+    
+  .step-container {
+  position: relative;
+  text-align: center;
+  transform: translateY(-43%);
+  }
+  
+  .step-circle {
+  width: fit-content;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #E1E1E6;
+  border: 2px solid #E1E1E6;
+  color: #8D8D99;
+  padding: 17px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  cursor: pointer; /* Added cursor pointer */
+  }
+
+  .step-circle.active-step {
+    /* Gaya saat langkah aktif (background putih, teks pink) */
+    background-color: #ffffff !important;
+    color: #E85AAD !important;
+    border: 2px solid #E85AAD !important;
+
+  }
+  
+  .step-line {
+  position: absolute;
+  top: 16px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: 2px;
+  background-color: #007bff;
+  z-index: -1;
+  }
+  
+  #multi-step-form{
+      overflow-x: hidden;
+  }
+
+.btn-next{
+  color: white;
+  background-color: #E85AAD ;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+.btn-next:hover {
+  color: white;
+  background-color: #E85AAD ;
+}
+
+.btn-back {
+  background-color: #E1E1E6;
+  color: black;
+  margin-left: 15px;
+  border-radius: 12px;
+}
+.btn-back:hover {
+  background-color: #E1E1E6;
+  color: black;
+}
+
+
+.form-check {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
+.form-check-input {
+  background-color: #ffffff; /* Set the background color for the unchecked state */
+  border: 1px solid #999999; /* Set the border color for the unchecked state */
+  color: #333333; /* Set the text color for the unchecked state */
+}
+
+/* Checked state styles */
+.form-check-input:checked {
+  background-color: #46BEFF; /* Set the background color for the checked state */
+  border: 1px solid #46BEFF; /* Set the border color for the checked state */
+  color: #ffffff; /* Set the text color for the checked state */
+}
+
+.form-check-label{
+  color: #536387;
+  font-size: 14px;
+}
+
+
+
+

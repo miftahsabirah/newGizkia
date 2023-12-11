@@ -31,17 +31,17 @@ class userController extends Controller
         return view('user.data.ibuMelahirkan');
     }
 
-    public function petaAnak()
+    public function petaAnakUser()
     {
         return view('user.peta.anak');
     }
 
-    public function petaBumil()
+    public function petaBumilUser()
     {
         return view('user.peta.bumil');
     }
 
-    public function petaBelumTerdaftar()
+    public function petaBelumTerdaftarUser()
     {
         return view('user.peta.belumTerdaftar');
     }
@@ -60,5 +60,22 @@ class userController extends Controller
     public function grafikDataImunisasi()
     {
         return view('user.grafik.dataImunisasi');
+    }
+
+    public function rekapDataAnak()
+    {
+        return view('user.rekapitulasi.anak');
+    }
+    public function rekapDataBumil()
+    {
+        return view('user.rekapitulasi.bumil');
+    }
+    public function rekapDataGizi()
+    {
+        return view('user.rekapitulasi.gizi');
+    }
+    public function rekapDataImunisasi()
+    {
+        return view('user.rekapitulasi.imunisasi');
     }
 }

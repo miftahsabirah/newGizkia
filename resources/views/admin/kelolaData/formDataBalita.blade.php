@@ -654,14 +654,15 @@
 
 
                     <div class="formbold-btn-wrapper">
+                        <button type="button" class="formbold-btn cancel">
+                            <a href="{{ route('dataBalita') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+                        </button>
+
                         <button type="button" class="button-modal formbold-btn save" data-bs-toggle="modal"
                             data-bs-target="#exampleModal-2">
                             Simpan
                         </button>
-                        <button type="button" class="formbold-btn cancel">
-                            <a href="{{ route('dataBumil') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
-                        </button>
-
+                    
                     </div>
 
                     <!-- Modal 2 -->

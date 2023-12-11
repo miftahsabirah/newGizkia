@@ -100,6 +100,7 @@
     margin-bottom: 20px;
 }
 
+
 .button-modal{
     background-color: #E85AAD;
     color: #FFF;
@@ -217,12 +218,6 @@ margin-right: 10px;
 }
 
 
-.formbold-form-input {
-width: 100%; /* Mengisi lebar container */
-padding: 8px; /* Sesuaikan dengan padding yang diinginkan */
-box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar elemen */
-}
-
 .w-text{
     color: #FFF;
 }
@@ -314,6 +309,31 @@ box-sizing: border-box; /* Membuat padding dan border tidak menambah lebar eleme
     height: 40px;
     padding-left: 25px;
 }
+
+.form-check {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+  
+.form-check-input {
+    background-color: #ffffff; /* Set the background color for the unchecked state */
+    border: 1px solid #999999; /* Set the border color for the unchecked state */
+    color: #333333; /* Set the text color for the unchecked state */
+  }
+  
+  /* Checked state styles */
+  .form-check-input:checked {
+    background-color: #46BEFF; /* Set the background color for the checked state */
+    border: 1px solid #46BEFF; /* Set the border color for the checked state */
+    color: #ffffff; /* Set the text color for the checked state */
+  }
+
+  .space {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+
+
 
 
 

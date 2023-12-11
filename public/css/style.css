@@ -1,7 +1,38 @@
-/* 'vh' stands for view height */
-/* Setting the html and body styles as follows allows us to use flexbox to center the page content vertically and horizontally */
-html,
-body {
-	min-width: 100vh;
-	min-height: 100vh;
+#container {
+  max-width: 100%;  
 }
+
+    .step-container {
+      position: relative;
+      text-align: center;
+      transform: translateY(-43%);
+    }
+
+    .step-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid #007bff;
+      line-height: 30px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      cursor: pointer; /* Added cursor pointer */
+    }
+
+    .step-line {
+      position: absolute;
+      top: 16px;
+      left: 50px;
+      width: calc(100% - 100px);
+      height: 2px;
+      background-color: #007bff;
+      z-index: -1;
+    }
+    
+    #multi-step-form{
+		overflow-x: hidden;
+	}
