@@ -8,7 +8,7 @@ use App\Http\Controllers\DatabayiController;
 use App\Http\Controllers\DatabumilController;
 use App\Http\Controllers\ManajemenPetugasKesehatanController;
 use App\Http\Controllers\MapsController;
-
+use App\Http\Controllers\RekapitulasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -247,6 +247,11 @@ route::controller(DatabumilController::class)->group(function() {
 
 });
 
+route::controller(RekapitulasiController::class)->group(function() {
+    Route::get('/indexrekapuminisasi', 'indexrekapuminisasi')->name('indexrekapuminisasi');
+    Route::get('/indexrekapbumil', 'indexrekapbumil')->name('indexrekapbumil');
+    Route::get('/indexrekapbalita', 'indexrekapbalita')->name('indexrekapbalita');
+});
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/manajemenAkses', 'manajemenAkses')->name('manajemenAkses');

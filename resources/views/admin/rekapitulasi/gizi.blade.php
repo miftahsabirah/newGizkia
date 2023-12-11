@@ -13,13 +13,6 @@ Rekapitulasi Gizi
 
 @section('isi')
 
-<div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <a href="{{ route('tambahGizi') }}" type="button" class="add-data" style="margin-left: auto;">
-      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Rekap Gizi
-    </a>
-</div>
-
-
 <div class="container">
     <div class="title-container">
         <h2>Rekapitulasi Gizi</h2>
@@ -83,7 +76,6 @@ Rekapitulasi Gizi
         </table>
     </div>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
