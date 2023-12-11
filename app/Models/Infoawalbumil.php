@@ -32,5 +32,11 @@ class Infoawalbumil extends Model
     {
         return $this->belongsTo(Posyandu::class, 'kode_posyandu', 'kode_posyandu');
     }
+    public function databumil()
+    {
+        return $this->hasOne(Databumil::class);
+    }
+
+
     public $timestamps = false;
 }

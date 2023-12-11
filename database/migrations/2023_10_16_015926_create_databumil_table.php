@@ -44,13 +44,12 @@ return new class extends Migration
             $table->tinyInteger('konseling_pasca_salin');
             $table->string('jenis_gakin');
 
-            $table->foreign('id_jenispenyakit')->references('id')->on('jenispenyakit');
-            $table->foreign('id_jenisfaktor')->references('id')->on('jenisfaktor');
-            $table->foreign('id_jenisristi')->references('id')->on('jenisristi');
-            $table->foreign('id_periksabumil')->references('id')->on('periksabumil');
-            $table->foreign('id_no_index_infobumil')->references('no_index_infobumil')->on('infoawalbumil');
-
-
+            $table->foreign('id_jenispenyakit')->references('id')->on('jenispenyakit')->onDelete('cascade');
+            $table->foreign('id_jenisfaktor')->references('id')->on('jenisfaktor')->onDelete('cascade');
+            $table->foreign('id_jenisristi')->references('id')->on('jenisristi')->onDelete('cascade');
+            $table->foreign('id_periksabumil')->references('id')->on('periksabumil')->onDelete('cascade');
+            $table->foreign('id_no_index_infobumil')->references('no_index_infobumil')->on('infoawalbumil')->onDelete('cascade');
+            
          
         });
     }

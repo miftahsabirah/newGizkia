@@ -61,10 +61,10 @@
 			<li>
 				<a href="#" class="a-link"><i class="fi fi-rr-memo-circle-check icon"></i> Kelola Rekapitulasi <i class='bx bx-chevron-right icon-right' ></i></a>
 				<ul class="side-dropdown">
-					<li><a href="{{ route('rekapBumil')}}" class="a-link">Rekapitulasi Bumil</a></li>
-					<li><a href="{{ route('rekapAnak')}}" class="a-link">Rekapitulasi Anak</a></li>
-					<li><a href="{{ route('rekapImunisasi')}}" class="a-link">Rekapitulasi Imunisasi</a></li>
-					<li><a href="{{ route('rekapGizi')}}" class="a-link">Rekapitulasi Gizi</a></li>
+					<li><a href="{{ route('indexrekapbumil')}}" class="a-link">Rekapitulasi Bumil</a></li>
+					<li><a href="{{ route('indexrekapbalita')}}" class="a-link">Rekapitulasi Anak</a></li>
+					<li><a href="{{ route('indexrekapuminisasi')}}" class="a-link">Rekapitulasi Imunisasi</a></li>
+					<li><a href="{{ route('indexrekapbalita')}}" class="a-link">Rekapitulasi Gizi</a></li>
 				</ul>
 			</li>
 			

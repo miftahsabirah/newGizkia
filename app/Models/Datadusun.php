@@ -21,9 +21,9 @@ class Datadusun extends Model
         'jumlah_penduduk',
     ];
 
-    public function datadesa()
+    public function posyandu()
     {
-        return $this->belongsTo(Datadesa::class, 'kode_dusun', 'kode_dusun');
+        return $this->hasMany(posyandu::class,'kode_posyandu');
     }
 
     public $timestamps = false;

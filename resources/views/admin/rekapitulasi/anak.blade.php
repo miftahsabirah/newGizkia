@@ -12,14 +12,6 @@ Rekapitulasi Anak
 <!-- MAIN -->
 
 @section('isi')
-
-<div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <a href="{{ route('tambahAnak') }}" type="button" class="add-data" style="margin-left: auto;">
-      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Rekap Anak
-    </a>
-</div>
-
-
 <div class="container">
     <div class="title-container">
         <h2>Rekapitulasi Anak</h2>
@@ -89,12 +81,9 @@ Rekapitulasi Anak
         </table>
     </div>
 </div>
-
-
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-
 <script>
     $(document).ready(function () {
         $('#example').DataTable({
@@ -104,5 +93,4 @@ Rekapitulasi Anak
         });
     });
   </script>
-
 @endsection

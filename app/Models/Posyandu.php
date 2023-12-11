@@ -31,12 +31,12 @@ class Posyandu extends Model
 
     public function dusun()
     {
-        return $this->belongsTo(DataDusun::class, 'kode_dusun', 'kode_dusun');
+        return $this->belongsTo(Datadusun::class, 'kode_dusun', 'kode_dusun');
     }
 
     public function databayi()
     {
-        return $this->hasMany(DataDusun::class, 'kode_posyandu', 'kode_posyandu');
+        return $this->hasMany(Databayi::class, 'kode_posyandu', 'kode_posyandu');
     }
     public function infoawalbumil()
     {
