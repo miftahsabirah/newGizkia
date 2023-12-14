@@ -33,8 +33,8 @@
                             </label>
                             <select name="kode_posyandu" id="kode_posyandu" class="formbold-form-input">
                                 @foreach ($databumilList as $databayi)
-                                    <option value="{{ $databayi->posyandu }}">
-                                        {{ $databayi->posyandu }}
+                                    <option value="{{ $databayi->kode_posyandu }}">
+                                        {{ $databayi->kode_posyandu }}
                                     </option>
                                 @endforeach
                                 @if ($errors->has('id_no_index_infobumil'))
@@ -340,8 +340,8 @@
                         <div class="formbold-w-45">
                             <label for="jenis_kelamin" class="formbold-form-label">Jenis Kelamin</label>
                             <select name="jenis_kelamin" id="jenis_kelamin" class="formbold-form-input">
-                                <option value="pria">Laki-laki</option>
-                                <option value="wanita">Perempuan</option>
+                                <option value="laki-laki">Laki-laki</option>
+                                <option value="perempuan">Perempuan</option>
                             </select>
                             @if ($errors->has('jenis_kelamin'))
                                 <span class="text-danger">{{ $errors->first('jenis_kelamin') }}</span>

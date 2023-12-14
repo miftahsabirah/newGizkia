@@ -251,6 +251,7 @@ route::controller(RekapitulasiController::class)->group(function() {
     Route::get('/indexrekapuminisasi', 'indexrekapuminisasi')->name('indexrekapuminisasi');
     Route::get('/indexrekapbumil', 'indexrekapbumil')->name('indexrekapbumil');
     Route::get('/indexrekapbalita', 'indexrekapbalita')->name('indexrekapbalita');
+    Route::get('/indexrekapgizi', 'indexrekapgizi')->name('indexrekapgizi');
 });
 
 Route::controller(AdminController::class)->group(function () {

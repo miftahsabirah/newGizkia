@@ -64,7 +64,7 @@
 					<li><a href="{{ route('indexrekapbumil')}}" class="a-link">Rekapitulasi Bumil</a></li>
 					<li><a href="{{ route('indexrekapbalita')}}" class="a-link">Rekapitulasi Anak</a></li>
 					<li><a href="{{ route('indexrekapuminisasi')}}" class="a-link">Rekapitulasi Imunisasi</a></li>
-					<li><a href="{{ route('indexrekapbalita')}}" class="a-link">Rekapitulasi Gizi</a></li>
+					<li><a href="{{ route('indexrekapgizi')}}" class="a-link">Rekapitulasi Gizi</a></li>
 				</ul>
 			</li>
 			

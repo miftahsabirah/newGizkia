@@ -859,7 +859,7 @@
 
                 <div class="formbold-btn-wrapper">
                     <button type="button" class="formbold-btn cancel">
-                        <a href="{{ route('dataBumilRisti') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
+                        <a href="{{ route('indexbumil') }}" style="color: #ffffff; text-decoration: none;">Batal</a>
                     </button>
                     
                     <button type="submit" class="button-modal formbold-btn save" data-bs-toggle="modal"

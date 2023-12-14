@@ -45,7 +45,8 @@
                                 <td>{{ $posyandu->kode_posyandu }}</td>
                                 <td>{{ $posyandu->posyandu }}</td>
                                 @if ($countPerVaccine[$posyandu->kode_posyandu])
-                                <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['bcg'] ?? 0 }}</td>                                <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['dpt_1'] ?? 0 }}</td>
+                                <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['bcg'] ?? 0 }}</td>           
+                                <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['dpt_1'] ?? 0 }}</td>
                                 <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['dpt_2'] ?? 0 }}</td>
                                 <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['dpt_3'] ?? 0 }}</td>
                                 <td>{{ $countPerVaccine[$posyandu->kode_posyandu]['polio_1'] ?? 0 }}</td>

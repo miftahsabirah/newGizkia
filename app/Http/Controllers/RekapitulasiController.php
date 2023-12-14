@@ -57,11 +57,78 @@ class RekapitulasiController extends Controller
     }
     public function indexrekapbalita()
     {
-        $databayii = Databayi::with(['posyandu', 'rekapbalita', 'rekapimunisasi', 'penyakit'])->get();
+        $posyandus = Posyandu::all();
+
+        $countPerbayi = [];
+        $countPerbayi2 = [];
+        $countPerbayi3 = [];
+        $countPerbayi4 = [];
+
+        $databayii = ['jenis_kelamin', 'tanggal_meniggal'];
+        $databayi2 = ['tanggal_register', 'tanggal_lahir'];
+        $databayi3 = ['jenis_kelamin'];
+        $databayi4 = ['jenis_kelamin', 'tanggal_meniggal'];
+
+        foreach ($posyandus as $posyandu) {
+            $countPerbayi[$posyandu->kode_posyandu] = [];
+            foreach ($posyandu->databayi as $bayi) {
+                foreach ($databayii as $key) {
+                    if ($bayi->rekapbalita->$key) {
+                        if (!isset($countPerbayi[$posyandu->kode_posyandu][$key])) {
+                            $countPerbayi[$posyandu->kode_posyandu][$key] = 0;
+                        }
+
+                        $countPerbayi[$posyandu->kode_posyandu][$key]++;
+                    }
+                }
+            }
+
+            $countPerbayi2[$posyandu->kode_posyandu] = [];
+            foreach ($posyandu->databayi as $bayi) {
+                foreach ($databayi2 as $key) {
+                    if ($bayi->$key) {
+                        if (!isset($countPerbayi2[$posyandu->kode_posyandu][$key])) {
+                            $countPerbayi2[$posyandu->kode_posyandu][$key] = 0;
+                        }
+
+                        $countPerbayi2[$posyandu->kode_posyandu][$key]++;
+                    }
+                }
+            }
+
+            $countPerbayi3[$posyandu->kode_posyandu] = ['laki-laki' => 0, 'perempuan' => 0];
+            foreach ($posyandu->databayi as $bayi) {
+                foreach ($databayi3 as $key) {
+                    if ($key === 'jenis_kelamin' && in_array($bayi->$key, ['laki-laki', 'perempuan'])) {
+                        $countPerbayi3[$posyandu->kode_posyandu][$bayi->$key]++;
+                    }
+                }
+            }
 
 
-        return view('admin.rekapitulasi.anak', ['databayiList' => $databayii]);
+            $countPerbayi4[$posyandu->kode_posyandu] = ['laki-laki' => 0, 'perempuan' => 0];
+            foreach ($posyandu->databayi as $bayi) {
+                // Assuming 'jenis_kelamin' is in 'databayi'
+                $gender = $bayi->jenis_kelamin;
+            
+                // Check if the baby has a date of death in the 'rekapbalita' table
+                $dateOfDeath = $bayi->rekapbalita->tanggal_meniggal;
+            
+                if ($gender && $dateOfDeath) {
+                    $countPerbayi4[$posyandu->kode_posyandu][$gender]++;
+                }
+            }
+        }
+
+        return view('admin.rekapitulasi.anak', [
+            'posyandus' => $posyandus,
+            'countPerbayi' => $countPerbayi,
+            'countPerbayi2' => $countPerbayi2,
+            'countPerbayi3' => $countPerbayi3,
+            'countPerbayi4' => $countPerbayi4,
+        ]);
     }
+
     public function indexrekapuminisasi()
     {
         $posyandu = Posyandu::all();
@@ -105,5 +172,41 @@ class RekapitulasiController extends Controller
 
     public function indexrekapgizi()
     {
+        $posyandugizi = Posyandu::all();
+
+        $coutngizi = [];
+        $coutngizi2 = [];
+        $datagizi = ['tanggal_register', 'gakin', 'tanggal_timbang_terakhir'];
+        $datagizi2 = ['jenis_kelamin'];
+
+        foreach ($posyandugizi as $posyandu) {
+            $coutngizi[$posyandu->kode_posyandu] = [];
+            foreach ($posyandu->databayi as $bayi) {
+                foreach ($datagizi as $key) {
+                    if ($bayi->$key) {
+                        if (!isset($coutngizi[$posyandu->kode_posyandu][$key])) {
+                            $coutngizi[$posyandu->kode_posyandu][$key] = 0;
+                        }
+
+                        $coutngizi[$posyandu->kode_posyandu][$key]++;
+                    }
+                }
+            }
+
+            $coutngizi2[$posyandu->kode_posyandu] = ['laki-laki' => 0, 'perempuan' => 0];
+            foreach ($posyandu->databayi as $bayi) {
+                foreach ($datagizi2 as $key) {
+                    if ($key === 'jenis_kelamin' && in_array($bayi->$key, ['laki-laki', 'perempuan'])) {
+                        $coutngizi2[$posyandu->kode_posyandu][$bayi->$key]++;
+                    }
+                }
+            }
+        }
+
+        return view('admin.rekapitulasi.gizi', [
+            'posyandus' => $posyandugizi,
+            'datagizi' => $coutngizi, 
+            'datagizi2' => $coutngizi2
+        ]);
     }
 }
