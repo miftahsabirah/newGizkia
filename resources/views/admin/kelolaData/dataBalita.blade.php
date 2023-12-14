@@ -12,13 +12,12 @@
 <!-- MAIN -->
 
 @section('isi')
-
-  <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <h4>Data Balita</h4>
-    <a href="{{ route('createbayi') }}" type="button" class="add-data2">
-      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
-    </a>
-  </div>
+    <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
+        <h4>Data Balita</h4>
+        <a href="{{ route('createbayi') }}" type="button" class="add-data2">
+            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
+        </a>
+    </div>
 
 
 
@@ -245,7 +244,7 @@
                             <td>{{ $data->rt }}</td>
                             <td>{{ $data->rw }}</td>
                             <td>{{ $data->posyandu->desa->desa }}</td>
-                            <td>{{ $data->posyandu->dusun->nama}}</td>
+                            <td>{{ $data->posyandu->dusun->nama }}</td>
                             <td>{{ $data->tb_terakhir }}</td>
                             <td>{{ $data->bb_terakhir }}</td>
                             <td>{{ $data->tanggal_timbang_terakhir }}</td>
@@ -263,8 +262,10 @@
                                 </button>
                                 <span style="margin-right: 10px;"></span>
                                 <button class="icon-button">
-                                    <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
-                                    <!-- Ikon kedua menjadi hijau -->
+                                    <a href="{{ route('deletebayi', $data->no_index_balita) }}">
+                                        <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
+                                        <!-- Ikon kedua menjadi hijau -->
+                                    </a>
                                 </button>
                             </td>
                         </tr>
@@ -299,5 +300,3 @@
         }
     </script>
 @endsection
-
-

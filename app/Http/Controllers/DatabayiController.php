@@ -29,6 +29,12 @@ class DatabayiController extends Controller
             'allPosyanduValues' => $allPosyanduValues,
             'filterPosyandu' => $filterPosyandu,
         ]);
+
+    }
+    public function deletebayi($no_index_balita){
+        $bayidelete = Databayi::findOrFail($no_index_balita);
+        $bayidelete->delete();
+        return redirect()->route('indexbayi')->withSuccess('You have successfully deleted the data bayi');
     }
     public function createbayi()
     {
