@@ -12,13 +12,12 @@
 <!-- MAIN -->
 
 @section('isi')
-
-  <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
-    <h4>Data Balita</h4>
-    <a href="{{ route('createbayi') }}" type="button" class="add-data2">
-      <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
-    </a>
-  </div>
+    <div class="dropdown" style="display: flex; justify-content: space-between; align-items: center;">
+        <h4>Data Balita</h4>
+        <a href="{{ route('createbayi') }}" type="button" class="add-data2">
+            <i class="fi fi-rr-plus-small add-icon"></i> Tambah Data Balita
+        </a>
+    </div>
 
 
 
@@ -86,33 +85,35 @@
 
                 <!-- Modal 2 -->
                 <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="{{ route('indexbayi') }}" method="get">
-                                @csrf
-                                <div class="formbold-mb-3">
-                                    <label for="Posyandu">Posyandu:</label>
-                                    <select name="posyandu" id="Posyandu" class="form-control">
-                                        <option value="">-- Pilih Posyandu --</option>
-                                        @foreach ($allPosyanduValues as $kodePosyandu => $posyanduName)
-                                            <option value="{{ $kodePosyandu }}" {{ $kodePosyandu == $filterPosyandu ? 'selected' : '' }}>
-                                                {{ $posyanduName }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                <button type="submit" class="btn btn-primary">Terapkan</button>
-                            </form>
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{ route('indexbayi') }}" method="get">
+                                    @csrf
+                                    <div class="formbold-mb-3">
+                                        <label for="Posyandu">Posyandu:</label>
+                                        <select name="posyandu" id="Posyandu" class="form-control">
+                                            <option value="">-- Pilih Posyandu --</option>
+                                            @foreach ($allPosyanduValues as $kodePosyandu => $posyanduName)
+                                                <option value="{{ $kodePosyandu }}"
+                                                    {{ $kodePosyandu == $filterPosyandu ? 'selected' : '' }}>
+                                                    {{ $posyanduName }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary">Terapkan</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
                 {{-- button modal 3 --}}
                 <button type="button" class="button-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3">
@@ -245,7 +246,7 @@
                             <td>{{ $data->rt }}</td>
                             <td>{{ $data->rw }}</td>
                             <td>{{ $data->posyandu->desa->desa }}</td>
-                            <td>{{ $data->posyandu->dusun->nama}}</td>
+                            <td>{{ $data->posyandu->dusun->nama }}</td>
                             <td>{{ $data->tb_terakhir }}</td>
                             <td>{{ $data->bb_terakhir }}</td>
                             <td>{{ $data->tanggal_timbang_terakhir }}</td>
@@ -263,8 +264,10 @@
                                 </button>
                                 <span style="margin-right: 10px;"></span>
                                 <button class="icon-button">
-                                    <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
-                                    <!-- Ikon kedua menjadi hijau -->
+                                    <a href="{{ route('deletebayi', $data->no_index_balita) }}">
+                                        <i class="fi fi-rr-trash" style="color: #A30D11;"></i>
+                                        <!-- Ikon kedua menjadi hijau -->
+                                    </a>
                                 </button>
                             </td>
                         </tr>
@@ -299,5 +302,3 @@
         }
     </script>
 @endsection
-
-

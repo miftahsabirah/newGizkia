@@ -217,8 +217,8 @@ Route::controller(ManajemenPetugasKesehatanController::class)->group(function ()
 
 route::controller(DatabayiController::class)->group(function() {
     Route::get('/indexbayi', 'indexbayi')->name('indexbayi');
-
     Route::get('/createbayi', 'createbayi')->name('createbayi');
+    Route::get('/deletebayi/{no_index_balita}', 'deletebayi')->name('deletebayi');
     Route::post('/storedatabayi', 'storedatabayi')->name('storedatabayi');
 
     Route::get('/indexbayirekap', 'indexbayirekap')->name('indexbayirekap');
