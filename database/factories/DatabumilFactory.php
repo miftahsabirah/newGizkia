@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Infoawalbumil;
 use App\Models\Jenisristi;
 use App\Models\Jenisfaktor;
 use App\Models\Periksabumil;
@@ -24,6 +25,9 @@ class DatabumilFactory extends Factory
             'no_index_bumil' => $this->faker->unique()->numberBetween(100000000000000000, 999999999999999999),
             'id_jenispenyakit' => function () {
                 return Jenispenyakit::inRandomOrder()->first()->id;
+            },
+            'id_no_index_infobumil' => function () {
+                return Infoawalbumil::inRandomOrder()->first()->no_index_infobumil;
             },
             'id_jenisfaktor' => function () {
                 return Jenisfaktor::inRandomOrder()->first()->id;
