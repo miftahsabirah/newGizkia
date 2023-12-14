@@ -13,12 +13,22 @@ use App\Models\Rekapimunisasi;
 
 class DatabayiController extends Controller
 {
-    public function indexbayi()
+    public function indexbayi(Request $request)
     {
-        $databayii = Databayi::with(['posyandu', 'rekapbalita', 'rekapimunisasi', 'penyakit'])->get();
+        $filterPosyandu = $request->input('posyandu');
+        $allPosyanduValues = Posyandu::pluck('posyandu', 'kode_posyandu')->toArray();
+        $databayii = Databayi::with(['posyandu', 'rekapbalita', 'rekapimunisasi', 'penyakit'])
+        ->when($filterPosyandu, function ($query) use ($filterPosyandu) {
+            return $query->where('kode_posyandu', $filterPosyandu);
+        })
+        ->get();
         // dd($databayii->posyandu);
         // return $databayii;
-        return view('admin.keloladata.dataBalita', ['databayiList' => $databayii]);
+        return view('admin.keloladata.dataBalita', [
+            'databayiList' => $databayii,
+            'allPosyanduValues' => $allPosyanduValues,
+            'filterPosyandu' => $filterPosyandu,
+        ]);
     }
     public function createbayi()
     {
@@ -207,11 +217,21 @@ class DatabayiController extends Controller
         return redirect()->route('indexbayi')->with('success', 'Data berhasil disimpan.');
     }
 
-    public function indexbayirekap()
+    public function indexbayirekap(Request $request)
     {
-        $databayii = Databayi::with(['posyandu', 'rekapbalita', 'rekapimunisasi', 'penyakit'])->get();
+        $filterPosyandu = $request->input('posyandu');
+        $allPosyanduValues = Posyandu::pluck('posyandu', 'kode_posyandu')->toArray();
+        $databayii = Databayi::with(['posyandu', 'rekapbalita', 'rekapimunisasi', 'penyakit'])
+        ->when($filterPosyandu, function ($query) use ($filterPosyandu) {
+            return $query->where('kode_posyandu', $filterPosyandu);
+        })
+        ->get();
         // dd($databayii->posyandu);
         // return $databayii;
-        return view('admin.keloladata.dataImunisasi', ['databayiList' => $databayii]);
+        return view('admin.keloladata.dataImunisasi', [
+            'databayiList' => $databayii,
+            'allPosyanduValues' => $allPosyanduValues,
+            'filterPosyandu' => $filterPosyandu,
+        ]);
     }
 }
