@@ -91,31 +91,34 @@ Data Ibu Melahirkan
           </button>
           
           <!-- Modal 2 -->
-          <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+          <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="formbold-mb-3">
-                    <label class="formbold-form-label">Puskesmas</label>
-            
-                    <select class="formbold-form-input" name="Puskesmas" id="Puskesmas">
-                      <option value="Pilih Puskesmas">--Pilih Puskesmas--</option>
-                      <option value="Puskesmas1">Puskesmas 1</option>
-                      <option value="Puskesmas2">Puskesmas 2</option>
-                      <option value="Puskesmas3">Puskesmas 3</option>
-                    </select>
+                  <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                  <button type="button" class="btn btn-primary">Terapkan</button>
-                </div>
+                  <div class="modal-body">
+                      <form action="{{ route('indexbumilmelahirkan') }}" method="get">
+                          @csrf
+                          <div class="formbold-mb-3">
+                              <label for="Posyandu">Posyandu:</label>
+                              <select name="posyandu" id="Posyandu" class="form-control">
+                                  <option value="">-- Pilih Posyandu --</option>
+                                  @foreach ($allPosyanduValues as $kodePosyandu => $posyanduName)
+                                      <option value="{{ $kodePosyandu }}" {{ $kodePosyandu == $filterPosyandu ? 'selected' : '' }}>
+                                          {{ $posyanduName }}
+                                      </option>
+                                  @endforeach
+                              </select>
+                          </div>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                          <button type="submit" class="btn btn-primary">Terapkan</button>
+                      </form>
+                  </div>
               </div>
-            </div>
           </div>
+      </div>
 
           {{-- button modal 3 --}}
           <button type="button" class="button-modal" data-bs-toggle="modal" data-bs-target="#exampleModal-3">
@@ -213,7 +216,7 @@ Data Ibu Melahirkan
                         <td>{{ $item ->rt }}</td>                        
                         <td>{{ $item ->rw }}</td>  
                         <td>{{ $item ->infoawalbumil->posyandu->dusun->nama }}</td>                        
-                        <td>{{ $item ->infoawalbumil->posyandu->desa->nama }}</td>  
+                        <td>{{ $item ->infoawalbumil->posyandu->desa->desa }}</td>  
                         <td>{{ $item->tanggal_melahirkan }}</td>
                         <td>{{ $item->cara_lahir }}</td>
                         <td>{{ $item->penolong }}</td>

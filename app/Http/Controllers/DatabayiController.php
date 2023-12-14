@@ -20,15 +20,6 @@ class DatabayiController extends Controller
         // return $databayii;
         return view('admin.keloladata.dataBalita', ['databayiList' => $databayii]);
     }
-
-    public function btnfilter(Request $request)
-    {
-        $filterposyandu = $request->input('posyandu');
-        $data = Posyandu::where('posyandu', $filterposyandu)->get();
-
-        return view('admin.keloladata.dataBalita', compact('data'));
-    }
-
     public function createbayi()
     {
         $databalita = Posyandu::all();
@@ -169,7 +160,7 @@ class DatabayiController extends Controller
         $rekapimunisasi = Rekapimunisasi::orderBy('id', 'DESC')->first();
         // dd($rekapimunisasi);
         $Penyakit = Penyakit::orderBy('id', 'DESC')->first();
-        Databayi::created([
+        Databayi::create([
             'no_index_balita' => $request->no_index_balita,
             'kode_posyandu' => $request->kode_posyandu,
             'id_rekapimunisasi' => $rekapimunisasi->id,

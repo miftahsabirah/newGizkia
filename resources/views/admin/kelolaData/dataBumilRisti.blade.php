@@ -102,24 +102,29 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div class="formbold-mb-3">
-                                    <label class="formbold-form-label">Puskesmas</label>
-
-                                    <select class="formbold-form-input" name="Puskesmas" id="Puskesmas">
-                                        <option value="Pilih Puskesmas">--Pilih Puskesmas--</option>
-                                        <option value="Puskesmas1">Puskesmas 1</option>
-                                        <option value="Puskesmas2">Puskesmas 2</option>
-                                        <option value="Puskesmas3">Puskesmas 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                <button type="button" class="btn btn-primary">Terapkan</button>
+                                <form action="{{ route('indexbumil') }}" method="get">
+                                    @csrf
+                                    <div class="formbold-mb-3">
+                                        <label for="Posyandu">Posyandu:</label>
+                                        <select name="posyandu" id="Posyandu" class="form-control">
+                                            <option value="">-- Pilih Posyandu --</option>
+                                            @foreach ($allPosyanduValues as $kodePosyandu => $posyanduName)
+                                                <option value="{{ $kodePosyandu }}"
+                                                    {{ $kodePosyandu == $filterPosyandu ? 'selected' : '' }}>
+                                                    {{ $posyanduName }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-primary">Terapkan</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="d-flex">
@@ -232,42 +237,60 @@
                             <td>{{ $item->infoawalbumil->posyandu->desa->nama }}</td>
                             <td>{{ $item->htp }}</td>
                             <td>
-                                <input type="checkbox" class="form-check-input" name="faktor1" value="{{ $item->jenisfaktor->faktor1 }}"
+                                <input type="checkbox" class="form-check-input" name="faktor1"
+                                    value="{{ $item->jenisfaktor->faktor1 }}"
                                     {{ $item->jenisfaktor->faktor1 ? 'checked' : '' }}>
                             </td>
-                            <td><input type="checkbox" class="form-check-input" name="faktor1" value="{{ $item->jenisfaktor->faktor2 }}"
+                            <td><input type="checkbox" class="form-check-input" name="faktor1"
+                                    value="{{ $item->jenisfaktor->faktor2 }}"
                                     {{ $item->jenisfaktor->faktor2 ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="faktor1" value="{{ $item->jenisfaktor->faktor3 }}"
+                            <td><input type="checkbox" class="form-check-input" name="faktor1"
+                                    value="{{ $item->jenisfaktor->faktor3 }}"
                                     {{ $item->jenisfaktor->faktor3 ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="faktor1" value="{{ $item->jenisfaktor->faktor4 }}"
+                            <td><input type="checkbox" class="form-check-input" name="faktor1"
+                                    value="{{ $item->jenisfaktor->faktor4 }}"
                                     {{ $item->jenisfaktor->faktor4 ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="faktor1" value="{{ $item->jenisfaktor->faktor5 }}"
+                            <td><input type="checkbox" class="form-check-input" name="faktor1"
+                                    value="{{ $item->jenisfaktor->faktor5 }}"
                                     {{ $item->jenisfaktor->faktor5 ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="faktor1" value="{{ $item->jenisfaktor->faktor6 }}"
+                            <td><input type="checkbox" class="form-check-input" name="faktor1"
+                                    value="{{ $item->jenisfaktor->faktor6 }}"
                                     {{ $item->jenisfaktor->faktor6 ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->jantung }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->jantung }}"
                                     {{ $item->jenispenyakit->jantung ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->diabetes }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->diabetes }}"
                                     {{ $item->jenispenyakit->diabetes ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->paru_paru }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->paru_paru }}"
                                     {{ $item->jenispenyakit->paru_paru ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->ginjal }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->ginjal }}"
                                     {{ $item->jenispenyakit->ginjal ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->hati }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->hati }}"
                                     {{ $item->jenispenyakit->hati ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->kurang_darah }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->kurang_darah }}"
                                     {{ $item->jenispenyakit->kurang_darah ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->malaria }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->malaria }}"
                                     {{ $item->jenispenyakit->malaria ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->asma }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->asma }}"
                                     {{ $item->jenispenyakit->asma ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->tbc }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->tbc }}"
                                     {{ $item->jenispenyakit->tbc ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->epilepsi }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->epilepsi }}"
                                     {{ $item->jenispenyakit->epilepsi ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->jiwa }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->jiwa }}"
                                     {{ $item->jenispenyakit->jiwa ? 'checked' : '' }}></td>
-                            <td><input type="checkbox" class="form-check-input" name="resiko1" value="{{ $item->jenispenyakit->pms }}"
+                            <td><input type="checkbox" class="form-check-input" name="resiko1"
+                                    value="{{ $item->jenispenyakit->pms }}"
                                     {{ $item->jenispenyakit->pms ? 'checked' : '' }}></td>
                             <td>{{ $item->jenisristi }}</td>
                             <td>{{ $item->penolong }}</td>

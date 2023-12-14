@@ -153,12 +153,25 @@ class DatabumilController extends Controller
 
 
     // fungsi dari data bumil
-    public function indexbumil()
+    public function indexbumil(Request $request)
     {
-        $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])->get();
+        $filterPosyandu = $request->input('posyandu');
+        $allPosyanduValues = Posyandu::pluck('posyandu', 'kode_posyandu')->toArray();
+        $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])
+        ->when($filterPosyandu, function ($query) use ($filterPosyandu) {
+            return $query->whereHas('infoawalbumil.posyandu', function ($subquery) use ($filterPosyandu) {
+                $subquery->where('kode_posyandu', $filterPosyandu);
+            });
+        })
+        ->get();
+    
         // dd($databayii->posyandu);
         // return $databumil;
-        return view('admin.keloladata.dataBumilRisti', ['databumilList' => $databumil]);
+        return view('admin.keloladata.dataBumilRisti', [
+            'databumilList' => $databumil,
+            'allPosyanduValues' => $allPosyanduValues,
+            'filterPosyandu' => $filterPosyandu,
+        ]);
     }
 
     public function createdatabumil()
@@ -415,12 +428,24 @@ class DatabumilController extends Controller
         return redirect()->route('indexbumil')->with('success', 'Data berhasil disimpan.');
     }
 
-    public function indexbumilmelahirkan()
+    public function indexbumilmelahirkan(Request $request)
     {
-        $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])->get();
+        $filterPosyandu = $request->input('posyandu');
+        $allPosyanduValues = Posyandu::pluck('posyandu', 'kode_posyandu')->toArray();
+        $databumil = Databumil::with(['jenispenyakit', 'jenisfaktor', 'jenisristi', 'periksabumil', 'infoawalbumil.posyandu'])
+        ->when($filterPosyandu, function ($query) use ($filterPosyandu) {
+            return $query->whereHas('infoawalbumil.posyandu', function ($subquery) use ($filterPosyandu) {
+                $subquery->where('kode_posyandu', $filterPosyandu);
+            });
+        })
+        ->get();
         // dd($databayii->posyandu);
         // return $databumil;
-        return view('admin.keloladata.dataibuMelahirkan', ['databumilList' => $databumil]);
+        return view('admin.keloladata.dataibuMelahirkan', [
+            'databumilList' => $databumil,
+            'allPosyanduValues' => $allPosyanduValues,
+            'filterPosyandu' => $filterPosyandu,
+        ]);
     }
 
     public function deletedatabumil($no_index_bumil)
