@@ -27,7 +27,9 @@ class DatabayiFactory extends Factory
         $posyandu = Posyandu::inRandomOrder()->first();
         return [
             'no_index_balita' => $this->faker->unique()->numberBetween(100000000000000000, 999999999999999999),
-            'kode_posyandu' => $posyandu ? $posyandu->kode_posyandu : null,
+            'kode_posyandu' => function () {
+                return Posyandu::inRandomOrder()->first()->kode_posyandu;
+            },
             'id_rekapimunisasi' => function () {
                 return Rekapimunisasi::inRandomOrder()->first()->id;
             },
@@ -43,7 +45,7 @@ class DatabayiFactory extends Factory
             'nokk' => $this->faker->unique()->numberBetween(1000000000, 9999999999),
             'nama_bayi' => $this->faker->firstName,
             'tanggal_lahir' => $this->faker->date,
-            'jenis_kelamin' => $this->faker->randomElement(['L', 'P']),
+            'jenis_kelamin' => $this->faker->randomElement(['laki-laki', 'perempuan']),
             'nama_ibu' => $this->faker->firstNameFemale,
             'nama_ayah' => $this->faker->firstNameMale,
             'gakin' => $this->faker->numberBetween(0, 1),
